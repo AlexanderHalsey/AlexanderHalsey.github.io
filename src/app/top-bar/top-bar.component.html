@@ -1,7 +1,9 @@
 <nav>
   <ul>
-    @for (menuItem of menuItems; track menuItem.selector ) {
-      <li><a (click)="scrollTo(menuItem)">{{ menuItem.name }}</a></li>
+    @for (menuItem of menuItems; track menuItem.selector) {
+      <li>
+        <button (click)="scrollTo(menuItem)">{{ menuItem.name }}</button>
+      </li>
     }
   </ul>
 </nav>

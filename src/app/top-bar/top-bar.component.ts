@@ -5,7 +5,7 @@ import type { MenuItem } from '../shared/models';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrl: './top-bar.component.scss'
+  styleUrl: './top-bar.component.scss',
 })
 export class TopBarComponent {
   menuItems: MenuItem[] = [
@@ -13,7 +13,7 @@ export class TopBarComponent {
     { selector: '#experience', name: 'Experience' },
     { selector: '#skills', name: 'Skills' },
     { selector: '#contact', name: 'Contact' },
-  ]
+  ];
 
   scrollTo(menuItem: MenuItem) {
     const element = document.querySelector(menuItem.selector);
@@ -22,6 +22,6 @@ export class TopBarComponent {
     }
     const yOffset = -15;
     const top = element.getBoundingClientRect().top + window.scrollY + yOffset;
-    window.scrollTo({ behavior: 'smooth', top })
+    window.scrollTo({ behavior: 'smooth', top });
   }
 }
