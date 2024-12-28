@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, afterNextRender } from '@angular/core';
+
+import { TopBarComponent } from "./top-bar/top-bar.component";
+import { LandingComponent } from './landing/landing.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    AboutMeComponent,
+    ContactComponent, 
+    ExperienceComponent,
+    LandingComponent,
+    SkillsComponent, 
+    TopBarComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'portfolio';
-}
+export class AppComponent {}
