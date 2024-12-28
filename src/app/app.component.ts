@@ -1,6 +1,6 @@
-import { Component, afterNextRender } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { TopBarComponent } from "./top-bar/top-bar.component";
+import { TopBarComponent } from './top-bar/top-bar.component';
 import { LandingComponent } from './landing/landing.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
@@ -11,11 +11,11 @@ import { ContactComponent } from './contact/contact.component';
   selector: 'app-root',
   imports: [
     AboutMeComponent,
-    ContactComponent, 
+    ContactComponent,
     ExperienceComponent,
     LandingComponent,
-    SkillsComponent, 
-    TopBarComponent
+    SkillsComponent,
+    TopBarComponent,
   ],
   templateUrl: './app.component.html',
 })
