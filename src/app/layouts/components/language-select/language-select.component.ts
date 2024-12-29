@@ -12,7 +12,11 @@ import { MenuItem } from '@/models';
 export class LanguageSelectComponent {
   activeLanguage = signal<string>(navigator.language);
 
-  languages: MenuItem[] = [{ label: 'English' }, { label: 'Spanish' }, { label: 'French' }];
+  languages: MenuItem[] = [
+    { label: $localize`English` },
+    { label: 'Spanish' },
+    { label: 'French' },
+  ];
 
   setLanguage = (language: MenuItem) => {
     this.activeLanguage.set(language.label);

@@ -10,9 +10,13 @@ import { MenuItem } from '@/models';
   styleUrl: './theme-select.component.css',
 })
 export class ThemeSelectComponent {
-  activeTheme = signal<string>('System');
+  themes: MenuItem[] = [
+    { label: $localize`Light` },
+    { label: $localize`Dark` },
+    { label: $localize`System` },
+  ];
 
-  themes: MenuItem[] = [{ label: 'Light' }, { label: 'Dark' }, { label: 'System' }];
+  activeTheme = signal<string>(this.themes[2].label);
 
   setTheme = (theme: MenuItem) => {
     this.activeTheme.set(theme.label);

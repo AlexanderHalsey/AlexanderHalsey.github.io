@@ -25,10 +25,10 @@ export class TopBarComponent {
   display = useDisplay();
 
   selectorItems: SelectorItem[] = [
-    { selector: '#aboutMe', label: 'About Me' },
-    { selector: '#experience', label: 'Experience' },
-    { selector: '#skills', label: 'Skills' },
-    { selector: '#contact', label: 'Contact' },
+    { selector: '#aboutMe', label: $localize`About Me` },
+    { selector: '#experience', label: $localize`Experience` },
+    { selector: '#skills', label: $localize`Skills` },
+    { selector: '#contact', label: $localize`Contact` },
   ];
 
   scrollTo = (menuItem: SelectorItem) => {

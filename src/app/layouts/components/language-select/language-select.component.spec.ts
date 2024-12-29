@@ -8,9 +8,8 @@ describe('LanguageSelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LanguageSelectComponent]
-    })
-    .compileComponents();
+      imports: [LanguageSelectComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LanguageSelectComponent);
     component = fixture.componentInstance;
