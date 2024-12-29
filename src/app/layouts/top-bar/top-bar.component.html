@@ -1,0 +1,18 @@
+<nav class="flex">
+  <div class="grow">logo</div>
+  @if (!display.isMobile()) {
+    <menu class="flex">
+      @for (selectorItem of selectorItems; track $index) {
+        <li class="mr-4">
+          <app-menu-item [menuItem]="selectorItem" (click)="scrollTo(selectorItem)" />
+        </li>
+      }
+    </menu>
+    <div class="mx-4">|</div>
+  }
+  <app-theme-select />
+  <app-language-select class="ml-4" />
+  @if (display.isMobile()) {
+    <app-hamburger-menu [selectorItems]="selectorItems" class="ml-4" (goTo)="scrollTo($event)" />
+  }
+</nav>

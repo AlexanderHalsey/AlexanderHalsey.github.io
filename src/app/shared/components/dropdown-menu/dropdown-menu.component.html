@@ -1,0 +1,14 @@
+<button #toggleButton (click)="isMenuOpen.set(!isMenuOpen())">
+  @if (activatorTitle()) {
+    {{ activatorTitle() }}
+  } @else {
+    <ng-content select="activator" />
+  }
+</button>
+<menu #menu [class]="isMenuOpen() ? null : 'hidden'">
+  @for (menuItem of menuItems(); track $index) {
+    <li>
+      <app-menu-item [menuItem]="menuItem" (click)="selectMenuItem($event, menuItem)" />
+    </li>
+  }
+</menu>
