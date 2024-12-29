@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { LandingComponent } from './landing/landing.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutMeComponent } from '@/sections/about-me/about-me.component';
+import { ContactComponent } from '@/sections/contact/contact.component';
+import { ExperienceComponent } from '@/sections/experience/experience.component';
+import { LandingComponent } from '@/sections/landing/landing.component';
+import { SkillsComponent } from '@/sections/skills/skills.component';
+import { TopBarComponent } from '@/layouts/top-bar/top-bar.component';
 
 @Component({
   selector: 'app-root',
