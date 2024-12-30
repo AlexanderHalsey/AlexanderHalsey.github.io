@@ -1,0 +1,7 @@
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #c62368;
+  padding-bottom: 9rem;
+  color: white;
+}

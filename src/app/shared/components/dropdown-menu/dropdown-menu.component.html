@@ -8,7 +8,7 @@
   </button>
   <menu
     #menu
-    class="absolute right-0 z-10 bg-white border border-gray-200 rounded shadow-md"
+    class="absolute right-0 z-10 border bg-white border-gray-200 rounded shadow-md"
     [class]="isMenuOpen() ? 'block' : 'hidden'"
   >
     @for (menuItem of menuItems(); track $index) {
