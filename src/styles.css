@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  /* background-color: #001122; */
+  background-color: #f1efef;
+}
+
+section {
+  padding: 0 3rem;
+}
+
+.spacer {
+  aspect-ratio: 1500 / 300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layered-waves-1 {
+  background-image: url('/layered-waves-1.svg');
+}
+
+.layered-waves-2 {
+  background-image: url('/layered-waves-2.svg');
+}
+
+.layered-waves-3 {
+  background-image: url('/layered-waves-3.svg');
+}

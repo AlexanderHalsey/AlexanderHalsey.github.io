@@ -29,7 +29,7 @@ export class TopBarComponent {
     if (!element) {
       throw new Error(`Element with selector ${menuItem.selector} not found`);
     }
-    const yOffset = -15;
+    const yOffset = -75;
     const top = element.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ behavior: 'smooth', top });
   };
