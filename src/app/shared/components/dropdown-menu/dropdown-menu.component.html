@@ -1,8 +1,8 @@
-<button #toggleButton (click)="isMenuOpen.set(!isMenuOpen())">
+<button #toggleButton (click)="toggleMenuOpen($event, !isMenuOpen())">
   @if (activatorTitle()) {
     {{ activatorTitle() }}
   } @else {
-    <ng-content select="activator" />
+    <ng-content select="activator" (click)="toggleMenuOpen($event, !isMenuOpen())" />
   }
 </button>
 <menu #menu [class]="isMenuOpen() ? null : 'hidden'">
