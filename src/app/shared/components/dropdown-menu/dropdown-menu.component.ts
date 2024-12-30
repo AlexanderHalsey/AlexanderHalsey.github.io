@@ -1,12 +1,10 @@
 import { Component, ElementRef, input, output, Renderer2, signal, viewChild } from '@angular/core';
 
-import { MenuItemComponent } from '../menu-item/menu-item.component';
-
 import { MenuItem } from '@/models';
 
 @Component({
   selector: 'app-dropdown-menu',
-  imports: [MenuItemComponent],
+  imports: [],
   templateUrl: './dropdown-menu.component.html',
   styleUrl: './dropdown-menu.component.css',
 })
@@ -35,7 +33,7 @@ export class DropdownMenuComponent<T extends MenuItem> {
     });
   }
 
-  toggleMenuOpen = (event: MouseEvent, isOpen: boolean) => {
+  toggleMenuOpen = (event: Event, isOpen: boolean) => {
     event.preventDefault();
     this.isMenuOpen.set(isOpen);
   };
