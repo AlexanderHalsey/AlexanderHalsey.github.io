@@ -35,6 +35,11 @@ export class DropdownMenuComponent<T extends MenuItem> {
     });
   }
 
+  toggleMenuOpen = (event: MouseEvent, isOpen: boolean) => {
+    event.preventDefault();
+    this.isMenuOpen.set(isOpen);
+  };
+
   selectMenuItem = (event: MouseEvent, menuItem: T) => {
     event.preventDefault();
     this.select.emit(menuItem);
