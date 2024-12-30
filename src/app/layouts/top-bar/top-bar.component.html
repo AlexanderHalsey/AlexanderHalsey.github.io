@@ -1,10 +1,12 @@
-<nav class="flex px-2">
-  <div class="grow">logo</div>
+<nav class="flex px-2 items-center">
+  <div class="grow">
+    <img src="rubix-logo.svg" alt="logo" class="w-10 h-10" />
+  </div>
   @if (!display.isMobile()) {
     <menu class="flex">
       @for (selectorItem of selectorItems; track $index) {
-        <li class="mr-4">
-          <app-menu-item [menuItem]="selectorItem" (click)="scrollTo(selectorItem)" />
+        <li class="py-1 px-4 hover:text-blue-800">
+          <button (click)="scrollTo(selectorItem)">{{ selectorItem.label }}</button>
         </li>
       }
     </menu>

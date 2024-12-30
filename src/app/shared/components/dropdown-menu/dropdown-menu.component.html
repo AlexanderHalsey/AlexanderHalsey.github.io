@@ -1,14 +1,20 @@
-<button #toggleButton (click)="toggleMenuOpen($event, !isMenuOpen())">
-  @if (activatorTitle()) {
-    {{ activatorTitle() }}
-  } @else {
-    <ng-content select="activator" (click)="toggleMenuOpen($event, !isMenuOpen())" />
-  }
-</button>
-<menu #menu [class]="isMenuOpen() ? null : 'hidden'">
-  @for (menuItem of menuItems(); track $index) {
-    <li>
-      <app-menu-item [menuItem]="menuItem" (click)="selectMenuItem($event, menuItem)" />
-    </li>
-  }
-</menu>
+<div #dropdownMenu class="relative">
+  <button #toggleButton (click)="toggleMenuOpen($event, !isMenuOpen())">
+    @if (activatorTitle()) {
+      {{ activatorTitle() }}
+    } @else {
+      <ng-content select="activator" (click)="toggleMenuOpen($event, !isMenuOpen())" />
+    }
+  </button>
+  <menu
+    #menu
+    class="absolute right-0 z-10 bg-white border border-gray-200 rounded shadow-md"
+    [class]="isMenuOpen() ? 'block' : 'hidden'"
+  >
+    @for (menuItem of menuItems(); track $index) {
+      <li class="py-1 px-3 hover:bg-blue-50">
+        <button (click)="selectMenuItem($event, menuItem)">{{ menuItem.label }}</button>
+      </li>
+    }
+  </menu>
+</div>

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { MenuItemComponent } from '@/components/menu-item/menu-item.component';
-
 import { HamburgerMenuComponent } from '../components/hamburger-menu/hamburger-menu.component';
 import { LanguageSelectComponent } from '../components/language-select/language-select.component';
 import { ThemeSelectComponent } from '../components/theme-select/theme-select.component';
@@ -12,12 +10,7 @@ import type { SelectorItem } from '@/models';
 
 @Component({
   selector: 'app-top-bar',
-  imports: [
-    HamburgerMenuComponent,
-    LanguageSelectComponent,
-    MenuItemComponent,
-    ThemeSelectComponent,
-  ],
+  imports: [HamburgerMenuComponent, LanguageSelectComponent, ThemeSelectComponent],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css',
 })
