@@ -18,7 +18,7 @@ export class TopBarComponent {
   display = useDisplay();
 
   selectorItems: SelectorItem[] = [
-    { selector: '#aboutMe', label: $localize`About Me` },
+    { selector: '#aboutMe', label: $localize`About me` },
     { selector: '#experience', label: $localize`Experience` },
     { selector: '#skills', label: $localize`Skills` },
     { selector: '#contact', label: $localize`Contact` },

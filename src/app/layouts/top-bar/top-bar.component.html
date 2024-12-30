@@ -1,11 +1,13 @@
-<nav class="flex px-2 items-center">
+<nav class="flex p-3 items-center sticky top-0 z-50 backdrop-blur-2xl border border-b-gray-200">
   <div class="grow">
-    <img src="rubix-logo.svg" alt="logo" class="w-10 h-10" />
+    <button (click)="scrollTo({ selector: '#landing', label: '' })">
+      <img #logo src="rubix-logo.svg" i18n-alt alt="logo" class="w-6 h-6" />
+    </button>
   </div>
   @if (!display.isMobile()) {
     <menu class="flex">
       @for (selectorItem of selectorItems; track $index) {
-        <li class="py-1 px-4 hover:text-blue-800">
+        <li class="py-1 font-semibold px-4 hover:text-blue-800">
           <button (click)="scrollTo(selectorItem)">{{ selectorItem.label }}</button>
         </li>
       }
