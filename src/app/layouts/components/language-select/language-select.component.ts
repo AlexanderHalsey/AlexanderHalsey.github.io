@@ -14,8 +14,8 @@ export class LanguageSelectComponent {
 
   languages: MenuItem[] = [
     { label: $localize`English` },
-    { label: 'Spanish' },
-    { label: 'French' },
+    { label: $localize`Spanish` },
+    { label: $localize`French` },
   ];
 
   setLanguage = (language: MenuItem) => {
