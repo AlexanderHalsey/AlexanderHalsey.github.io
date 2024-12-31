@@ -6,7 +6,6 @@ import { CardComponent } from '@/components/card/card.component';
   selector: 'app-skills',
   imports: [CardComponent],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css',
 })
 export class SkillsComponent {
   skills = [

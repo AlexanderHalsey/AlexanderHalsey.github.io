@@ -12,7 +12,6 @@ import type { SelectorItem } from '@/models';
   selector: 'app-top-bar',
   imports: [HamburgerMenuComponent, LanguageSelectComponent, ThemeSelectComponent],
   templateUrl: './top-bar.component.html',
-  styleUrl: './top-bar.component.css',
 })
 export class TopBarComponent {
   display = useDisplay();

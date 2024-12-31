@@ -2,31 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* background-color: #001122; */
-  background-color: #f1efef;
+:root {
+  --color-primary: #0da6e8;
+  --bg-color: #f1efef;
+  --title-color: black;
+  --text-color: #111827;
+  --border-color: #d1d5db;
 }
 
-section {
-  padding: 0 3rem;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f192a;
+    --title-color: #f3f4f6;
+    --text-color: #d1d5db;
+    --border-color: #374151;
+  }
 }
 
-.spacer {
-  aspect-ratio: 1500 / 300;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+@layer base {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--title-color);
+  }
+
+  main > * > section {
+    padding: 0 1.75rem;
+  }
+  @media (min-width: 768px) {
+    main > * > section {
+      padding: 0 3.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main > * > section {
+      padding: 0 5.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    main > * > section {
+      padding: 0 7rem;
+    }
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
 }
 
-.layered-waves-1 {
-  background-image: url('/layered-waves-1.svg');
-}
+@layer components {
+  .spacer {
+    aspect-ratio: 1500 / 300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-.layered-waves-2 {
-  background-image: url('/layered-waves-2.svg');
-}
+  .layered-waves-1 {
+    background-image: url('/layered-waves-1.svg');
+  }
 
-.layered-waves-3 {
-  background-image: url('/layered-waves-3.svg');
+  .layered-waves-2 {
+    background-image: url('/layered-waves-2.svg');
+  }
+
+  .layered-waves-3 {
+    background-image: url('/layered-waves-3.svg');
+  }
 }

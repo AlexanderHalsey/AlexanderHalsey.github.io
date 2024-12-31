@@ -8,7 +8,6 @@ import type { SelectorItem } from '@/shared/models';
   selector: 'app-hamburger-menu',
   imports: [DropdownMenuComponent],
   templateUrl: './hamburger-menu.component.html',
-  styleUrl: './hamburger-menu.component.css',
 })
 export class HamburgerMenuComponent<T extends SelectorItem> {
   selectorItems = input.required<T[]>();

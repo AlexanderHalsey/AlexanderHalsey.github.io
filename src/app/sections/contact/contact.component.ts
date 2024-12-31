@@ -7,6 +7,5 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
   selector: 'app-contact',
   imports: [ContactFormComponent, ContactInfoComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
 })
 export class ContactComponent {}

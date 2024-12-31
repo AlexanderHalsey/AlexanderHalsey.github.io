@@ -7,7 +7,6 @@ import { MenuItem } from '@/models';
   selector: 'app-language-select',
   imports: [DropdownMenuComponent],
   templateUrl: './language-select.component.html',
-  styleUrl: './language-select.component.css',
 })
 export class LanguageSelectComponent {
   activeLanguage = signal<string>(navigator.language);

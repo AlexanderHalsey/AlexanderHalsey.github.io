@@ -8,7 +8,6 @@ import type { TimelineItem } from '@/models';
   selector: 'app-experience',
   imports: [TimelineComponent],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
   experience = computed<TimelineItem[]>(() => [

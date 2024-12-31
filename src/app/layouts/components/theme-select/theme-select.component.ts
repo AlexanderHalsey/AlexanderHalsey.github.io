@@ -7,7 +7,6 @@ import { MenuItem } from '@/models';
   selector: 'app-theme-select',
   imports: [DropdownMenuComponent],
   templateUrl: './theme-select.component.html',
-  styleUrl: './theme-select.component.css',
 })
 export class ThemeSelectComponent {
   themes: MenuItem[] = [
