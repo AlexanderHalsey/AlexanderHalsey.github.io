@@ -9,7 +9,6 @@ import { DatePipe } from '@angular/common';
   selector: 'app-timeline',
   imports: [CardComponent, DatePipe],
   templateUrl: './timeline.component.html',
-  styleUrl: './timeline.component.css',
 })
 export class TimelineComponent<T extends TimelineItem> {
   items = input.required<T[]>();

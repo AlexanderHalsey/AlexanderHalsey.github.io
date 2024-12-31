@@ -6,7 +6,6 @@ import { MenuItem } from '@/models';
   selector: 'app-dropdown-menu',
   imports: [],
   templateUrl: './dropdown-menu.component.html',
-  styleUrl: './dropdown-menu.component.css',
 })
 export class DropdownMenuComponent<T extends MenuItem> {
   menuItems = input.required<T[]>();

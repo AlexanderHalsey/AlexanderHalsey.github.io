@@ -8,12 +8,14 @@
   </button>
   <menu
     #menu
-    class="absolute right-0 z-10 border bg-white border-gray-200 rounded shadow-md"
+    class="absolute right-0 z-10 border bg-white dark:bg-gray-700 rounded shadow-md"
     [class]="isMenuOpen() ? 'block' : 'hidden'"
   >
     @for (menuItem of menuItems(); track $index) {
-      <li class="py-1 px-3 hover:bg-blue-50">
-        <button (click)="selectMenuItem($event, menuItem)">{{ menuItem.label }}</button>
+      <li class="py-1 px-3 hover:bg-blue-200 hover:bg-opacity-30">
+        <button (click)="selectMenuItem($event, menuItem)">
+          {{ menuItem.label }}
+        </button>
       </li>
     }
   </menu>
