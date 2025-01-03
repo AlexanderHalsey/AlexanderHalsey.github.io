@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
     "rxjs": "~7.8.0",
+    "three": "^0.172.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -31,6 +32,7 @@
     "@angular/compiler-cli": "^19.0.0",
     "@angular/localize": "^19.0.5",
     "@types/jasmine": "~5.1.0",
+    "@types/three": "^0.171.0",
     "angular-eslint": "19.0.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.16.0",
