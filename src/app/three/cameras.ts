@@ -26,7 +26,6 @@ export const createBezierCurveCamera1 = (): THREE.Line<
 };
 
 export const moveCamera1 = (camera: THREE.PerspectiveCamera) => {
-  console.log('moving camera');
   const t = document.body.getBoundingClientRect().top;
   const maxHeight = 430;
   const positionRange = t / maxHeight < -1 ? 1 : t / maxHeight > 0 ? 0 : -t / 450;
