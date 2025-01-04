@@ -1,4 +1,8 @@
-<section id="experience" class="flex flex-col items-center bg-[#c62368]">
+<section
+  id="experience"
+  class="flex flex-col items-center"
+  [style.background-color]="theme.backgroundColor1()"
+>
   <h2 i18n class="text-gray-200">Experience</h2>
   <app-timeline [items]="experience()" class="text-gray-200" />
 </section>

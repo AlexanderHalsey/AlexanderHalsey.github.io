@@ -25,15 +25,17 @@
     color: var(--text-color);
   }
 
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
   main {
     position: absolute;
     z-index: 1;
+    width: 100vw;
+  }
+
+  #rubix-cube,
+  #grid-room-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   #rubix-cube {
@@ -85,23 +87,8 @@
 }
 
 @layer components {
-  .spacer {
-    aspect-ratio: 1500 / 300;
+  .layered-peaks-spacer > svg {
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .layered-waves-1 {
-    background-image: url('/layered-waves-1.svg');
-  }
-
-  .layered-waves-2 {
-    background-image: url('/layered-waves-2.svg');
-  }
-
-  .layered-waves-3 {
-    background-image: url('/layered-waves-3.svg');
+    height: auto;
   }
 }

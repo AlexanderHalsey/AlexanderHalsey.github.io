@@ -1,12 +1,11 @@
 import * as THREE from 'three';
-import WebGL from 'three/addons/capabilities/WebGL.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { createBackground1 } from './backgrounds';
 import { createRubixCube } from './rubixCube';
 import { createBezierCurveCamera1, createCamera1, moveCamera1 } from './cameras';
 
 const ORBIT_CONTROLS_FLAG = false;
-const RENDER_FLAG = true;
+const RENDER_FLAG = false;
 
 export function renderBackground1(): THREE.WebGLRenderer {
   const scene = new THREE.Scene();
@@ -20,7 +19,7 @@ export function renderBackground1(): THREE.WebGLRenderer {
   const renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth / 2, window.innerHeight / 2, false);
-  renderer.domElement.id = 'background1';
+  renderer.domElement.id = 'grid-room-3d';
   document.body.appendChild(renderer.domElement);
 
   const camera = createCamera1();
@@ -34,11 +33,6 @@ export function renderBackground1(): THREE.WebGLRenderer {
     if (RENDER_FLAG) renderer.render(scene, camera);
   }
 
-  if (!WebGL.isWebGL2Available()) {
-    const warning = WebGL.getWebGL2ErrorMessage();
-    document.body.appendChild(warning);
-  }
-
   animate();
 
   const onWindowResize = () => {
@@ -49,6 +43,7 @@ export function renderBackground1(): THREE.WebGLRenderer {
 
   window.addEventListener('scroll', () => {
     moveCamera1(camera);
+    animate();
   });
   window.addEventListener('resize', () => {
     onWindowResize();

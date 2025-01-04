@@ -2,6 +2,8 @@ import { Component, computed } from '@angular/core';
 
 import { TimelineComponent } from '@/components/timeline/timeline.component';
 
+import { useTheme } from '@/composables/theme.composable';
+
 import type { TimelineItem } from '@/models';
 
 @Component({
@@ -10,6 +12,8 @@ import type { TimelineItem } from '@/models';
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
+  theme = useTheme();
+
   experience = computed<TimelineItem[]>(() => [
     {
       startDate: new Date(2022, 7, 1),
