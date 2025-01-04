@@ -4,8 +4,8 @@
     @for (skill of skills; track $index) {
       <app-card class="max-w-prose flex-grow w-full md:w-1/3 xl:w-1/4">
         <div class="flex items-center">
-          <img [src]="skill.img" [alt]="skill.title" class="w-10 h-10 mr-4" />
-          <h3 class="font-bold">{{ skill.title }}</h3>
+          <ng-container *ngComponentOutlet="skill.icon" />
+          <h3 class="font-bold ml-4">{{ skill.title }}</h3>
         </div>
         <p>{{ skill.description }}</p>
       </app-card>
