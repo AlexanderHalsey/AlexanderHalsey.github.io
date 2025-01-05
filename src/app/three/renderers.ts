@@ -69,7 +69,7 @@ export function renderRubixCube(): THREE.WebGLRenderer {
   const renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setAnimationLoop(animate);
+  if (RENDER_FLAG) renderer.setAnimationLoop(animate);
   renderer.domElement.id = 'rubix-cube';
   document.body.appendChild(renderer.domElement);
 
