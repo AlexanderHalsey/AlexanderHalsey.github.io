@@ -40,6 +40,11 @@
     z-index: 2;
   }
 
+  main > * > section {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
   h1,
   h2,
   h3,
@@ -47,27 +52,6 @@
   h5,
   h6 {
     color: var(--title-color);
-  }
-
-  main > * > section {
-    padding: 0 1.75rem;
-  }
-  @media (min-width: 768px) {
-    main > * > section {
-      padding: 0 3.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    main > * > section {
-      padding: 0 5.25rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    main > * > section {
-      padding: 0 7rem;
-    }
   }
 
   h1 {
