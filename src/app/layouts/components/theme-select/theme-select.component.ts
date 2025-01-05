@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   computed,
+  OnDestroy,
   Signal,
   signal,
   TemplateRef,
@@ -27,13 +28,18 @@ interface ThemeOption {
   imports: [ComputerIconComponent, DayIconComponent, DropdownMenuComponent, NightIconComponent],
   templateUrl: './theme-select.component.html',
 })
-export class ThemeSelectComponent implements AfterViewInit {
+export class ThemeSelectComponent implements AfterViewInit, OnDestroy {
   theme: Signal<Theme>;
   icons = viewChildren<TemplateRef<HTMLElement>>('icon');
 
   themeOptions = signal<readonly ThemeOption[]>([]);
+
   constructor(private themeService: ThemeService) {
     this.theme = themeService.get('theme');
+
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', this.onSystemChange);
   }
 
   ngAfterViewInit() {
@@ -44,9 +50,16 @@ export class ThemeSelectComponent implements AfterViewInit {
     ]);
   }
 
+  ngOnDestroy() {
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .removeEventListener('change', this.onSystemChange);
+  }
+
+  onSystemChange = () => this.setTheme('system');
+
   activeTheme = signal<string>(localStorage.getItem('theme') ?? 'system');
   themeOption = computed(() => {
-    console.log(this.themeOptions().find((option) => option.id === this.activeTheme()));
     return this.themeOptions().find((option) => option.id === this.activeTheme());
   });
 
@@ -54,8 +67,8 @@ export class ThemeSelectComponent implements AfterViewInit {
     window.getComputedStyle(document.body).getPropertyValue('--color-primary'),
   );
 
-  setTheme = (themeOption: ThemeOption) => {
-    this.themeService.setTheme(themeOption.id);
-    this.activeTheme.set(themeOption.id);
+  setTheme = (theme: ThemeOrSystem) => {
+    this.themeService.setTheme(theme);
+    this.activeTheme.set(theme);
   };
 }

@@ -1,4 +1,4 @@
-import { computed, Injectable, OnDestroy, Signal, signal } from '@angular/core';
+import { computed, Injectable, Signal, signal } from '@angular/core';
 
 const BACKGROUND_COLORS = {
   light: {
@@ -21,7 +21,7 @@ interface State {
 @Injectable({
   providedIn: 'root',
 })
-export class ThemeService implements OnDestroy {
+export class ThemeService {
   readonly state = signal<State>({
     theme: 'light',
   });
@@ -29,19 +29,7 @@ export class ThemeService implements OnDestroy {
 
   constructor() {
     this.setTheme((localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference);
-
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', this.onSystemChange);
   }
-
-  ngOnDestroy() {
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .removeEventListener('change', this.onSystemChange);
-  }
-
-  onSystemChange = () => this.setTheme('system');
 
   public get<K extends keyof State>(key: K): Signal<State[K]> {
     return computed(() => this.state()[key]);
