@@ -1,18 +1,17 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 import { createBackground1 } from './backgrounds';
 import { createRubixCube } from './rubixCube';
 import { createBezierCurveCamera1, createCamera1, moveCamera1 } from './cameras';
+import { ClassWatcher } from './classWatcher';
 
 const ORBIT_CONTROLS_FLAG = false;
 const RENDER_FLAG = false;
 
 export function renderBackground1(): THREE.WebGLRenderer {
   const scene = new THREE.Scene();
-  let theme: 'light' | 'dark' =
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+  const theme: 'light' | 'dark' = document.body.classList.contains('darkmode') ? 'dark' : 'light';
 
   scene.background = new THREE.Color(theme === 'light' ? '#f1efef' : '#0f192a');
 
@@ -49,8 +48,7 @@ export function renderBackground1(): THREE.WebGLRenderer {
     onWindowResize();
     animate();
   });
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-    theme = event.matches ? 'dark' : 'light';
+  const onThemeChange = (theme: 'light' | 'dark') => {
     scene.background = new THREE.Color(theme === 'light' ? '#f1efef' : '#0f192a');
     background1.children.forEach((line) => {
       ((line as THREE.Line).material as THREE.LineBasicMaterial).color = new THREE.Color(
@@ -58,8 +56,16 @@ export function renderBackground1(): THREE.WebGLRenderer {
       );
     });
     animate();
-  });
-
+  };
+  const classWatcher = new ClassWatcher(
+    document.body,
+    'darkmode',
+    () => onThemeChange('dark'),
+    () => onThemeChange('light'),
+  );
+  window.onbeforeunload = () => {
+    classWatcher.disconnect();
+  };
   return renderer;
 }
 
