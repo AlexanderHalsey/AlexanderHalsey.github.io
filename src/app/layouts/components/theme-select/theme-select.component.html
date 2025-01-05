@@ -1,7 +1,7 @@
 <app-dropdown-menu
   [menuItems]="themeOptions()"
   [activeItem]="themeOption()"
-  (select)="setTheme($event)"
+  (select)="setTheme($event.id)"
 >
   <ng-content ngProjectAs="activator">
     @if (theme() === 'light') {
