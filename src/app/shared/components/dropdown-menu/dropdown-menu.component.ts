@@ -1,13 +1,16 @@
 import {
   Component,
+  contentChild,
   ElementRef,
   input,
   output,
   Renderer2,
   signal,
   viewChild,
+  AfterContentChecked,
   Signal,
 } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 
 import { ThemeService } from '@/services/theme.service';
 
@@ -15,15 +18,18 @@ import { MenuItem } from '@/models';
 
 @Component({
   selector: 'app-dropdown-menu',
+  imports: [NgTemplateOutlet],
   templateUrl: './dropdown-menu.component.html',
 })
-export class DropdownMenuComponent<T extends MenuItem> {
-  menuItems = input.required<T[]>();
+export class DropdownMenuComponent<T extends MenuItem> implements AfterContentChecked {
+  menuItems = input.required<readonly T[]>();
   activatorTitle = input<string>();
+  activeItem = input<T>();
   select = output<T>();
 
   toggleButton = viewChild<ElementRef<HTMLButtonElement>>('toggleButton');
   menu = viewChild<ElementRef<HTMLMenuElement>>('menu');
+  activator = contentChild<ElementRef>('activator');
 
   isMenuOpen = signal(false);
 
@@ -34,17 +40,24 @@ export class DropdownMenuComponent<T extends MenuItem> {
     private themeService: ThemeService,
   ) {
     this.theme = themeService.get('theme');
-    this.renderer.listen('window', 'click', (e: Event) => {
+    this.renderer.listen('document', 'mousedown', (e: Event) => {
       const toggleButtonElement = this.toggleButton()?.nativeElement;
       const menuElement = this.menu()?.nativeElement;
       if (
         !!toggleButtonElement &&
         !!menuElement &&
-        e.target !== toggleButtonElement &&
-        e.target !== menuElement
+        !toggleButtonElement.contains(e.target as Node) &&
+        !menuElement.contains(e.target as Node)
       ) {
         this.isMenuOpen.set(false);
       }
+    });
+  }
+
+  ngAfterContentChecked() {
+    this.activator()?.nativeElement.addEventListener('click', (event: MouseEvent) => {
+      event.stopImmediatePropagation();
+      this.toggleMenuOpen(event, !this.isMenuOpen());
     });
   }
 

@@ -3,17 +3,33 @@
     @if (activatorTitle()) {
       {{ activatorTitle() }}
     } @else {
-      <ng-content select="activator" (click)="toggleMenuOpen($event, !isMenuOpen())" />
+      <ng-content select="activator" />
     }
   </button>
   <menu
     #menu
     class="absolute right-0 top-8 z-10 border rounded shadow-md"
-    [class]="[theme() === 'dark' ? 'bg-gray-700' : 'bg-white', isMenuOpen() ? 'block' : 'hidden']"
+    [class]="[
+      theme() === 'dark' ? 'border-gray-700' : 'border-gray-300',
+      theme() === 'dark' ? 'bg-gray-800' : 'bg-gray-100',
+      isMenuOpen() ? 'block' : 'hidden',
+    ]"
   >
     @for (menuItem of menuItems(); track $index) {
-      <li class="py-1 px-3 hover:bg-blue-200 hover:bg-opacity-30">
-        <button (click)="selectMenuItem($event, menuItem)">
+      <li
+        class="hover:bg-blue-200 hover:bg-opacity-30"
+        [class]="[
+          activeItem() === menuItem ? 'bg-blue-200' : '',
+          activeItem() === menuItem ? 'bg-opacity-30' : '',
+        ]"
+      >
+        <button
+          class="flex items-center w-full h-full py-1 px-3"
+          (click)="selectMenuItem($event, menuItem)"
+        >
+          @if (menuItem.icon) {
+            <div class="me-2"><ng-container [ngTemplateOutlet]="menuItem.icon" /></div>
+          }
           {{ menuItem.label }}
         </button>
       </li>
