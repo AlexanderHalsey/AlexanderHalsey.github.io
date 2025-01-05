@@ -1,9 +1,11 @@
-import { Component, input } from '@angular/core';
+import { Component, input, Signal } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 import { CardComponent } from '../card/card.component';
 
+import { ThemeService } from '@/services/theme.service';
+
 import { TimelineItem } from '@/models';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-timeline',
@@ -12,4 +14,10 @@ import { DatePipe } from '@angular/common';
 })
 export class TimelineComponent<T extends TimelineItem> {
   items = input.required<T[]>();
+
+  theme: Signal<string>;
+
+  constructor(private themeService: ThemeService) {
+    this.theme = themeService.get('theme');
+  }
 }

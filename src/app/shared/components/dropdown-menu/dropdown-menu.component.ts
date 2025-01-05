@@ -1,10 +1,20 @@
-import { Component, ElementRef, input, output, Renderer2, signal, viewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  input,
+  output,
+  Renderer2,
+  signal,
+  viewChild,
+  Signal,
+} from '@angular/core';
+
+import { ThemeService } from '@/services/theme.service';
 
 import { MenuItem } from '@/models';
 
 @Component({
   selector: 'app-dropdown-menu',
-  imports: [],
   templateUrl: './dropdown-menu.component.html',
 })
 export class DropdownMenuComponent<T extends MenuItem> {
@@ -17,7 +27,13 @@ export class DropdownMenuComponent<T extends MenuItem> {
 
   isMenuOpen = signal(false);
 
-  constructor(private renderer: Renderer2) {
+  theme: Signal<string>;
+
+  constructor(
+    private renderer: Renderer2,
+    private themeService: ThemeService,
+  ) {
+    this.theme = themeService.get('theme');
     this.renderer.listen('window', 'click', (e: Event) => {
       const toggleButtonElement = this.toggleButton()?.nativeElement;
       const menuElement = this.menu()?.nativeElement;

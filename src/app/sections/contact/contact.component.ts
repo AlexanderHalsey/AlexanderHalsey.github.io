@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, computed, Signal } from '@angular/core';
 
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 
-import { useTheme } from '@/composables/theme.composable';
+import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,5 +11,8 @@ import { useTheme } from '@/composables/theme.composable';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent {
-  theme = useTheme();
+  backgroundColor: Signal<string>;
+  constructor(private themeService: ThemeService) {
+    this.backgroundColor = computed(() => themeService.backgroundColors().background2);
+  }
 }
