@@ -1,10 +1,9 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, Signal } from '@angular/core';
 
 import { TimelineComponent } from '@/components/timeline/timeline.component';
 
-import { useTheme } from '@/composables/theme.composable';
-
 import type { TimelineItem } from '@/models';
+import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-experience',
@@ -12,7 +11,10 @@ import type { TimelineItem } from '@/models';
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
-  theme = useTheme();
+  backgroundColor: Signal<string>;
+  constructor(private themeService: ThemeService) {
+    this.backgroundColor = computed(() => themeService.backgroundColors().background1);
+  }
 
   experience = computed<TimelineItem[]>(() => [
     {

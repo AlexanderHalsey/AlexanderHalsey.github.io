@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 
 import { HamburgerMenuComponent } from '../components/hamburger-menu/hamburger-menu.component';
 import { LanguageSelectComponent } from '../components/language-select/language-select.component';
 import { ThemeSelectComponent } from '../components/theme-select/theme-select.component';
 
-import { useDisplay } from '@/composables/display.composable';
+import { DisplayService } from '@/services/display.service';
 
 import type { SelectorItem } from '@/models';
+import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -14,7 +15,16 @@ import type { SelectorItem } from '@/models';
   templateUrl: './top-bar.component.html',
 })
 export class TopBarComponent {
-  display = useDisplay();
+  isMobile: Signal<boolean>;
+  theme: Signal<string>;
+
+  constructor(
+    private displayService: DisplayService,
+    private themeService: ThemeService,
+  ) {
+    this.isMobile = displayService.get('isMobile');
+    this.theme = themeService.get('theme');
+  }
 
   selectorItems: SelectorItem[] = [
     { selector: '#aboutMe', label: $localize`About me` },

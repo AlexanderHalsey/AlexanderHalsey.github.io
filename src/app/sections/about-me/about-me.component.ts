@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { useTheme } from '@/composables/theme.composable';
+import { Component, computed, Signal } from '@angular/core';
+
+import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,5 +8,8 @@ import { useTheme } from '@/composables/theme.composable';
   templateUrl: './about-me.component.html',
 })
 export class AboutMeComponent {
-  theme = useTheme();
+  backgroundColor: Signal<string>;
+  constructor(private themeService: ThemeService) {
+    this.backgroundColor = computed(() => themeService.backgroundColors().background1);
+  }
 }

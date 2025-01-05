@@ -1,6 +1,7 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, Signal } from '@angular/core';
 
-import { useTheme } from '@/composables/theme.composable';
+import { Theme, ThemeService } from '@/services/theme.service';
+import { getColorGradients } from '@/helpers/theme.helper';
 
 @Component({
   selector: 'app-layered-peaks-3',
@@ -38,10 +39,13 @@ import { useTheme } from '@/composables/theme.composable';
   `,
 })
 export class LayeredPeaks3Component {
-  theme = useTheme();
+  theme: Signal<Theme>;
+  constructor(private themeService: ThemeService) {
+    this.theme = themeService.get('theme');
+  }
 
-  startColor = computed(() => (this.theme.theme() === 'light' ? '#89bff5' : '#2769ab'));
-  colors = computed(() =>
-    this.theme.getGradients(this.startColor(), this.theme.backgroundColor2(), 5),
-  );
+  backgroundColor = computed(() => this.themeService.backgroundColors().background2);
+  startColor = computed(() => (this.theme() === 'light' ? '#89bff5' : '#2769ab'));
+
+  colors = computed(() => getColorGradients(this.startColor(), this.backgroundColor(), 5));
 }

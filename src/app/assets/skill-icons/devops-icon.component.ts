@@ -1,6 +1,6 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, Signal } from '@angular/core';
 
-import { useTheme } from '@/composables/theme.composable';
+import { Theme, ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-devops-icon',
@@ -82,7 +82,10 @@ import { useTheme } from '@/composables/theme.composable';
   host: { class: '[&>svg]:w-10 [&>svg]:h-10' },
 })
 export class DevopsIconComponent {
-  theme = useTheme();
+  theme: Signal<Theme>;
+  constructor(private themeService: ThemeService) {
+    this.theme = themeService.get('theme');
+  }
 
-  color = computed(() => (this.theme.theme() === 'light' ? '#000000' : '#ffffff'));
+  color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
 }
