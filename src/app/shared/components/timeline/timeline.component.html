@@ -1,31 +1,70 @@
 <div class="relative">
   @for (item of items(); track $index) {
-    <div class="flex my-6">
+    <div
+      class="flex"
+      [class]="{
+        'mb-8': $index !== items.length - 1,
+        'mt-8': $index !== 0,
+      }"
+    >
       <div
-        class="relative flex flex-col items-end mt-4 w-32"
-        [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
+        class="relative flex flex-col items-end mt-6 w-32"
+        [class]="{
+          'w-32': !isMobile(),
+          'w-8': isMobile(),
+          'text-gray-300': theme() === 'light',
+        }"
       >
-        <div>{{ item.startDate | date }}</div>
-        @if (item.endDate) {
-          <div>- {{ item.endDate | date }}</div>
-        }
-        <div class="absolute left-[10.3rem] z-[1] rounded-full">
-          <app-icon
-            iconName="arrow-right"
-            [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
+        @if (!isMobile()) {
+          <ng-container
+            [ngTemplateOutlet]="title"
+            [ngTemplateOutletContext]="{ $implicit: item }"
           />
+        }
+        <!-- icon delineating start of new item -->
+        <div
+          class="absolute z-[1] rounded-full"
+          [class]="{
+            'left-[0.3rem]': isMobile(),
+            'right-[-3.7rem]': !isMobile(),
+          }"
+        >
+          <app-icon iconName="arrow-right" />
         </div>
+        <!-- timeline line connecting events -->
+        <div
+          class="absolute top-1 border-l-2 border-border-color"
+          [class]="{
+            'h-[calc(100%+4rem)]': $index !== items().length - 1,
+            'h-[calc(100%-1.5rem)]': $index === items().length - 1,
+            'right-[-3rem]': !isMobile(),
+            'left-4': isMobile(),
+          }"
+        ></div>
       </div>
+
       <app-card
-        class="max-w-prose w-full ml-24"
-        [class]="[
-          theme() === 'light' ? '[&>*]:bg-gray-200' : '[&>*]:bg-gray-800',
-          theme() === 'light' ? '[&>*]:shadow-zinc-600' : '[&>*]:shadow-zinc-700',
-        ]"
+        class="max-w-prose w-full grow"
+        [class]="{
+          'ml-24': !isMobile(),
+          'ml-12': isMobile(),
+        }"
       >
+        @if (isMobile()) {
+          <ng-container
+            [ngTemplateOutlet]="title"
+            [ngTemplateOutletContext]="{ $implicit: item }"
+          />
+        }
         {{ item.description }}
       </app-card>
     </div>
   }
-  <div class="absolute h-[calc(100%-2rem)] top-6 left-44 border-l-2 border-border-color"></div>
 </div>
+
+<ng-template #title let-item>
+  <div>{{ item.startDate | date }}</div>
+  @if (item.endDate) {
+    <div>- {{ item.endDate | date }}</div>
+  }
+</ng-template>

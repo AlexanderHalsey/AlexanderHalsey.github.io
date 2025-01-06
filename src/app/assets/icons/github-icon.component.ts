@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 
+import { IconComponentDefinition } from '@/models/Icon';
+
 @Component({
   selector: 'app-github-icon',
   template: `
@@ -31,7 +33,7 @@ import { Component, input } from '@angular/core';
     </svg>
   `,
 })
-export class GithubIconComponent {
+export class GithubIconComponent implements IconComponentDefinition {
   size = input.required<string | number>();
   color = input.required<string>();
 }

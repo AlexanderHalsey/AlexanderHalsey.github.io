@@ -8,31 +8,33 @@
   </button>
   <menu
     #menu
-    class="absolute right-0 top-8 z-10 border rounded shadow-md"
-    [class]="[
-      theme() === 'dark' ? 'border-gray-700' : 'border-gray-300',
-      theme() === 'dark' ? 'bg-gray-800' : 'bg-gray-100',
-      isMenuOpen() ? 'block' : 'hidden',
-    ]"
+    class="absolute right-0 top-8 z-10 shadow-md"
+    [class]="[isMenuOpen() ? 'block' : 'hidden']"
   >
-    @for (menuItem of menuItems(); track $index) {
-      <li
-        class="hover:bg-blue-200 hover:bg-opacity-30"
-        [class]="[
-          activeItem() === menuItem ? 'bg-blue-200' : '',
-          activeItem() === menuItem ? 'bg-opacity-30' : '',
-        ]"
-      >
-        <button
-          class="flex items-center w-full h-full py-1 px-3"
-          (click)="selectMenuItem($event, menuItem)"
+    <app-card class="[&>*>*]:p-0 [&>*>*]:py-1">
+      @for (menuItem of menuItems(); track $index) {
+        <li
+          class="hover:bg-blue-200 hover:bg-opacity-30"
+          [class]="{
+            'bg-blue-200 bg-opacity-30': activeItem() === menuItem,
+          }"
         >
-          @if (menuItem.icon) {
-            <div class="me-2"><ng-container [ngTemplateOutlet]="menuItem.icon" /></div>
-          }
-          {{ menuItem.label }}
-        </button>
-      </li>
-    }
+          <button
+            class="flex items-center w-full h-full py-1 px-3"
+            (click)="selectMenuItem($event, menuItem)"
+          >
+            @if (menuItem.icon) {
+              <app-icon
+                [iconName]="menuItem.icon.name"
+                [size]="menuItem.icon.size ?? '16'"
+                [color]="menuItem.icon.color ?? 'currentcolor'"
+                class="me-2"
+              />
+            }
+            {{ menuItem.label }}
+          </button>
+        </li>
+      }
+    </app-card>
   </menu>
 </div>

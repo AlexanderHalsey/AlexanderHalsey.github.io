@@ -1,18 +1,17 @@
 import { computed, Injectable, Signal, signal } from '@angular/core';
 
-const BACKGROUND_COLORS = {
+import { Theme, ThemeOrSystem } from '@/models';
+
+export const BACKGROUND_COLORS = {
   light: {
-    background1: '#bf5252',
-    background2: '#3d9464',
+    background1: '#a16d6d',
+    background2: '#507862',
   },
   dark: {
     background1: '#0d0909',
     background2: '#0a1710',
   },
 } as const;
-
-export type Theme = 'light' | 'dark';
-export type ThemeOrSystem = Theme | 'system';
 
 interface State {
   theme: Theme;

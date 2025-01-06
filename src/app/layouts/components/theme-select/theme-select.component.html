@@ -1,5 +1,5 @@
 <app-dropdown-menu
-  [menuItems]="themeOptions()"
+  [menuItems]="themeOptions"
   [activeItem]="themeOption()"
   (select)="setTheme($event.id)"
 >
@@ -13,13 +13,3 @@
     </div>
   </ng-content>
 </app-dropdown-menu>
-
-<ng-template #icon>
-  <app-icon iconName="day" size="16" />
-</ng-template>
-<ng-template #icon>
-  <app-icon iconName="night" size="16" />
-</ng-template>
-<ng-template #icon>
-  <app-icon iconName="computer" size="16" />
-</ng-template>

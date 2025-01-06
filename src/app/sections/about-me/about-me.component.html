@@ -1,21 +1,9 @@
 <section
-  class="flex flex-col items-center py-24 text-lg"
+  class="flex flex-col items-center pt-12 pb-48 text-lg"
   [style.background-color]="backgroundColor()"
 >
-  <h2
-    id="aboutMe"
-    i18n
-    class="mb-12"
-    [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
-  >
-    About me
-  </h2>
-  <app-card
-    [class]="[
-      theme() === 'light' ? '[&>*]:bg-gray-200' : '[&>*]:bg-gray-800',
-      theme() === 'light' ? '[&>*]:shadow-zinc-600' : '[&>*]:shadow-zinc-700',
-    ]"
-  >
+  <h2 id="aboutMe" i18n class="mb-12 text-gray-300">About me</h2>
+  <div class="xl:flex">
     <img
       ngSrc="me.png"
       i18n-alt
@@ -23,27 +11,35 @@
       width="456"
       height="400"
       priority
-      class="md:float-left md:me-4 mb-4"
+      class="object-contain object-top md:float-left xl:float-none"
     />
-    <p i18n class="text-xl mb-8">Hi there! 👋</p>
-    <p i18n class="mb-8">
-      You guessed it—I like Rubik's cubes. But what I’m even more passionate about is coding! I’m a
-      full-stack web developer with a love for building beautiful and functional web applications.
-    </p>
-    <p i18n class="mb-8">
-      My journey into programming began as a hobby in 2020. I started with little knowledge and a
-      lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired skills
-      to create a donation management system for a Buddhist institute. It was a challenging
-      experience filled with mistakes, but each one became a stepping stone for growth.
-    </p>
-    <p i18n class="mb-8">
-      Those early days taught me that making mistakes isn’t just part of the process—it’s how we
-      improve. Over time, my passion for problem-solving and creativity in coding has only grown
-      stronger, driving me to constantly learn, experiment, and refine my craft.
-    </p>
-    <p i18n class="mb-8">
-      When I’m not coding or solving puzzles, I’m usually exploring new technologies or thinking up
-      creative ways to make the web a better place. Let’s build something amazing together!
-    </p>
-  </app-card>
+    <div
+      class="mt-8 md:mt-0"
+      [class]="{
+        'text-gray-300': theme() === 'light',
+      }"
+    >
+      <p i18n class="text-xl mb-6">Hi there! 👋</p>
+      <p i18n class="mb-6">
+        You guessed it—I like Rubik's cubes. But what I’m even more passionate about is coding! I’m
+        a full-stack web developer with a love for building beautiful and functional web
+        applications.
+      </p>
+      <p i18n class="mb-6">
+        My journey into programming began as a hobby in 2020. I started with little knowledge and a
+        lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired
+        skills to create a donation management system for a Buddhist institute. It was a challenging
+        experience filled with mistakes, but each one became a stepping stone for growth.
+      </p>
+      <p i18n class="mb-6">
+        Those early days taught me that making mistakes isn’t just part of the process—it’s how we
+        improve. Over time, my passion for problem-solving and creativity in coding has only grown
+        stronger, driving me to constantly learn, experiment, and refine my craft.
+      </p>
+      <p i18n>
+        When I’m not coding or solving puzzles, I’m usually exploring new technologies or thinking
+        up creative ways to make the web a better place. Let’s build something amazing together!
+      </p>
+    </div>
+  </div>
 </section>

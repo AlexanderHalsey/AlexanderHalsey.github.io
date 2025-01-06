@@ -10,7 +10,9 @@ import {
   AfterContentChecked,
   Signal,
 } from '@angular/core';
-import { NgTemplateOutlet } from '@angular/common';
+
+import { CardComponent } from '../card/card.component';
+import { IconComponent } from '../icon/icon.component';
 
 import { ThemeService } from '@/services/theme.service';
 
@@ -18,23 +20,24 @@ import { MenuItem } from '@/models';
 
 @Component({
   selector: 'app-dropdown-menu',
-  imports: [NgTemplateOutlet],
+  imports: [CardComponent, IconComponent],
   templateUrl: './dropdown-menu.component.html',
 })
 export class DropdownMenuComponent<T extends MenuItem> implements AfterContentChecked {
   menuItems = input.required<readonly T[]>();
-  activatorTitle = input<string>();
   activeItem = input<T>();
+
+  activatorTitle = input<string>();
+  activator = contentChild<ElementRef>('activator');
+
   select = output<T>();
 
   toggleButton = viewChild<ElementRef<HTMLButtonElement>>('toggleButton');
   menu = viewChild<ElementRef<HTMLMenuElement>>('menu');
-  activator = contentChild<ElementRef>('activator');
 
   isMenuOpen = signal(false);
 
   theme: Signal<string>;
-
   constructor(
     private renderer: Renderer2,
     private themeService: ThemeService,

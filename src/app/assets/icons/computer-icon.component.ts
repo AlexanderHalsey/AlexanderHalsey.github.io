@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 
+import { IconComponentDefinition } from '@/models/Icon';
+
 @Component({
   selector: 'app-computer-icon',
   imports: [],
@@ -20,9 +22,7 @@ import { Component, input } from '@angular/core';
     </svg>
   `,
 })
-export class ComputerIconComponent {
+export class ComputerIconComponent implements IconComponentDefinition {
   size = input.required<string | number>();
   color = input.required<string>();
-
-  // color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
 }

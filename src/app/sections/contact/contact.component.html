@@ -1,16 +1,10 @@
 <section
   id="contact"
-  class="flex flex-col items-center"
+  class="flex flex-col items-center pt-8 pb-24"
   [style.background-color]="backgroundColor()"
 >
-  <h2
-    i18n
-    class="text-gray-200 pb-12"
-    [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
-  >
-    Contact
-  </h2>
-  <div class="flex mt-12 text-gray-200">
+  <h2 i18n class="pb-12 text-gray-200">Contact</h2>
+  <div class="flex text-gray-300">
     <app-contact-info class="pr-12" />
     <app-contact-form />
   </div>
