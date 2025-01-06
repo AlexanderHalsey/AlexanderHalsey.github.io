@@ -1,14 +1,11 @@
-import { Component, computed, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-mobile-development-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -22,13 +19,8 @@ import { Theme, ThemeService } from '@/services/theme.service';
       />
     </svg>
   `,
-  host: { class: '[&>svg]:w-10 [&>svg]:h-10' },
 })
 export class MobileDevelopmentIconComponent {
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
-  color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
+  size = input.required<string | number>();
+  color = input.required<string>();
 }

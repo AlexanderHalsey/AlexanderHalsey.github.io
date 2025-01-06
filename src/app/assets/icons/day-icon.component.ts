@@ -1,15 +1,11 @@
-import { Component, computed, input, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
-
+import { Component, input } from '@angular/core';
 @Component({
   selector: 'app-day-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      [attr.fill]="computedColor()"
-      width="800px"
-      height="800px"
+      [attr.fill]="color()"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 240 240"
       version="1.1"
       id="Layer_1"
@@ -25,16 +21,12 @@ import { Theme, ThemeService } from '@/services/theme.service';
       </g>
     </svg>
   `,
-  host: { class: '[&>svg]:w-4 [&>svg]:h-4' },
 })
 export class DayIconComponent {
-  color = input<string>();
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
+  size = input.required<string | number>();
+  color = input.required<string>();
 
-  computedColor = computed(
-    () => this.color() ?? (this.theme() === 'light' ? '#000000' : '#ffffff'),
-  );
+  // computedColor = computed(
+  //   () => this.color() ?? (this.theme() === 'light' ? '#000000' : '#ffffff'),
+  // );
 }

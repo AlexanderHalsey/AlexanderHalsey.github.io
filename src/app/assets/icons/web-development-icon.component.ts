@@ -1,19 +1,16 @@
-import { Component, computed, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-web-development-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
       [attr.fill]="color()"
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 419.931 419.931"
       xml:space="preserve"
     >
@@ -78,13 +75,8 @@ import { Theme, ThemeService } from '@/services/theme.service';
       </g>
     </svg>
   `,
-  host: { class: '[&>svg]:w-8 [&>svg]:h-8' },
 })
 export class WebDevelopmentIconComponent {
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
-  color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
+  size = input.required<string | number>();
+  color = input.required<string>();
 }

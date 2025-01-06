@@ -1,14 +1,11 @@
-import { Component, computed, input, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-github-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +18,7 @@ import { Theme, ThemeService } from '@/services/theme.service';
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-140.000000, -7559.000000)"
-          [attr.fill]="computedColor()"
+          [attr.fill]="color()"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path
@@ -33,16 +30,8 @@ import { Theme, ThemeService } from '@/services/theme.service';
       </g>
     </svg>
   `,
-  host: { class: '[&>svg]:w-6 [&>svg]:h-6' },
 })
 export class GithubIconComponent {
-  color = input<string>();
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
-  computedColor = computed(
-    () => this.color() ?? (this.theme() === 'light' ? '#000000' : '#ffffff'),
-  );
+  size = input.required<string | number>();
+  color = input.required<string>();
 }

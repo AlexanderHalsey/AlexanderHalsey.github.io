@@ -1,14 +1,11 @@
-import { Component, computed, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-arrow-right-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,13 +20,8 @@ import { Theme, ThemeService } from '@/services/theme.service';
       />
     </svg>
   `,
-  host: { class: '[&>svg]:w-6 [&>svg]:h-6' },
 })
 export class ArrowRightIconComponent {
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
-  color = computed(() => (this.theme() === 'light' ? '#e5e7eb' : '#9ca3af'));
+  size = input.required<string | number>();
+  color = input.required<string>();
 }

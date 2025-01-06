@@ -5,9 +5,9 @@ import { LanguageSelectComponent } from '../components/language-select/language-
 import { ThemeSelectComponent } from '../components/theme-select/theme-select.component';
 
 import { DisplayService } from '@/services/display.service';
+import { ThemeService } from '@/services/theme.service';
 
 import type { SelectorItem } from '@/models';
-import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-top-bar',

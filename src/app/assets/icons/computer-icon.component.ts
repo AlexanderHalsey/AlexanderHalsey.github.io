@@ -1,15 +1,12 @@
-import { Component, computed, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-computer-icon',
   imports: [],
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -22,13 +19,10 @@ import { Theme, ThemeService } from '@/services/theme.service';
       />
     </svg>
   `,
-  host: { class: '[&>svg]:w-4 [&>svg]:h-4' },
 })
 export class ComputerIconComponent {
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
+  size = input.required<string | number>();
+  color = input.required<string>();
 
-  color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
+  // color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
 }

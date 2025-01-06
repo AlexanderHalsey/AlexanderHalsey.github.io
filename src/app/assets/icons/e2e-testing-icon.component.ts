@@ -1,14 +1,11 @@
-import { Component, computed, Signal } from '@angular/core';
-
-import { Theme, ThemeService } from '@/services/theme.service';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-e2e-testing-icon',
   template: `
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
     <svg
-      width="800px"
-      height="800px"
+      [attr.width]="size() + 'px'"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 24 24"
       id="Layer_1"
       data-name="Layer 1"
@@ -36,13 +33,8 @@ import { Theme, ThemeService } from '@/services/theme.service';
       <line class="cls-1" x1="4.39" y1="16.77" x2="6.3" y2="16.77" />
     </svg>
   `,
-  host: { class: '[&>svg]:w-10 [&>svg]:h-8' },
 })
 export class E2ETestingIconComponent {
-  theme: Signal<Theme>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
-  color = computed(() => (this.theme() === 'light' ? '#000000' : '#ffffff'));
+  size = input.required<string | number>();
+  color = input.required<string>();
 }

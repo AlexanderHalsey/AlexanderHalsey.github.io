@@ -10,7 +10,10 @@
           <div>- {{ item.endDate | date }}</div>
         }
         <div class="absolute left-[10.3rem] z-[1] rounded-full">
-          <app-arrow-right-icon />
+          <app-icon
+            iconName="arrow-right"
+            [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
+          />
         </div>
       </div>
       <app-card
