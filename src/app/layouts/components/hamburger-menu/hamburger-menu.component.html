@@ -1,3 +1,5 @@
 <app-dropdown-menu [menuItems]="selectorItems()" (select)="goTo.emit($event)">
-  <ng-content ngProjectAs="activator">HHH</ng-content>
+  <ng-content ngProjectAs="activator">
+    <div #activator><app-hamburger-icon /></div>
+  </ng-content>
 </app-dropdown-menu>

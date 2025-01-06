@@ -3,7 +3,13 @@
   class="flex flex-col items-center"
   [style.background-color]="backgroundColor()"
 >
-  <h2 i18n class="text-gray-200">Contact</h2>
+  <h2
+    i18n
+    class="text-gray-200 pb-12"
+    [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
+  >
+    Contact
+  </h2>
   <div class="flex mt-12 text-gray-200">
     <app-contact-info class="pr-12" />
     <app-contact-form />

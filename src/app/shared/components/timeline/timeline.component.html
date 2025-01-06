@@ -1,19 +1,28 @@
 <div class="relative">
   @for (item of items(); track $index) {
-    <div class="flex my-4">
-      <div class="mt-2 pr-8">
+    <div class="flex my-6">
+      <div
+        class="relative flex flex-col items-end mt-4 w-32"
+        [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']"
+      >
         <div>{{ item.startDate | date }}</div>
         @if (item.endDate) {
           <div>- {{ item.endDate | date }}</div>
         }
+        <div class="absolute left-[10.3rem] z-[1] rounded-full">
+          <app-arrow-right-icon />
+        </div>
       </div>
-      <app-card class="w-96">
+      <app-card
+        class="max-w-prose w-full ml-24"
+        [class]="[
+          theme() === 'light' ? '[&>*]:bg-gray-200' : '[&>*]:bg-gray-800',
+          theme() === 'light' ? '[&>*]:shadow-zinc-600' : '[&>*]:shadow-zinc-700',
+        ]"
+      >
         {{ item.description }}
       </app-card>
     </div>
   }
-  <div
-    class="absolute top-0 h-full border border-x-1"
-    [class]="[theme() === 'dark' ? 'border-gray-700' : 'border-gray-300']"
-  ></div>
+  <div class="absolute h-[calc(100%-2rem)] top-6 left-44 border-l-2 border-border-color"></div>
 </div>

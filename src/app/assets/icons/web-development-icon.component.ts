@@ -78,7 +78,7 @@ import { Theme, ThemeService } from '@/services/theme.service';
       </g>
     </svg>
   `,
-  host: { class: '[&>svg]:w-10 [&>svg]:h-10' },
+  host: { class: '[&>svg]:w-8 [&>svg]:h-8' },
 })
 export class WebDevelopmentIconComponent {
   theme: Signal<Theme>;
