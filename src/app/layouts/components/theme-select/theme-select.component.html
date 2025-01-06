@@ -4,20 +4,22 @@
   (select)="setTheme($event.id)"
 >
   <ng-content ngProjectAs="activator">
-    @if (theme() === 'light') {
-      <div #activator><app-day-icon [color]="activatorColor()" /></div>
-    } @else {
-      <div #activator><app-night-icon [color]="activatorColor()" /></div>
-    }
+    <div #activator>
+      <app-icon
+        [iconName]="theme() === 'light' ? 'day' : 'night'"
+        size="16"
+        class="text-color-primary"
+      />
+    </div>
   </ng-content>
 </app-dropdown-menu>
 
 <ng-template #icon>
-  <app-day-icon />
+  <app-icon iconName="day" size="16" />
 </ng-template>
 <ng-template #icon>
-  <app-night-icon />
+  <app-icon iconName="night" size="16" />
 </ng-template>
 <ng-template #icon>
-  <app-computer-icon />
+  <app-icon iconName="computer" size="16" />
 </ng-template>

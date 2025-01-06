@@ -2,8 +2,9 @@ import { Component, computed, Signal } from '@angular/core';
 
 import { TimelineComponent } from '@/components/timeline/timeline.component';
 
-import type { TimelineItem } from '@/models';
 import { Theme, ThemeService } from '@/services/theme.service';
+
+import type { TimelineItem } from '@/models';
 
 @Component({
   selector: 'app-experience',

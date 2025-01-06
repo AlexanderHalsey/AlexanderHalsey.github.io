@@ -10,10 +10,7 @@ import {
 } from '@angular/core';
 
 import { DropdownMenuComponent } from '@/components/dropdown-menu/dropdown-menu.component';
-
-import { ComputerIconComponent } from '@/assets/icons/computer-icon.component';
-import { DayIconComponent } from '@/assets/icons/day-icon.component';
-import { NightIconComponent } from '@/assets/icons/night-icon.component';
+import { IconComponent } from '@/components/icon/icon.component';
 
 import { Theme, ThemeOrSystem, ThemeService } from '@/services/theme.service';
 
@@ -25,7 +22,7 @@ interface ThemeOption {
 
 @Component({
   selector: 'app-theme-select',
-  imports: [ComputerIconComponent, DayIconComponent, DropdownMenuComponent, NightIconComponent],
+  imports: [IconComponent, DropdownMenuComponent],
   templateUrl: './theme-select.component.html',
 })
 export class ThemeSelectComponent implements AfterViewInit, OnDestroy {
