@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 
+import { IconComponentDefinition } from '@/models/Icon';
+
 @Component({
   selector: 'app-mobile-development-icon',
   template: `
@@ -20,7 +22,7 @@ import { Component, input } from '@angular/core';
     </svg>
   `,
 })
-export class MobileDevelopmentIconComponent {
+export class MobileDevelopmentIconComponent implements IconComponentDefinition {
   size = input.required<string | number>();
   color = input.required<string>();
 }

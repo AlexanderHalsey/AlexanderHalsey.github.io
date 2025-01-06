@@ -3,7 +3,9 @@ import { Component, computed, Signal } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 
-import { Theme, ThemeService } from '@/services/theme.service';
+import { ThemeService } from '@/services/theme.service';
+
+import { Theme } from '@/models';
 
 @Component({
   selector: 'app-contact',

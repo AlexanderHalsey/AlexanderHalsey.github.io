@@ -1,24 +1,22 @@
 <nav
-  class="flex py-3 px-6 items-center sticky top-0 backdrop-blur-2xl border-b"
-  [class]="[theme() === 'dark' ? 'border-b-gray-700' : 'border-b-gray-300']"
+  class="flex py-3 px-6 items-center sticky top-0 backdrop-blur-2xl border-b border-border-color"
 >
   <div class="grow">
-    <button (click)="scrollTo({ selector: '#landing', label: '' })">
-      <img #logo src="rubix-logo.svg" i18n-alt alt="logo" class="w-6 h-6" />
+    <button (click)="scrollTo('#landing')">
+      <img #logo ngSrc="rubix-logo.svg" i18n-alt alt="logo" width="24" height="24" />
     </button>
   </div>
   @if (!isMobile()) {
     <menu class="flex">
       @for (selectorItem of selectorItems; track $index) {
         <li class="py-1 font-semibold px-4 hover:text-color-primary">
-          <button (click)="scrollTo(selectorItem)">{{ selectorItem.label }}</button>
+          <button (click)="scrollTo(selectorItem.selector)">
+            <h5>{{ selectorItem.label }}</h5>
+          </button>
         </li>
       }
     </menu>
-    <div
-      class="ml-5 mr-8 border-l h-7"
-      [class]="[theme() === 'dark' ? 'border-l-gray-700' : 'border-l-gray-300']"
-    ></div>
+    <div class="ml-5 mr-8 border-l border-border-color h-7"></div>
   }
   <app-theme-select class="mt-1" />
   <app-language-select class="ml-8" />
@@ -26,7 +24,7 @@
     <app-hamburger-menu
       [selectorItems]="selectorItems"
       class="mt-1 ml-8"
-      (goTo)="scrollTo($event)"
+      (goTo)="scrollTo($event.selector)"
     />
   }
 </nav>

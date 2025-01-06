@@ -3,8 +3,6 @@
   class="flex flex-col items-center pb-24"
   [style.background-color]="backgroundColor()"
 >
-  <h2 i18n class="mb-12" [class]="[theme() === 'light' ? 'text-gray-200' : 'text-gray-400']">
-    Experience
-  </h2>
+  <h2 i18n class="mb-12 text-gray-300">Experience</h2>
   <app-timeline [items]="experience()" />
 </section>

@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 
+import { IconComponentDefinition } from '@/models/Icon';
+
 @Component({
   selector: 'app-night-icon',
   template: `
@@ -27,11 +29,7 @@ import { Component, input } from '@angular/core';
     </svg>
   `,
 })
-export class NightIconComponent {
+export class NightIconComponent implements IconComponentDefinition {
   size = input.required<string | number>();
   color = input.required<string>();
-
-  // computedColor = computed(
-  //   () => this.color() ?? (this.theme() === 'light' ? '#000000' : '#ffffff'),
-  // );
 }

@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 
+import { IconComponentDefinition } from '@/models/Icon';
+
 @Component({
   selector: 'app-e2e-testing-icon',
   template: `
@@ -34,7 +36,7 @@ import { Component, input } from '@angular/core';
     </svg>
   `,
 })
-export class E2ETestingIconComponent {
+export class E2ETestingIconComponent implements IconComponentDefinition {
   size = input.required<string | number>();
   color = input.required<string>();
 }
