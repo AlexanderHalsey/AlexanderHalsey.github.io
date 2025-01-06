@@ -1,5 +1,5 @@
 <nav
-  class="flex p-3 items-center top-0 backdrop-blur-2xl border-b"
+  class="flex py-3 px-6 items-center sticky top-0 backdrop-blur-2xl border-b"
   [class]="[theme() === 'dark' ? 'border-b-gray-700' : 'border-b-gray-300']"
 >
   <div class="grow">
@@ -23,6 +23,10 @@
   <app-theme-select class="mt-1" />
   <app-language-select class="ml-8" />
   @if (isMobile()) {
-    <app-hamburger-menu [selectorItems]="selectorItems" class="ml-4" (goTo)="scrollTo($event)" />
+    <app-hamburger-menu
+      [selectorItems]="selectorItems"
+      class="mt-1 ml-8"
+      (goTo)="scrollTo($event)"
+    />
   }
 </nav>

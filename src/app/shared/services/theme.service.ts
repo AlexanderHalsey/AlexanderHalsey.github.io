@@ -6,8 +6,8 @@ const BACKGROUND_COLORS = {
     background2: '#3d9464',
   },
   dark: {
-    background1: '#301616',
-    background2: '#0f2e1d',
+    background1: '#0d0909',
+    background2: '#0a1710',
   },
 } as const;
 
