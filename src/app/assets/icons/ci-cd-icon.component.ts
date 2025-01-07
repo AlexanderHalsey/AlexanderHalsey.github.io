@@ -8,8 +8,7 @@ import { IconComponentDefinition } from '@/models/Icon';
     <svg
       [attr.fill]="color()"
       [attr.width]="size() + 'px'"
-      [attr.width]="size() + 'px'"
-      height="800px"
+      [attr.height]="size() + 'px'"
       viewBox="0 0 36 36"
       xmlns="http://www.w3.org/2000/svg"
     >

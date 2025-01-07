@@ -16,7 +16,8 @@
         <li
           class="hover:bg-blue-200 hover:bg-opacity-30"
           [class]="{
-            'bg-blue-200 bg-opacity-30': activeItem() === menuItem,
+            'bg-opacity-30': activeItem() === menuItem,
+            'bg-blue-200': activeItem() === menuItem,
           }"
         >
           <button
