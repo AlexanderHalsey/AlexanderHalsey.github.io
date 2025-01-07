@@ -1,0 +1,10 @@
+<input
+  [type]="type()"
+  [placeholder]="placeholder()"
+  class="w-full rounded-md bg-bg-color p-2 border border-border-color"
+  [class]="{
+    'bg-bg-color': theme() === 'light',
+    'bg-gray-100': theme() === 'dark',
+    'text-black': theme() === 'dark',
+  }"
+/>
