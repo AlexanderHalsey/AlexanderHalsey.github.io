@@ -1,11 +1,57 @@
-<section
-  id="contact"
-  class="flex flex-col items-center pt-8 pb-24"
-  [style.background-color]="backgroundColor()"
->
-  <h2 i18n class="pb-12 text-gray-200">Contact</h2>
-  <div class="flex text-gray-300">
-    <app-contact-info class="pr-12" />
-    <app-contact-form />
+<section class="flex flex-col items-center pt-8 pb-16" [style.background-color]="backgroundColor()">
+  <h2 id="contact" i18n class="pb-12 text-gray-200">Contact</h2>
+  <div class="flex flex-col">
+    @if (isMobile()) {
+      <ng-container [ngTemplateOutlet]="contactInfo" />
+    }
+    <div class="flex">
+      @if (!isMobile()) {
+        <ng-container [ngTemplateOutlet]="contactInfo" />
+      }
+      <div>
+        <div class="flex mb-6">
+          <app-input type="text" i18n-placeholder placeholder="First Name*" class="me-4" />
+          <app-input type="text" i18n-placeholder placeholder="Last Name*" />
+        </div>
+        <div class="flex mb-6">
+          <app-input type="tel" i18n-placeholder placeholder="Phone" class="me-4" />
+          <app-input type="text" i18n-placeholder placeholder="Company" />
+        </div>
+        <div class="flex">
+          <app-input type="email" i18n-placeholder placeholder="Email*" class="mb-6 me-4" />
+          <app-input type="text" i18n-placeholder placeholder="Subject*" class="mb-6" />
+        </div>
+      </div>
+    </div>
+    <app-text-area i18n-placeholder placeholder="Message*" class="h-60 mb-6" />
+    <div class="flex justify-end items-center">
+      <app-button i18n icon="send">Send</app-button>
+    </div>
   </div>
 </section>
+
+<ng-template #contactInfo>
+  <ul class="w-60 pr-12 text-gray-300" [class]="{ 'pt-6': !isMobile(), 'pb-8': isMobile() }">
+    <li>
+      <a href="tel:+33688518384">
+        <div class="flex items-center">
+          <app-icon iconName="phone" class="me-4" /> +33 6 88 51 83 84
+        </div>
+      </a>
+    </li>
+    <li class="mt-2">
+      <a href="https://github.com/AlexanderHalsey" target="_blank">
+        <div class="flex items-center">
+          <app-icon iconName="github" size="26" class="me-4" /> Github
+        </div>
+      </a>
+    </li>
+    <li class="mt-3">
+      <a href="https://www.linkedin.com/in/alexander-halsey-01a13125b/" target="_blank">
+        <div class="flex items-center">
+          <app-icon iconName="linkedin" size="28" class="me-4" /> LinkedIn
+        </div>
+      </a>
+    </li>
+  </ul>
+</ng-template>

@@ -34,6 +34,7 @@ import { TypescriptIconComponent } from '@/assets/icons/typescript-icon.componen
 import { ViteIconComponent } from '@/assets/icons/vite-icon.component';
 import { VueIconComponent } from '@/assets/icons/vue-icon.component';
 import { WebDevelopmentIconComponent } from '@/assets/icons/web-development-icon.component';
+import { SendIconComponent } from '@/assets/icons/send-icon.component';
 
 export const ICON_OPTIONS = [
   { name: 'angular', component: AngularIconComponent, allowAnimate: true },
@@ -65,6 +66,7 @@ export const ICON_OPTIONS = [
   { name: 'python', component: PythonIconComponent, allowAnimate: true },
   { name: 'react', component: ReactIconComponent, allowAnimate: true },
   { name: 'sass', component: SassIconComponent, allowAnimate: true },
+  { name: 'send', component: SendIconComponent },
   { name: 'tailwindcss', component: TailwindcssIconComponent, allowAnimate: true },
   { name: 'typescript', component: TypescriptIconComponent, allowAnimate: true },
   { name: 'vite', component: ViteIconComponent, allowAnimate: true },

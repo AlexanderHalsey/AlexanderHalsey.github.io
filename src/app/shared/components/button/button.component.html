@@ -1,0 +1,8 @@
+<button type="button" [class]="class()">
+  <div class="flex items-center">
+    @if (icon()) {
+      <app-icon [iconName]="icon()!" [size]="iconSize()" [class]="iconClass()" />
+    }
+    <ng-content />
+  </div>
+</button>
