@@ -1,6 +1,6 @@
 <section class="flex flex-col items-center pt-8 pb-16" [style.background-color]="backgroundColor()">
   <h2 id="contact" i18n class="pb-12 text-gray-200">Contact</h2>
-  <div class="flex flex-col">
+  <form [formGroup]="form" class="flex flex-col" (ngSubmit)="onSubmit()">
     @if (isMobile()) {
       <ng-container [ngTemplateOutlet]="contactInfo" />
     }
@@ -9,25 +9,70 @@
         <ng-container [ngTemplateOutlet]="contactInfo" />
       }
       <div>
-        <div class="flex mb-6">
-          <app-input type="text" i18n-placeholder placeholder="First Name*" class="me-4" />
-          <app-input type="text" i18n-placeholder placeholder="Last Name*" />
+        <div class="flex mb-3">
+          <app-input
+            formControlName="firstName"
+            type="text"
+            [error]="errorBag().firstName"
+            i18n-placeholder
+            placeholder="First Name *"
+            class="me-4"
+          />
+          <app-input
+            formControlName="lastName"
+            type="text"
+            [error]="errorBag().lastName"
+            i18n-placeholder
+            placeholder="Last Name *"
+          />
         </div>
-        <div class="flex mb-6">
-          <app-input type="tel" i18n-placeholder placeholder="Phone" class="me-4" />
-          <app-input type="text" i18n-placeholder placeholder="Company" />
+        <div class="flex mb-3">
+          <app-input
+            formControlName="phone"
+            type="tel"
+            [error]="errorBag().phone"
+            i18n-placeholder
+            placeholder="Phone"
+            class="me-4"
+          />
+          <app-input
+            formControlName="company"
+            type="text"
+            [error]="errorBag().company"
+            i18n-placeholder
+            placeholder="Company"
+          />
         </div>
-        <div class="flex">
-          <app-input type="email" i18n-placeholder placeholder="Email*" class="mb-6 me-4" />
-          <app-input type="text" i18n-placeholder placeholder="Subject*" class="mb-6" />
+        <div class="flex mb-3">
+          <app-input
+            formControlName="email"
+            type="email"
+            [error]="errorBag().email"
+            i18n-placeholder
+            placeholder="Email *"
+            class="me-4"
+          />
+          <app-input
+            formControlName="subject"
+            type="text"
+            [error]="errorBag().subject"
+            i18n-placeholder
+            placeholder="Subject *"
+          />
         </div>
       </div>
     </div>
-    <app-text-area i18n-placeholder placeholder="Message*" class="h-60 mb-6" />
+    <app-text-area
+      formControlName="message"
+      [error]="errorBag().message"
+      i18n-placeholder
+      placeholder="Message*"
+      class="h-60 mb-3"
+    ></app-text-area>
     <div class="flex justify-end items-center">
-      <app-button i18n icon="send">Send</app-button>
+      <app-button i18n icon="send" type="submit" [disabled]="submitDisabled()">Send</app-button>
     </div>
-  </div>
+  </form>
 </section>
 
 <ng-template #contactInfo>

@@ -1,4 +1,4 @@
-<button type="button" [class]="class()">
+<button [type]="type()" [class]="class()" [disabled]="disabled()">
   <div class="flex items-center">
     @if (icon()) {
       <app-icon [iconName]="icon()!" [size]="iconSize()" [class]="iconClass()" />
