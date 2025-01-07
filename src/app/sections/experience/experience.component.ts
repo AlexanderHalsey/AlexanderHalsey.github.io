@@ -41,7 +41,13 @@ to optimise communication between services.
     },
     {
       startDate: new Date(2021, 7, 1),
-      description: $localize`desc 2`,
+      description: $localize`
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minus illo, obcaecati consequuntur labore odit facere esse ullam, eaque incidunt asperiores cupiditate expedita quibusdam voluptatibus? Modi id officiis amet omnis.
+Dolor, quidem natus ipsum error, iure est alias voluptatum velit dolores labore aliquam explicabo reiciendis dignissimos ullam quasi nobis culpa optio nulla eum. Iusto similique placeat saepe sunt accusamus magnam.
+Ex ratione repudiandae sit expedita rerum, officia quos officiis, cum distinctio provident suscipit at qui pariatur fugiat aliquam maxime amet tempore, nulla harum nihil deleniti nam incidunt ipsa ipsam? Cum!
+Voluptas praesentium fugiat placeat tenetur debitis! Corporis saepe non, labore neque nulla nihil id commodi quia illum modi dolores ex ratione quaerat doloremque facere sapiente quo possimus voluptatem a similique?
+Vero porro sint dolores soluta laudantium delectus ea praesentium eius tempora commodi? Delectus explicabo sed cumque. Quam, quo? Laboriosam nesciunt debitis velit magni fugiat alias cumque doloribus nisi error voluptatem.
+      `,
     },
     {
       startDate: new Date(2020, 7, 1),

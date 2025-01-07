@@ -11,11 +11,14 @@ import { IconName } from '@/models';
 })
 export class ButtonComponent {
   styleType = input<'primary' | 'secondary' | 'tertiary'>('primary');
+  type = input<'button' | 'submit' | 'reset'>('button');
   size = input<'small' | 'medium' | 'large'>('medium');
   icon = input<IconName | null>(null);
+  disabled = input<boolean>(false);
+  loading = input<boolean>(false);
 
   class = computed(() => {
-    let value = 'rounded-md ';
+    let value = 'rounded-md hover:brightness-110 ';
     switch (this.styleType()) {
       case 'primary':
         value += 'bg-color-primary text-white border border-color-primary ';
@@ -37,6 +40,9 @@ export class ButtonComponent {
       case 'large':
         value += 'text-lg py-3 px-4 ';
         break;
+    }
+    if (this.disabled()) {
+      value += 'cursor-not-allowed opacity-50 ';
     }
     return value;
   });
