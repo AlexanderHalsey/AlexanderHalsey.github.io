@@ -11,7 +11,7 @@ const RENDER_FLAG = false;
 
 export function renderBackground1(): THREE.WebGLRenderer {
   const scene = new THREE.Scene();
-  const theme: 'light' | 'dark' = document.body.classList.contains('darkmode') ? 'dark' : 'light';
+  const theme: 'light' | 'dark' = document.body.classList.contains('dark') ? 'dark' : 'light';
 
   scene.background = new THREE.Color(theme === 'light' ? '#f1efef' : '#0f192a');
 
@@ -59,7 +59,7 @@ export function renderBackground1(): THREE.WebGLRenderer {
   };
   const classWatcher = new ClassWatcher(
     document.body,
-    'darkmode',
+    'dark',
     () => onThemeChange('dark'),
     () => onThemeChange('light'),
   );

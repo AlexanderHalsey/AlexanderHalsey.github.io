@@ -70,13 +70,14 @@
       class="h-60 mb-3"
     ></app-text-area>
     <div class="flex justify-end items-center">
-      <app-button i18n icon="send" type="submit" [disabled]="submitDisabled()">Send</app-button>
+      <!-- [disabled]="submitDisabled()" -->
+      <app-button i18n icon="send" type="submit">Send</app-button>
     </div>
   </form>
 </section>
 
 <ng-template #contactInfo>
-  <ul class="w-60 pr-12 text-gray-300" [class]="{ 'pt-6': !isMobile(), 'pb-8': isMobile() }">
+  <ul class="w-60 pr-12 text-gray-300 pt-0 md:pt-6 pb-8 md:pb-0">
     <li>
       <a href="tel:+33688518384">
         <div class="flex items-center">

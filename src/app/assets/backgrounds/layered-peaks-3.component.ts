@@ -47,7 +47,7 @@ export class LayeredPeaks3Component {
   }
 
   backgroundColor = computed(() => this.themeService.backgroundColors().background2);
-  startColor = computed(() => (this.theme() === 'light' ? '#89bff5' : '#2769ab'));
+  startColor = computed(() => (this.theme() === 'light' ? '#9dc9f5' : '#2769ab'));
 
   colors = computed(() => getColorGradients(this.startColor(), this.backgroundColor(), 5));
 }

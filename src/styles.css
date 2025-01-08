@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0da6e8;
+  --color-primary: #00a7f0;
   --bg-color: #f1efef;
   --title-color: black;
   --text-color: #111827;
   --border-color: #d1d5db;
 }
 
-.darkmode {
+.dark {
   --bg-color: #0f192a;
   --title-color: #d1d5db;
   --text-color: #9ca3af;

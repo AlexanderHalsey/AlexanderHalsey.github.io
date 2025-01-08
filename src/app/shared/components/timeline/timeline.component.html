@@ -8,12 +8,7 @@
       }"
     >
       <div
-        class="relative flex flex-col items-end mt-6 w-32"
-        [class]="{
-          'w-32': !isMobile(),
-          'w-8': isMobile(),
-          'text-gray-300': theme() === 'light',
-        }"
+        class="relative flex flex-col items-end mt-6 w-8 md:w-32 text-gray-300 dark:text-gray-400"
       >
         @if (!isMobile()) {
           <ng-container
@@ -22,34 +17,20 @@
           />
         }
         <!-- icon delineating start of new item -->
-        <div
-          class="absolute z-[1] rounded-full"
-          [class]="{
-            'left-[0.3rem]': isMobile(),
-            'right-[-3.7rem]': !isMobile(),
-          }"
-        >
+        <div class="absolute z-[1] rounded-full max-md:left-[0.3rem] md:right-[-3.7rem]">
           <app-icon iconName="arrow-right" />
         </div>
         <!-- timeline line connecting events -->
         <div
-          class="absolute top-1 border-l-2 border-border-color"
+          class="absolute top-1 border-l-2 border-border-color max-md:left-4 md:right-[-3rem]"
           [class]="{
             'h-[calc(100%+4rem)]': $index !== items().length - 1,
             'h-[calc(100%-1.5rem)]': $index === items().length - 1,
-            'right-[-3rem]': !isMobile(),
-            'left-4': isMobile(),
           }"
         ></div>
       </div>
 
-      <app-card
-        class="max-w-prose w-full grow"
-        [class]="{
-          'ml-24': !isMobile(),
-          'ml-12': isMobile(),
-        }"
-      >
+      <app-card class="max-w-prose w-full grow ml-12 md:ml-24">
         @if (isMobile()) {
           <ng-container
             [ngTemplateOutlet]="title"

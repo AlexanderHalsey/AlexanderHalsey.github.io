@@ -9,9 +9,9 @@
   @if (!isMobile()) {
     <menu class="flex">
       @for (selectorItem of selectorItems; track $index) {
-        <li class="py-1 font-semibold px-4 hover:text-color-primary">
-          <button (click)="scrollTo(selectorItem.selector)">
-            <h5>{{ selectorItem.label }}</h5>
+        <li class="font-semibold">
+          <button (click)="scrollTo(selectorItem.selector)" class="ripple py-1 px-4">
+            <h5 class="hover:text-color-primary">{{ selectorItem.label }}</h5>
           </button>
         </li>
       }

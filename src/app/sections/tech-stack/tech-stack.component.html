@@ -1,22 +1,10 @@
 <section id="tech-stack" class="flex flex-col items-center gap-16 pb-24">
   @for (techStackGroup of techStackGroups(); track $index) {
     <div
-      class="flex justify-center w-full border-y border-border-color shadow-lg"
-      [class]="{
-        'bg-bg-color': theme() === 'light',
-        'shadow-stone-400': theme() === 'light',
-        'bg-gray-800': theme() === 'dark',
-        'shadow-slate-800': theme() === 'dark',
-      }"
+      class="flex justify-center w-full border-y border-border-color shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800"
     >
       <div
-        class="w-8 bg-gradient-to-r"
-        [class]="{
-          'from-neutral-300': theme() === 'light',
-          'to-bg-color': theme() === 'light',
-          'from-gray-700': theme() === 'dark',
-          'to-gray-800': theme() === 'dark',
-        }"
+        class="w-8 bg-gradient-to-r from-neutral-300 to-bg-color dark:from-gray-700 dark:to-gray-800"
       ></div>
       <div class="w-full flex justify-center">
         <div class="w-[95%] flex justify-between py-8">
@@ -34,13 +22,7 @@
         </div>
       </div>
       <div
-        class="w-8 bg-gradient-to-l"
-        [class]="{
-          'from-neutral-300': theme() === 'light',
-          'to-bg-color': theme() === 'light',
-          'from-gray-700': theme() === 'dark',
-          'to-bg-gray-800': theme() === 'dark',
-        }"
+        class="w-8 bg-gradient-to-l from-neutral-300 to-bg-color dark:from-gray-700 dark:to-gray-800"
       ></div>
     </div>
   }
