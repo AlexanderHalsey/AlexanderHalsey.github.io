@@ -9,10 +9,8 @@ import { ThemeService } from '@/services/theme.service';
   templateUrl: './about-me.component.html',
 })
 export class AboutMeComponent {
-  theme: Signal<string>;
   backgroundColor: Signal<string>;
   constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
     this.backgroundColor = computed(() => themeService.backgroundColors().background1);
   }
 }

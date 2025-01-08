@@ -1,9 +1,7 @@
-import { Component, Signal } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CardComponent } from '@/components/card/card.component';
 import { IconComponent } from '@/components/icon/icon.component';
-
-import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,11 +9,6 @@ import { ThemeService } from '@/services/theme.service';
   templateUrl: './skills.component.html',
 })
 export class SkillsComponent {
-  theme: Signal<string>;
-  constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
-
   skills = [
     {
       title: 'Web Development',

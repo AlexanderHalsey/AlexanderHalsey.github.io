@@ -8,6 +8,7 @@ import { IconName } from '@/models';
   selector: 'app-button',
   imports: [IconComponent],
   templateUrl: './button.component.html',
+  styleUrl: './button.component.css',
 })
 export class ButtonComponent {
   styleType = input<'primary' | 'secondary' | 'tertiary'>('primary');
@@ -18,7 +19,7 @@ export class ButtonComponent {
   loading = input<boolean>(false);
 
   class = computed(() => {
-    let value = 'rounded-md hover:brightness-110 ';
+    let value = 'rounded-md hover:brightness-110 ripple ';
     switch (this.styleType()) {
       case 'primary':
         value += 'bg-color-primary text-white border border-color-primary ';

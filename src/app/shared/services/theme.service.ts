@@ -4,8 +4,8 @@ import { Theme, ThemeOrSystem } from '@/models';
 
 export const BACKGROUND_COLORS = {
   light: {
-    background1: '#a16d6d',
-    background2: '#507862',
+    background1: '#a87979',
+    background2: '#779e89',
   },
   dark: {
     background1: '#0d0909',
@@ -37,10 +37,10 @@ export class ThemeService {
   public setTheme = (theme: ThemeOrSystem) => {
     if (theme === 'system') theme = this.getSystemPreference();
     if (theme === 'dark') {
-      document.body.classList.add('darkmode');
+      document.body.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.body.classList.remove('darkmode');
+      document.body.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
     this.state.update((currentValue) => ({ ...currentValue, theme }));

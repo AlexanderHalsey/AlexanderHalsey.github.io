@@ -1,0 +1,43 @@
+button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s ease-in;
+
+  &.ripple {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: currentColor;
+      visibility: hidden;
+    }
+
+    &:not(:active)::before {
+      animation: ripple 0.4s cubic-bezier(0, 0, 0.2, 1);
+      transition: visibility 0.4s step-end;
+    }
+
+    &:active::before {
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 130%;
+    height: 200%;
+    opacity: 0;
+  }
+}

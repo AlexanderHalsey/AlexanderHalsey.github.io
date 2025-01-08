@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Component, forwardRef, HostListener, input, model, Signal } from '@angular/core';
+import { Component, forwardRef, HostListener, input, model } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { ThemeService } from '@/services/theme.service';
-
-import { Theme } from '@/models';
+import { inputErrorAnimationTriggers } from '@/animations/input-error';
 
 @Component({
   selector: 'app-text-area',
@@ -16,6 +14,7 @@ import { Theme } from '@/models';
       multi: true,
     },
   ],
+  animations: inputErrorAnimationTriggers('borderError', 'textError'),
 })
 export class TextAreaComponent implements ControlValueAccessor {
   value = model<string>('');
@@ -25,11 +24,6 @@ export class TextAreaComponent implements ControlValueAccessor {
 
   error = input<string>();
   placeholder = input<string>('');
-
-  theme: Signal<Theme>;
-  constructor(themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
 
   onInput(event: Event) {
     this.value.set((event.target as HTMLTextAreaElement).value);

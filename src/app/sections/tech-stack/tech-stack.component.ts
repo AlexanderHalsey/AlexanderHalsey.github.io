@@ -1,10 +1,8 @@
-import { Component, computed, signal, Signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 import { IconComponent } from '@/components/icon/icon.component';
 
-import { ThemeService } from '@/services/theme.service';
-
-import { IconName, Theme } from '@/models';
+import { IconName } from '@/models';
 
 @Component({
   selector: 'app-tech-stack',
@@ -12,10 +10,6 @@ import { IconName, Theme } from '@/models';
   templateUrl: './tech-stack.component.html',
 })
 export class TechStackComponent {
-  theme: Signal<Theme>;
-  constructor(themeService: ThemeService) {
-    this.theme = themeService.get('theme');
-  }
   techStack = [
     'angular',
     'azure-devops',

@@ -2,19 +2,11 @@
   <textarea
     [value]="value()"
     [placeholder]="placeholder()"
-    class="w-full h-full rounded-md bg-bg-color p-2 border"
-    [class]="{
-      'bg-bg-color': theme() === 'light',
-      'bg-gray-100': theme() === 'dark',
-      'text-black': theme() === 'dark',
-      'border-border-color': !error(),
-      outline: error(),
-      'outline-red-500': error(),
-      'outline-2': error(),
-    }"
+    class="w-full h-full rounded-md bg-bg-color p-2 border dark:bg-gray-100 dark:text-black"
     (input)="onInput($event)"
+    [@borderError]="error() ? 'error' : 'default'"
   ></textarea>
   @if (error()) {
-    <div class="absolute bottom-0 text-red-500 text-sm mt-1">{{ error() }}</div>
+    <div class="absolute bottom-0 text-red-500 text-sm mt-1" @textError>{{ error() }}</div>
   }
 </div>
