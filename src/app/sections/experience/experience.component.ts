@@ -1,21 +1,22 @@
-import { Component, computed, Signal } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-empty-function */
+import { AfterViewInit, Component, computed, OnDestroy, Signal } from '@angular/core';
 
 import { TimelineComponent } from '@/components/timeline/timeline.component';
 
 import { ThemeService } from '@/services/theme.service';
 
-import { Theme, TimelineItem } from '@/models';
+import { scrollObserver } from '@/helpers/scroll.helper';
+
+import { TimelineItem } from '@/models';
 
 @Component({
   selector: 'app-experience',
   imports: [TimelineComponent],
   templateUrl: './experience.component.html',
 })
-export class ExperienceComponent {
-  theme: Signal<Theme>;
+export class ExperienceComponent implements AfterViewInit, OnDestroy {
   backgroundColor: Signal<string>;
   constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
     this.backgroundColor = computed(() => themeService.backgroundColors().background1);
   }
 
@@ -62,4 +63,26 @@ my ability to tackle challenges independently and continuously learn new technol
       `,
     },
   ]);
+
+  scrollObserverEntryDisconnect = () => {};
+  scrollObserverLeaveDisconnect = () => {};
+  ngAfterViewInit() {
+    this.scrollObserverEntryDisconnect = scrollObserver('.timeline-item', {
+      enterCallback: (entry) => {
+        entry.target.classList.add('show');
+      },
+      options: { threshold: 0.8 },
+    });
+    this.scrollObserverLeaveDisconnect = scrollObserver('.timeline-item', {
+      leaveCallback: (entry) => {
+        entry.target.classList.remove('show');
+      },
+      options: { threshold: 0.2 },
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.scrollObserverEntryDisconnect();
+    this.scrollObserverLeaveDisconnect();
+  }
 }

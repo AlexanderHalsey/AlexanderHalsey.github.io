@@ -1,0 +1,16 @@
+.typewriter {
+  border-right: 0.1em solid var(--color-primary);
+}
+.blinking {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-primary);
+  }
+}

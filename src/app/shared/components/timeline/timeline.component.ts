@@ -1,16 +1,27 @@
-import { Component, input, Signal } from '@angular/core';
+import { Component, input, signal, Signal } from '@angular/core';
 import { DatePipe, NgTemplateOutlet } from '@angular/common';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
+import { ButtonComponent } from '../button/button.component';
 import { CardComponent } from '../card/card.component';
 import { IconComponent } from '../icon/icon.component';
 
-import { TimelineItem } from '@/models';
 import { DisplayService } from '@/services/display.service';
+
+import { TimelineItem } from '@/models';
 
 @Component({
   selector: 'app-timeline',
-  imports: [CardComponent, DatePipe, IconComponent, NgTemplateOutlet],
+  imports: [ButtonComponent, CardComponent, DatePipe, IconComponent, NgTemplateOutlet],
   templateUrl: './timeline.component.html',
+  styleUrl: './timeline.component.css',
+  animations: [
+    trigger('expand', [
+      state('open', style({ height: '*' })),
+      state('closed', style({ height: '250px' })),
+      transition('open <=> closed', [animate('0.3s ease-in-out')]),
+    ]),
+  ],
 })
 export class TimelineComponent<T extends TimelineItem> {
   items = input.required<T[]>();
@@ -19,4 +30,9 @@ export class TimelineComponent<T extends TimelineItem> {
   constructor(private displayService: DisplayService) {
     this.isMobile = displayService.get('isMobile');
   }
+
+  expanded = signal<Record<string, boolean>>({});
+  toggle = (index: number) => {
+    this.expanded.update((currentValue) => ({ ...currentValue, [index]: !currentValue[index] }));
+  };
 }

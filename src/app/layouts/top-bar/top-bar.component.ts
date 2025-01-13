@@ -18,7 +18,7 @@ import type { SelectorItem } from '@/models';
     ThemeSelectComponent,
   ],
   templateUrl: './top-bar.component.html',
-  styleUrls: ['../../shared/components/button/button.component.css'],
+  styleUrls: ['./top-bar.component.css', '../../shared/components/button/button.component.css'],
 })
 export class TopBarComponent {
   isMobile: Signal<boolean>;
