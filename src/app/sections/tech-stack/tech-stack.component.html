@@ -1,17 +1,18 @@
 <section id="tech-stack" class="flex flex-col items-center gap-16 pb-24">
   @for (techStackGroup of techStackGroups(); track $index) {
     <div
-      class="flex justify-center w-full border-y border-border-color shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800"
+      class="flex justify-center w-full overflow-x-hidden border-y border-border-color shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800"
     >
-      <div
-        class="w-8 bg-gradient-to-r from-neutral-300 to-bg-color dark:from-gray-700 dark:to-gray-800"
-      ></div>
-      <div class="w-full flex justify-center">
-        <div class="w-[95%] flex justify-between py-8">
+      <div class="sticky left-0 bg-gradient-to-l from-transparent to-neutral-300 dark:to-gray-700">
+        <div class="w-12"></div>
+      </div>
+      <div class="w-full flex">
+        <div class="tech-stack-bar relative w-[150rem] ms-7 flex py-8 right-[-1rem]">
           @for (techStackItem of techStackGroup; track $index) {
             <app-icon
               [iconName]="techStackItem"
               size="70"
+              class="me-[6.5rem]"
               [animateOnHover]="hoveredIcon() === techStackItem"
               (mouseover)="setHoveredIcon(techStackItem)"
               (focus)="setHoveredIcon(techStackItem)"
@@ -21,9 +22,9 @@
           }
         </div>
       </div>
-      <div
-        class="w-8 bg-gradient-to-l from-neutral-300 to-bg-color dark:from-gray-700 dark:to-gray-800"
-      ></div>
+      <div class="sticky right-0 bg-gradient-to-r from-transparent to-neutral-300 dark:to-gray-700">
+        <div class="w-12"></div>
+      </div>
     </div>
   }
 </section>

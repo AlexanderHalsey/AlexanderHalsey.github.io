@@ -1,0 +1,14 @@
+.contact-link {
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  filter: brightness(1.3);
+  transform: scale(1.1) translate(5%, -5%);
+}
+
+@media (prefers-reduced-motion) {
+  .contact-link:hover {
+    transform: scale(1) translate(0);
+  }
+}

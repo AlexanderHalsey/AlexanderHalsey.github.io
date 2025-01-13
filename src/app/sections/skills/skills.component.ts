@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 
 import { CardComponent } from '@/components/card/card.component';
 import { IconComponent } from '@/components/icon/icon.component';
+
+import { scrollObserver } from '@/helpers/scroll.helper';
 
 @Component({
   selector: 'app-skills',
   imports: [CardComponent, IconComponent],
   templateUrl: './skills.component.html',
+  styleUrl: './skills.component.css',
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit, OnDestroy {
   skills = [
     {
       title: 'Web Development',
@@ -41,4 +44,22 @@ export class SkillsComponent {
         'I have experience building mobile applications using Android and iOS. I have also used frameworks like React Native and Flutter.',
     },
   ] as const;
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  scrollObserverDisconnect = () => {};
+  ngAfterViewInit() {
+    this.scrollObserverDisconnect = scrollObserver('.skills', {
+      enterCallback: (entry) => {
+        entry.target.classList.add('show');
+      },
+      leaveCallback: (entry) => {
+        entry.target.classList.remove('show');
+      },
+      options: { threshold: 0.2 },
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.scrollObserverDisconnect();
+  }
 }

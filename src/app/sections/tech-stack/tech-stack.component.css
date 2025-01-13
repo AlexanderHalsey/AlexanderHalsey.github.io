@@ -1,0 +1,19 @@
+.tech-stack-bar {
+  animation: scrollStack 600s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+#tech-stack {
+  :nth-child(2) > * > .tech-stack-bar {
+    animation-direction: reverse;
+  }
+}
+@keyframes scrollStack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

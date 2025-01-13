@@ -1,7 +1,7 @@
 <div class="relative">
   @for (item of items(); track $index) {
     <div
-      class="flex"
+      class="flex timeline-item show"
       [class]="{
         'mb-8': $index !== items.length - 1,
         'mt-8': $index !== 0,
@@ -10,35 +10,62 @@
       <div
         class="relative flex flex-col items-end mt-6 w-8 md:w-32 text-gray-300 dark:text-gray-400"
       >
-        @if (!isMobile()) {
-          <ng-container
-            [ngTemplateOutlet]="title"
-            [ngTemplateOutletContext]="{ $implicit: item }"
-          />
-        }
-        <!-- icon delineating start of new item -->
-        <div class="absolute z-[1] rounded-full max-md:left-[0.3rem] md:right-[-3.7rem]">
-          <app-icon iconName="arrow-right" />
+        <!-- icon and title delineating start of new item -->
+        <div
+          class="timeline-item-delineator absolute flex gap-2 z-[1] max-md:left-[0.3rem] md:right-[-3.7rem]"
+        >
+          @if (!isMobile()) {
+            <ng-container
+              [ngTemplateOutlet]="title"
+              [ngTemplateOutletContext]="{ $implicit: item }"
+            />
+          }
+          <app-icon class="rounded-full" iconName="arrow-right" />
         </div>
         <!-- timeline line connecting events -->
         <div
-          class="absolute top-1 border-l-2 border-border-color max-md:left-4 md:right-[-3rem]"
+          class="timeline-item-line absolute bottom-4 border-l-2 border-border-color max-md:left-4 md:right-[-3rem]"
           [class]="{
-            'h-[calc(100%+4rem)]': $index !== items().length - 1,
-            'h-[calc(100%-1.5rem)]': $index === items().length - 1,
+            'h-[calc(100%-1.25rem)]': $index === 0,
+            'h-[calc(100%+4rem)]': $index !== 0,
           }"
         ></div>
       </div>
 
-      <app-card class="max-w-prose w-full grow ml-12 md:ml-24">
-        @if (isMobile()) {
-          <ng-container
-            [ngTemplateOutlet]="title"
-            [ngTemplateOutletContext]="{ $implicit: item }"
-          />
-        }
-        {{ item.description }}
-      </app-card>
+      <div
+        class="timeline-item-card grow max-w-prose w-full ml-12 md:ml-24 overflow-hidden"
+        #timelineItem
+        [@expand]="expanded()[$index] ? 'open' : 'closed'"
+      >
+        <app-card
+          class="timeline-item-card-content relative"
+          [class]="{
+            '[&>*>*]:pb-9': expanded()[$index],
+          }"
+        >
+          @if (isMobile()) {
+            <ng-container
+              [ngTemplateOutlet]="title"
+              [ngTemplateOutletContext]="{ $implicit: item }"
+            />
+          }
+          <p>{{ item.description }}</p>
+
+          <app-button
+            styleType="tertiary"
+            size="small"
+            class="absolute bottom-0 pb-1 left-0 h-12 w-full flex items-end justify-center rounded-b-md bg-gradient-to-t from-bg-color dark:from-gray-800 from-60%"
+            i18n
+            (click)="toggle($index)"
+          >
+            @if (expanded()[$index]) {
+              See less
+            } @else {
+              See more
+            }
+          </app-button>
+        </app-card>
+      </div>
     </div>
   }
 </div>

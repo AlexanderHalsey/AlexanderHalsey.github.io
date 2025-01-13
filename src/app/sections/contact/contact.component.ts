@@ -31,6 +31,7 @@ import { Theme } from '@/models';
     TextAreaComponent,
   ],
   templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css',
 })
 export class ContactComponent {
   isMobile: Signal<boolean>;

@@ -1,0 +1,37 @@
+.rubix-logo {
+  animation: reverseSpinCube 1s ease-out;
+}
+
+.rubix-logo:hover {
+  animation: spinCube 1s ease-out forwards;
+}
+
+@keyframes spinCube {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(110deg);
+  }
+  85% {
+    transform: rotateZ(80deg);
+  }
+  100% {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes reverseSpinCube {
+  0% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(-20deg);
+  }
+  85% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
