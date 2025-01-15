@@ -16,32 +16,32 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
     {
       title: 'Web Development',
       icon: 'web-development',
-      description:
-        'I have experience building websites using HTML, CSS, and JavaScript. I have also used frameworks like Angular, React, and Vue.',
+      description: $localize`I have experience building frontend applications using frameworks like Vue, Angular, and React, working with state management libraries like Pinia and Redux, and creating responsive designs.`,
     },
     {
       title: 'Backend Development',
       icon: 'backend-development',
-      description:
-        'I have experience building backend services using Node.js, Express, and MongoDB. I have also used cloud services like AWS and Firebase.',
+      description: $localize`I have experience building backend services using frameworks like NestJS and Express, working with SQL databases such as PostgreSQL, and integrating with external infrastructure APIs.`,
     },
     {
       title: 'E2E Testing',
       icon: 'e2e-testing',
-      description:
-        'I have experience writing end-to-end tests using tools like Cypress and Selenium. I have also used unit testing frameworks like Jest and Mocha.',
-    },
-    {
-      title: 'CI/CD Pipelines',
-      icon: 'ci-cd-pipelines',
-      description:
-        'I have experience setting up CI/CD pipelines using tools like Jenkins, Travis CI, and GitHub Actions. I have also used containerization tools like Docker and Kubernetes.',
+      description: $localize`I have experience writing end-to-end and unit tests using tools like Cypress and Jest. These tests have been crucial in catching errors when updating solutions, ensuring long-term scalability and reliability.`,
     },
     {
       title: 'Mobile Development',
       icon: 'mobile-development',
-      description:
-        'I have experience building mobile applications using Android and iOS. I have also used frameworks like React Native and Flutter.',
+      description: $localize`I have foundational experience in building mobile applications creating solutions for web, iOS, and Android platforms. I gained hands-on experience with React Native during my programming course.`,
+    },
+    {
+      title: 'Web / UX Design',
+      icon: 'web-design',
+      description: $localize`I have experience designing websites using tools like Figma, leveraging CSS frameworks such as Tailwind CSS, and working with Material Design libraries, including creating, using, and maintaining them.`,
+    },
+    {
+      title: 'CI / CD Pipelines',
+      icon: 'ci-cd-pipelines',
+      description: $localize`I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I also work with Docker and Kubernetes, debugging deployment files and monitoring services.`,
     },
   ] as const;
 
