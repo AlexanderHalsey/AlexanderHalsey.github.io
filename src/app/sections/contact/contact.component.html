@@ -70,8 +70,8 @@
       class="h-60 mb-3"
     ></app-text-area>
     <div class="flex justify-end items-center">
-      <!-- [disabled]="submitDisabled()" -->
-      <app-button i18n icon="send" type="submit">Send</app-button>
+      <input type="text" formControlName="honey" hidden />
+      <app-button i18n icon="send" type="submit" [disabled]="submitDisabled()"> Send </app-button>
     </div>
   </form>
 </section>

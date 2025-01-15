@@ -1,5 +1,6 @@
 import { Component, computed, signal, Signal } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
+
 import {
   AbstractControl,
   ControlEvent,
@@ -10,6 +11,8 @@ import {
   Validators,
 } from '@angular/forms';
 
+import SubmitJSON from 'submitjson';
+
 import { ButtonComponent } from '@/components/button/button.component';
 import { IconComponent } from '@/components/icon/icon.component';
 import { InputComponent } from '@/components/input/input.component';
@@ -19,6 +22,11 @@ import { DisplayService } from '@/services/display.service';
 import { ThemeService } from '@/services/theme.service';
 
 import { Theme } from '@/models';
+
+const sj = new SubmitJSON({
+  apiKey: 'sjk_6099463104314c42a5d9c031f5bc3b92',
+  endpoint: 'VzSGBUsqe',
+});
 
 @Component({
   selector: 'app-contact',
@@ -58,6 +66,7 @@ export class ContactComponent {
         company: [''],
         subject: ['', [Validators.required]],
         message: ['', [Validators.required]],
+        honey: [''],
       } satisfies Record<keyof FormData, unknown>,
       { updateOn: 'blur' },
     );
@@ -81,12 +90,39 @@ export class ContactComponent {
   }
 
   submitDisabled = signal(false);
+  formLoading = signal(false);
   errorBag = signal<Partial<Record<keyof FormData, string>>>({});
 
   async onSubmit() {
     this.form.markAllAsTouched();
     if (this.form.valid) {
-      console.log('valid');
+      this.formLoading.set(true);
+      try {
+        this.formLoading.set(true);
+        await sj.submit({
+          ...this.form.value,
+          honey: this.form.value.honey || undefined,
+        });
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        this.form.reset(
+          {
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            company: '',
+            subject: '',
+            message: '',
+            honey: '',
+          },
+          { emitEvent: false },
+        );
+        // create success notification
+      } catch (err: unknown) {
+        // create error notification
+      } finally {
+        this.formLoading.set(false);
+      }
     } else {
       this.submitDisabled.set(true);
     }
@@ -101,6 +137,7 @@ interface FormData {
   company: string;
   subject: string;
   message: string;
+  honey: string;
 }
 
 export const ERROR_MESSAGES: Record<string, string> = {
