@@ -29,12 +29,13 @@ import { PostgresqlIconComponent } from '@/assets/icons/postgresql-icon.componen
 import { PythonIconComponent } from '@/assets/icons/python-icon.component';
 import { ReactIconComponent } from '@/assets/icons/react-icon.component';
 import { SassIconComponent } from '@/assets/icons/sass-icon.component';
+import { SendIconComponent } from '@/assets/icons/send-icon.component';
 import { TailwindcssIconComponent } from '@/assets/icons/tailwindcss-icon.component';
 import { TypescriptIconComponent } from '@/assets/icons/typescript-icon.component';
 import { ViteIconComponent } from '@/assets/icons/vite-icon.component';
 import { VueIconComponent } from '@/assets/icons/vue-icon.component';
+import { WebDesignIconComponent } from '@/assets/icons/web-design.component';
 import { WebDevelopmentIconComponent } from '@/assets/icons/web-development-icon.component';
-import { SendIconComponent } from '@/assets/icons/send-icon.component';
 
 export const ICON_OPTIONS = [
   { name: 'angular', component: AngularIconComponent, allowAnimate: true },
@@ -71,6 +72,7 @@ export const ICON_OPTIONS = [
   { name: 'typescript', component: TypescriptIconComponent, allowAnimate: true },
   { name: 'vite', component: ViteIconComponent, allowAnimate: true },
   { name: 'vue', component: VueIconComponent, allowAnimate: true },
+  { name: 'web-design', component: WebDesignIconComponent },
   { name: 'web-development', component: WebDevelopmentIconComponent },
 ] as const;
 

@@ -3,25 +3,29 @@
   :nth-child(2),
   :nth-child(3),
   :nth-child(4),
-  :nth-child(5) {
+  :nth-child(5),
+  :nth-child(6) {
     transform: translateX(-10%);
-    filter: blur(2px);
+    filter: blur(1px);
     opacity: 0;
   }
   :first-child {
-    transition: all 0.3s 0.25s ease-in;
+    transition: all 0.3s 0.15s ease-in;
   }
   :nth-child(2) {
-    transition: all 0.3s 0.4s ease-in;
+    transition: all 0.3s 0.3s ease-in;
   }
   :nth-child(3) {
-    transition: all 0.3s 0.55s ease-in;
+    transition: all 0.3s 0.45s ease-in;
   }
   :nth-child(4) {
-    transition: all 0.3s 0.7s ease-in;
+    transition: all 0.3s 0.6s ease-in;
   }
   :nth-child(5) {
-    transition: all 0.3s 0.95s ease-in;
+    transition: all 0.3s 0.85s ease-in;
+  }
+  :nth-child(6) {
+    transition: all 0.3s 1s ease-in;
   }
 }
 
@@ -30,7 +34,8 @@
   :nth-child(2),
   :nth-child(3),
   :nth-child(4),
-  :nth-child(5) {
+  :nth-child(5),
+  :nth-child(6) {
     transform: translateX(0);
     filter: blur(0);
     opacity: 1;
@@ -42,7 +47,8 @@
   :nth-child(2),
   :nth-child(3),
   :nth-child(4),
-  :nth-child(5) {
+  :nth-child(5),
+  :nth-child(6) {
     transform: translateX(0);
     filter: blur(0);
     opacity: 1;
