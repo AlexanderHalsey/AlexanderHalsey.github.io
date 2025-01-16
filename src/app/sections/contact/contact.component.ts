@@ -59,7 +59,7 @@ export class ContactComponent {
   ) {
     this.isMobile = displayService.get('isMobile');
     this.theme = themeService.get('theme');
-    this.backgroundColor = computed(() => themeService.backgroundColors().background2);
+    this.backgroundColor = computed(() => themeService.mountainBackgroundColor());
     this.addNotification = notificationService.addNotification;
 
     this.form = formBuilder.group(

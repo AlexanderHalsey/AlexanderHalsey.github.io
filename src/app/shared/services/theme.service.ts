@@ -1,16 +1,12 @@
 import { computed, Injectable, Signal, signal } from '@angular/core';
 
+import { getColorGradients } from '@/helpers/theme.helper';
+
 import { Theme, ThemeOrSystem } from '@/models';
 
-export const BACKGROUND_COLORS = {
-  light: {
-    background1: '#a87979',
-    background2: '#779e89',
-  },
-  dark: {
-    background1: '#0d0909',
-    background2: '#0a1710',
-  },
+export const MOUNTAIN_BACKGROUND_COLOR = {
+  light: '#35473e',
+  dark: '#0a1710',
 } as const;
 
 interface State {
@@ -24,7 +20,15 @@ export class ThemeService {
   readonly state = signal<State>({
     theme: 'light',
   });
-  readonly backgroundColors = computed(() => BACKGROUND_COLORS[this.state().theme]);
+  readonly mountainBackgroundColor = computed(() => MOUNTAIN_BACKGROUND_COLOR[this.state().theme]);
+
+  public mountainGradients = computed(() =>
+    getColorGradients(
+      this.state().theme === 'light' ? '#9dc9f5' : '#2769ab',
+      this.mountainBackgroundColor(),
+      5,
+    ),
+  );
 
   constructor() {
     this.setTheme((localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference);

@@ -17,7 +17,7 @@ import { TimelineItem } from '@/models';
 export class ExperienceComponent implements AfterViewInit, OnDestroy {
   backgroundColor: Signal<string>;
   constructor(private themeService: ThemeService) {
-    this.backgroundColor = computed(() => themeService.backgroundColors().background1);
+    this.backgroundColor = computed(() => themeService.mountainBackgroundColor());
   }
 
   experience = computed<TimelineItem[]>(() => [

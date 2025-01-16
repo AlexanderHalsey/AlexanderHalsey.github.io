@@ -1,5 +1,5 @@
 <nav
-  class="flex py-3 px-6 items-center sticky top-0 backdrop-blur-2xl border-b border-border-color"
+  class="flex py-3 px-6 items-center fixed w-full top-0 backdrop-blur-2xl border-b border-gray-800 dark:border-gray-700"
 >
   <div class="grow">
     <button class="rubix-logo p-1" (click)="scrollTo('#landing')">
@@ -10,16 +10,16 @@
     <menu class="flex">
       @for (selectorItem of selectorItems; track $index) {
         <li class="font-semibold">
-          <button (click)="scrollTo(selectorItem.selector)" class="ripple py-1 px-4">
+          <button (click)="scrollTo(selectorItem.selector)" class="ripple py-1 px-6">
             <h5 class="hover:text-color-primary">{{ selectorItem.label }}</h5>
           </button>
         </li>
       }
     </menu>
-    <div class="ml-5 mr-8 border-l border-border-color h-7"></div>
+    <div class="ml-5 mr-8 border-l border-gray-800 dark:border-gray-700 h-7"></div>
   }
   <app-theme-select class="mt-1" />
-  <app-language-select class="ml-8" />
+  <app-language-select class="ml-8 text-title-color" />
   @if (isMobile()) {
     <app-hamburger-menu
       [selectorItems]="selectorItems"

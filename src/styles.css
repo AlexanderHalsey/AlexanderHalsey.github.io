@@ -4,9 +4,10 @@
 
 :root {
   --color-primary: #00a7f0;
-  --bg-color: #f1efef;
+  --bg-color: #faebeb;
+  --bg-color-2: #ace0f9;
   --title-color: black;
-  --text-color: #111827;
+  --text-color: #1f2937;
   --border-color: #d1d5db;
   --success: #10b981;
   --error: #ef4444;
@@ -16,6 +17,7 @@
 
 .dark {
   --bg-color: #0f192a;
+  --bg-color-2: #030005;
   --title-color: #d1d5db;
   --text-color: #9ca3af;
   --border-color: #374151;
@@ -23,6 +25,7 @@
 
 @layer base {
   body {
+    font-family: 'Montserrat', serif;
     background-color: var(--bg-color);
     color: var(--text-color);
   }
@@ -41,7 +44,7 @@
       z-index: 50;
     }
 
-    > * > section {
+    section {
       padding-left: 8%;
       padding-right: 8%;
       width: 100%;
@@ -87,5 +90,23 @@
   .layered-peaks-spacer > svg {
     width: 100%;
     height: auto;
+    background-color: transparent;
+  }
+
+  #landing,
+  #tech-stack {
+    background-color: var(--bg-color);
+
+    background-image: radial-gradient(at 90% 5%, hsla(0, 90%, 55%, 0.21) 0px, transparent 50%),
+      radial-gradient(at 43% 5%, hsla(240, 100%, 56%, 0.14) 0px, transparent 50%),
+      radial-gradient(at 65% 58%, hwb(289 52% 0% / 0.24) 0px, transparent 50%),
+      radial-gradient(at 11% 26%, hsla(216, 100%, 50%, 0.2) 0px, transparent 50%);
+  }
+  #skills {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(at 90% 95%, hsla(0, 90%, 55%, 0.21) 0px, transparent 50%),
+      radial-gradient(at 43% 95%, hsla(240, 100%, 56%, 0.14) 0px, transparent 50%),
+      radial-gradient(at 65% 42%, hsla(289, 100%, 76%, 0.24) 0px, transparent 50%),
+      radial-gradient(at 11% 74%, hsla(216, 100%, 50%, 0.2) 0px, transparent 50%);
   }
 }

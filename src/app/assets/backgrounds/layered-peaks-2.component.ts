@@ -1,21 +1,16 @@
-import { Component, computed, Signal } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 
 import { ThemeService } from '@/services/theme.service';
-import { getColorGradients } from '@/helpers/theme.helper';
-
-import { Theme } from '@/models';
 
 @Component({
   selector: 'app-layered-peaks-2',
   template: `
     <svg
       id="visual"
-      viewBox="0 0 1500 300"
-      width="1500"
-      height="300"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1"
+      viewBox="0 0 1500 216"
     >
       <path
         d="M0 128L188 108L375 169L563 133L750 194L938 149L1125 114L1313 115L1500 216L1500 0L1313 0L1125 0L938 0L750 0L563 0L375 0L188 0L0 0Z"
@@ -41,13 +36,8 @@ import { Theme } from '@/models';
   `,
 })
 export class LayeredPeaks2Component {
-  theme: Signal<Theme>;
+  colors: Signal<string[]>;
   constructor(private themeService: ThemeService) {
-    this.theme = themeService.get('theme');
+    this.colors = themeService.mountainGradients;
   }
-
-  backgroundColor = computed(() => this.themeService.backgroundColors().background1);
-  startColor = computed(() => (this.theme() === 'light' ? '#f5c4e3' : '#702e58'));
-
-  colors = computed(() => getColorGradients(this.startColor(), this.backgroundColor(), 5));
 }
