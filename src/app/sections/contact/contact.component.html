@@ -71,7 +71,14 @@
     ></app-text-area>
     <div class="flex justify-end items-center">
       <input type="text" formControlName="honey" hidden />
-      <app-button i18n icon="send" type="submit" [disabled]="submitDisabled()"> Send </app-button>
+      <app-button
+        i18n
+        [icon]="formLoading() ? 'loader' : 'send'"
+        type="submit"
+        [disabled]="submitDisabled()"
+      >
+        Send
+      </app-button>
     </div>
   </form>
 </section>
