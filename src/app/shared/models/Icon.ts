@@ -4,6 +4,7 @@ import { AngularIconComponent } from '@/assets/icons/angular-icon.component';
 import { ArrowRightIconComponent } from '@/assets/icons/arrow-right-icon.component';
 import { AzureDevopsIconComponent } from '@/assets/icons/azure-devops-icon.component';
 import { BackendDevelopmentIconComponent } from '@/assets/icons/backend-development-icon.component';
+import { CheckCircleIconComponent } from '@/assets/icons/check-circle-icon.component';
 import { CiCdIconComponent } from '@/assets/icons/ci-cd-icon.component';
 import { ComputerIconComponent } from '@/assets/icons/computer-icon.component';
 import { CssIconComponent } from '@/assets/icons/css-icon.component';
@@ -12,13 +13,16 @@ import { DayIconComponent } from '@/assets/icons/day-icon.component';
 import { DjangoIconComponent } from '@/assets/icons/django-icon.component';
 import { DockerIconComponent } from '@/assets/icons/docker-icon.component';
 import { E2ETestingIconComponent } from '@/assets/icons/e2e-testing-icon.component';
+import { ErrorCircleIconComponent } from '@/assets/icons/error-circle-icon.component';
 import { GitIconComponent } from '@/assets/icons/git-icon.component';
 import { GithubIconComponent } from '@/assets/icons/github-icon.component';
 import { HamburgerIconComponent } from '@/assets/icons/hamburger-icon.component';
 import { HtmlIconComponent } from '@/assets/icons/html-icon.component';
+import { InfoCircleIconComponent } from '@/assets/icons/info-circle-icon.component';
 import { JavascriptIconComponent } from '@/assets/icons/javascript-icon.component';
 import { JestIconComponent } from '@/assets/icons/jest-icon.component';
 import { LinkedInIconComponent } from '@/assets/icons/linkedin-icon.component';
+import { LoaderIconComponent } from '@/assets/icons/loader.component';
 import { MobileDevelopmentIconComponent } from '@/assets/icons/mobile-development-icon.component';
 import { NestIconComponent } from '@/assets/icons/nest-icon.component';
 import { NodeIconComponent } from '@/assets/icons/node-icon.component';
@@ -34,6 +38,7 @@ import { TailwindcssIconComponent } from '@/assets/icons/tailwindcss-icon.compon
 import { TypescriptIconComponent } from '@/assets/icons/typescript-icon.component';
 import { ViteIconComponent } from '@/assets/icons/vite-icon.component';
 import { VueIconComponent } from '@/assets/icons/vue-icon.component';
+import { WarningCircleIconComponent } from '@/assets/icons/warning-circle-icon.component';
 import { WebDesignIconComponent } from '@/assets/icons/web-design.component';
 import { WebDevelopmentIconComponent } from '@/assets/icons/web-development-icon.component';
 
@@ -42,6 +47,7 @@ export const ICON_OPTIONS = [
   { name: 'arrow-right', component: ArrowRightIconComponent },
   { name: 'azure-devops', component: AzureDevopsIconComponent, allowAnimate: true },
   { name: 'backend-development', component: BackendDevelopmentIconComponent },
+  { name: 'check-circle', component: CheckCircleIconComponent },
   { name: 'ci-cd-pipelines', component: CiCdIconComponent },
   { name: 'computer', component: ComputerIconComponent },
   { name: 'css', component: CssIconComponent, allowAnimate: true },
@@ -50,13 +56,16 @@ export const ICON_OPTIONS = [
   { name: 'django', component: DjangoIconComponent, allowAnimate: true },
   { name: 'docker', component: DockerIconComponent, allowAnimate: true },
   { name: 'e2e-testing', component: E2ETestingIconComponent },
+  { name: 'error-circle', component: ErrorCircleIconComponent },
   { name: 'git', component: GitIconComponent, allowAnimate: true },
   { name: 'github', component: GithubIconComponent },
   { name: 'hamburger', component: HamburgerIconComponent },
   { name: 'html', component: HtmlIconComponent, allowAnimate: true },
+  { name: 'info-circle', component: InfoCircleIconComponent },
   { name: 'javascript', component: JavascriptIconComponent, allowAnimate: true },
   { name: 'jest', component: JestIconComponent, allowAnimate: true },
   { name: 'linkedin', component: LinkedInIconComponent },
+  { name: 'loader', component: LoaderIconComponent },
   { name: 'mobile-development', component: MobileDevelopmentIconComponent },
   { name: 'nest', component: NestIconComponent, allowAnimate: true },
   { name: 'node', component: NodeIconComponent, allowAnimate: true },
@@ -72,6 +81,7 @@ export const ICON_OPTIONS = [
   { name: 'typescript', component: TypescriptIconComponent, allowAnimate: true },
   { name: 'vite', component: ViteIconComponent, allowAnimate: true },
   { name: 'vue', component: VueIconComponent, allowAnimate: true },
+  { name: 'warning-circle', component: WarningCircleIconComponent },
   { name: 'web-design', component: WebDesignIconComponent },
   { name: 'web-development', component: WebDevelopmentIconComponent },
 ] as const;

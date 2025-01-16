@@ -8,6 +8,10 @@
   --title-color: black;
   --text-color: #111827;
   --border-color: #d1d5db;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
 }
 
 .dark {

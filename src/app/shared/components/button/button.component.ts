@@ -3,10 +3,11 @@ import { Component, computed, input } from '@angular/core';
 import { IconComponent } from '../icon/icon.component';
 
 import { IconName } from '@/models';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-button',
-  imports: [IconComponent],
+  imports: [IconComponent, NgClass],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
@@ -16,37 +17,6 @@ export class ButtonComponent {
   size = input<'small' | 'medium' | 'large'>('medium');
   icon = input<IconName | null>(null);
   disabled = input<boolean>(false);
-  loading = input<boolean>(false);
-
-  class = computed(() => {
-    let value = 'rounded-md hover:brightness-110 ripple ';
-    switch (this.styleType()) {
-      case 'primary':
-        value += 'bg-color-primary text-white border border-color-primary ';
-        break;
-      case 'secondary':
-        value += 'text-color-primary border border-color-primary ';
-        break;
-      case 'tertiary':
-        value += 'text-color-primary font-bold ';
-        break;
-    }
-    switch (this.size()) {
-      case 'small':
-        value += 'text-sm py-1 px-2 ';
-        break;
-      case 'medium':
-        value += 'text-md py-2 px-3 ';
-        break;
-      case 'large':
-        value += 'text-lg py-3 px-4 ';
-        break;
-    }
-    if (this.disabled()) {
-      value += 'cursor-not-allowed opacity-50 ';
-    }
-    return value;
-  });
 
   iconSize = computed(() => {
     switch (this.size()) {
@@ -56,17 +26,6 @@ export class ButtonComponent {
         return 24;
       case 'large':
         return 28;
-    }
-  });
-
-  iconClass = computed(() => {
-    switch (this.size()) {
-      case 'small':
-        return 'mr-1';
-      case 'medium':
-        return 'mr-2';
-      case 'large':
-        return 'mr-3';
     }
   });
 }

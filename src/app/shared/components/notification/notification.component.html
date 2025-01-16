@@ -1,0 +1,17 @@
+<ul class="fixed top-16 right-1">
+  @for (notification of notifications(); track $index) {
+    <div class="mb-4">
+      <ng-container
+        [ngTemplateOutlet]="notificationFragment"
+        [ngTemplateOutletContext]="notification"
+      />
+    </div>
+  }
+</ul>
+
+<ng-template #notificationFragment let-message="message" let-type="type" let-location="location">
+  <div class="flex py-2 px-3 rounded-md shadow-lg text-white max-w-80" [class]="'bg-' + type">
+    <app-icon [iconName]="getIconNameFromType(type)" size="24" />
+    <p class="ml-2">{{ message }}</p>
+  </div>
+</ng-template>

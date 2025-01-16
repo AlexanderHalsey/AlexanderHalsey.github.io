@@ -19,9 +19,10 @@ import { InputComponent } from '@/components/input/input.component';
 import { TextAreaComponent } from '@/components/text-area/text-area.component';
 
 import { DisplayService } from '@/services/display.service';
+import { NotificationService } from '@/services/notification.service';
 import { ThemeService } from '@/services/theme.service';
 
-import { Theme } from '@/models';
+import { Notification, Theme } from '@/models';
 
 const sj = new SubmitJSON({
   apiKey: 'sjk_6099463104314c42a5d9c031f5bc3b92',
@@ -45,17 +46,21 @@ export class ContactComponent {
   isMobile: Signal<boolean>;
   theme: Signal<Theme>;
   backgroundColor: Signal<string>;
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  addNotification = (_notification: Notification) => {};
 
   form: FormGroup;
 
   constructor(
     private displayService: DisplayService,
+    private notificationService: NotificationService,
     private themeService: ThemeService,
     private formBuilder: FormBuilder,
   ) {
     this.isMobile = displayService.get('isMobile');
     this.theme = themeService.get('theme');
     this.backgroundColor = computed(() => themeService.backgroundColors().background2);
+    this.addNotification = notificationService.addNotification;
 
     this.form = formBuilder.group(
       {
@@ -117,9 +122,15 @@ export class ContactComponent {
           },
           { emitEvent: false },
         );
-        // create success notification
-      } catch (err: unknown) {
-        // create error notification
+        this.addNotification({
+          type: 'success',
+          message: $localize`Form submitted successfully. I will get back to you as soon as possible.`,
+        });
+      } catch (_e: unknown) {
+        this.addNotification({
+          type: 'error',
+          message: $localize`Failed to submit form. Please try again later.`,
+        });
       } finally {
         this.formLoading.set(false);
       }

@@ -1,7 +1,23 @@
-<button [type]="type()" [class]="class()" [disabled]="disabled()">
+<button
+  [type]="type()"
+  class="rounded-md hover:brightness-110 ripple"
+  [ngClass]="[
+    {
+      primary: 'bg-color-primary text-white border border-color-primary',
+      secondary: 'text-color-primary border border-color-primary',
+      tertiary: 'text-color-primary font-bold',
+    }[styleType()],
+    { small: 'text-sm py-1 px-2', medium: 'text-md py-2 px-3', large: 'text-lg py-3 px-4' }[size()],
+    { true: 'cursor-not-allowed opacity-50', false: '' }[disabled() ? 'true' : 'false'],
+  ]"
+>
   <div class="flex items-center">
     @if (icon()) {
-      <app-icon [iconName]="icon()!" [size]="iconSize()" [class]="iconClass()" />
+      <app-icon
+        [iconName]="icon()!"
+        [size]="iconSize()"
+        [class]="[{ small: 'mr-1', medium: 'mr-2', large: 'mr-3' }[size()]]"
+      />
     }
     <ng-content />
   </div>
