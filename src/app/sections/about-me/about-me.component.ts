@@ -13,7 +13,7 @@ import { scrollObserver } from '@/helpers/scroll.helper';
 export class AboutMeComponent implements AfterViewInit, OnDestroy {
   backgroundColor: Signal<string>;
   constructor(private themeService: ThemeService) {
-    this.backgroundColor = computed(() => themeService.backgroundColors().background1);
+    this.backgroundColor = computed(() => themeService.mountainBackgroundColor());
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
