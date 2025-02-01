@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 
-export const createRubixCube = (): THREE.Group<THREE.Object3DEventMap> => {
-  const center = [110, 0, 700];
-  const boxSize = 30;
+const RUBIX_CUBE_POSITION = new THREE.Vector3(100, 40, 700);
+const RUBIX_CUBE_SIZE = 69;
 
+export const createRubixCube = (): THREE.Group<THREE.Object3DEventMap> => {
   const rubixCube = new THREE.Group();
+  const boxSize = RUBIX_CUBE_SIZE / 3;
   for (let x = 0; x <= 2; x++) {
     for (let y = 0; y <= 2; y++) {
       for (let z = 0; z <= 2; z++) {
@@ -16,7 +17,8 @@ export const createRubixCube = (): THREE.Group<THREE.Object3DEventMap> => {
         const materials = rubixCubeColors.map(({ color, condition }) =>
           condition(x, y, z)
             ? new THREE.MeshBasicMaterial({
-                map: new THREE.TextureLoader().load(`rubix-cube-stickers/${color}.svg`),
+                map: new THREE.TextureLoader().load(`rubix-cube-sticker.svg`),
+                color,
               })
             : new THREE.MeshBasicMaterial({ color: 'black' }),
         );
@@ -30,7 +32,7 @@ export const createRubixCube = (): THREE.Group<THREE.Object3DEventMap> => {
       }
     }
   }
-  rubixCube.position.set(center[0], center[1], center[2]);
+  rubixCube.position.set(...RUBIX_CUBE_POSITION.toArray());
   return rubixCube;
 };
 
@@ -43,7 +45,7 @@ const rubixCubeColors: {
     condition: (ix, _iy, _iz) => ix === 2,
   },
   {
-    color: 'red',
+    color: '#c41108',
     condition: (ix, _iy, _iz) => ix === 0,
   },
   {
@@ -59,7 +61,7 @@ const rubixCubeColors: {
     condition: (_ix, _iy, iz) => iz === 2,
   },
   {
-    color: 'blue',
+    color: '#0d28d9',
     condition: (_ix, _iy, iz) => iz === 0,
   },
 ];
