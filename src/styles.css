@@ -4,7 +4,7 @@
 
 :root {
   --color-primary: #00a7f0;
-  --bg-color: #faebeb;
+  --bg-color: #fef7f7;
   --bg-color-2: #ace0f9;
   --title-color: black;
   --text-color: #1f2937;
@@ -52,15 +52,11 @@
     }
   }
 
-  #rubix-cube,
-  #grid-room-3d {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
   #rubix-cube {
-    z-index: 2;
+    position: absolute;
+    top: 0;
+    max-width: 2500px;
+    z-index: 1;
   }
 
   h1,
