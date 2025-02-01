@@ -1,4 +1,8 @@
-<section class="flex flex-col items-center pt-8 pb-16" [style.background-color]="backgroundColor()">
+<section
+  id="contact"
+  class="flex flex-col items-center pt-8 pb-16"
+  [style.background-color]="backgroundColor()"
+>
   <form [formGroup]="form" class="flex flex-col" (ngSubmit)="onSubmit()">
     @if (isMobile()) {
       <ng-container [ngTemplateOutlet]="contactInfo" />
