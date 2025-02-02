@@ -138,6 +138,10 @@ export class ContactComponent {
       this.submitDisabled.set(true);
     }
   }
+
+  downloadCV() {
+    window.open('cv.pdf');
+  }
 }
 
 interface FormData {

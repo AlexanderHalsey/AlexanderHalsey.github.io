@@ -1,3 +1,18 @@
+.cv {
+  transition:
+    transform 0.3s ease-in,
+    mask-position 0.5s ease-in 0.3s,
+    filter 0.4s ease-in;
+}
+
+.cv:hover {
+  filter: hue-rotate(-250deg);
+  transform: scale(1.1) translateX(8px);
+  mask-size: 300%;
+  mask-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.3), white);
+  mask-position: -170%;
+}
+
 .contact-link {
   transition: all 0.3s ease;
 }
@@ -10,5 +25,10 @@
 @media (prefers-reduced-motion) {
   .contact-link:hover {
     transform: scale(1) translate(0);
+  }
+  .cv:hover {
+    transform: none;
+    mask: none;
+    filter: none;
   }
 }
