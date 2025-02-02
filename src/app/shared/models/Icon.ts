@@ -8,6 +8,7 @@ import { CheckCircleIconComponent } from '@/assets/icons/check-circle-icon.compo
 import { CiCdIconComponent } from '@/assets/icons/ci-cd-icon.component';
 import { ComputerIconComponent } from '@/assets/icons/computer-icon.component';
 import { CssIconComponent } from '@/assets/icons/css-icon.component';
+import { CvsIconComponent } from '@/assets/icons/cv-icon.component';
 import { CypressIconComponent } from '@/assets/icons/cypress-icon.component';
 import { DayIconComponent } from '@/assets/icons/day-icon.component';
 import { DjangoIconComponent } from '@/assets/icons/django-icon.component';
@@ -51,6 +52,7 @@ export const ICON_OPTIONS = [
   { name: 'ci-cd-pipelines', component: CiCdIconComponent },
   { name: 'computer', component: ComputerIconComponent },
   { name: 'css', component: CssIconComponent, allowAnimate: true },
+  { name: 'cv', component: CvsIconComponent },
   { name: 'cypress', component: CypressIconComponent, allowAnimate: true },
   { name: 'day', component: DayIconComponent },
   { name: 'django', component: DjangoIconComponent, allowAnimate: true },
