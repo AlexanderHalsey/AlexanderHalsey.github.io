@@ -2,6 +2,7 @@
   @for (techStackGroup of techStackGroups(); track $index) {
     <div
       class="flex justify-center w-full overflow-x-hidden border-y border-border-color shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800"
+      [class]="'tech-stack-item-' + $index"
     >
       <div class="sticky left-0 bg-gradient-to-l from-transparent to-stone-200 dark:to-gray-900">
         <div class="w-12"></div>
@@ -14,11 +15,12 @@
                 activator
                 [iconName]="techStackItem.icon"
                 size="70"
-                [animateOnHover]="hoveredItem() === techStackItem"
-                (mouseover)="setHoveredItem(techStackItem)"
-                (focus)="setHoveredItem(techStackItem)"
-                (mouseout)="removeHoveredItem(techStackItem)"
-                (blur)="removeHoveredItem(techStackItem)"
+                color="gray"
+                [animateOnHover]="techStackItem.hovered"
+                (mouseover)="techStackItem.hovered = true"
+                (focus)="techStackItem.hovered = true"
+                (mouseout)="techStackItem.hovered = false"
+                (blur)="techStackItem.hovered = false"
               />
               <span>{{ techStackItem.name }}</span>
             </app-tooltip>
