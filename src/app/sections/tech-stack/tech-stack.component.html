@@ -7,18 +7,21 @@
         <div class="w-12"></div>
       </div>
       <div class="w-full flex">
-        <div class="tech-stack-bar relative w-[150rem] ms-7 flex py-8 right-[-1rem]">
+        <div class="tech-stack-bar relative w-[150rem] ms-7 flex py-14 right-[-1rem]">
           @for (techStackItem of techStackGroup; track $index) {
-            <app-icon
-              [iconName]="techStackItem"
-              size="70"
-              class="me-[6.5rem]"
-              [animateOnHover]="hoveredIcon() === techStackItem"
-              (mouseover)="setHoveredIcon(techStackItem)"
-              (focus)="setHoveredIcon(techStackItem)"
-              (mouseout)="removeHoveredIcon(techStackItem)"
-              (blur)="removeHoveredIcon(techStackItem)"
-            />
+            <app-tooltip location="bottom" class="me-[6.5rem]">
+              <app-icon
+                activator
+                [iconName]="techStackItem.icon"
+                size="70"
+                [animateOnHover]="hoveredItem() === techStackItem"
+                (mouseover)="setHoveredItem(techStackItem)"
+                (focus)="setHoveredItem(techStackItem)"
+                (mouseout)="removeHoveredItem(techStackItem)"
+                (blur)="removeHoveredItem(techStackItem)"
+              />
+              <span>{{ techStackItem.name }}</span>
+            </app-tooltip>
           }
         </div>
       </div>

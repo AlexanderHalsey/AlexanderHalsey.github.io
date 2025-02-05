@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, computed, OnDestroy, signal } from '@angular/core';
 
 import { IconComponent } from '@/components/icon/icon.component';
+import { TooltipComponent } from '@/components/tooltip/tooltip.component';
 
 import { scrollObserver } from '@/helpers/scroll.helper';
 
@@ -8,36 +9,36 @@ import { IconName } from '@/models';
 
 @Component({
   selector: 'app-tech-stack',
-  imports: [IconComponent],
+  imports: [IconComponent, TooltipComponent],
   templateUrl: './tech-stack.component.html',
   styleUrl: './tech-stack.component.css',
 })
 export class TechStackComponent implements AfterViewInit, OnDestroy {
   techStack = [
-    'angular',
-    'azure-devops',
-    'css',
-    'cypress',
-    'django',
-    'docker',
-    'git',
-    'html',
-    'javascript',
-    'jest',
-    'nest',
-    'node',
-    'npm',
-    'postgresql',
-    'python',
-    'react',
-    'sass',
-    'tailwindcss',
-    'typescript',
-    'vite',
-    'vue',
-  ] satisfies IconName[];
+    { icon: 'angular', name: 'Angular' },
+    { icon: 'azure-devops', name: 'Azure DevOps' },
+    { icon: 'css', name: 'CSS' },
+    { icon: 'cypress', name: 'Cypress' },
+    { icon: 'django', name: 'Django' },
+    { icon: 'docker', name: 'Docker' },
+    { icon: 'git', name: 'Git' },
+    { icon: 'html', name: 'HTML' },
+    { icon: 'javascript', name: 'Javascript' },
+    { icon: 'jest', name: 'Jest' },
+    { icon: 'nest', name: 'Nest' },
+    { icon: 'node', name: 'Node' },
+    { icon: 'npm', name: 'Npm' },
+    { icon: 'postgresql', name: 'PostgreSQL' },
+    { icon: 'python', name: 'Python' },
+    { icon: 'react', name: 'React' },
+    { icon: 'sass', name: 'Sass' },
+    { icon: 'tailwindcss', name: 'Tailwind CSS' },
+    { icon: 'typescript', name: 'Typescript' },
+    { icon: 'vite', name: 'Vite' },
+    { icon: 'vue', name: 'Vue' },
+  ] satisfies { icon: IconName; name: string }[];
 
-  techStackGroups = computed<IconName[][]>(() => {
+  techStackGroups = computed<{ icon: IconName; name: string }[][]>(() => {
     const groupLength = 7;
     const techStack = this.techStack;
     return Array.from(
@@ -49,13 +50,13 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
     });
   });
 
-  hoveredIcon = signal<IconName | null>(null);
-  setHoveredIcon(icon: IconName) {
-    return this.hoveredIcon.set(icon);
+  hoveredItem = signal<TechStackItem | null>(null);
+  setHoveredItem(item: TechStackItem) {
+    return this.hoveredItem.set(item);
   }
-  removeHoveredIcon(icon: IconName) {
-    if (this.hoveredIcon() === icon) {
-      this.hoveredIcon.set(null);
+  removeHoveredItem(item: TechStackItem) {
+    if (this.hoveredItem() === item) {
+      this.hoveredItem.set(null);
     }
   }
 
@@ -64,16 +65,16 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.scrollObserverDisconnect = scrollObserver('#tech-stack', {
       enterCallback: (_, index) => {
-        this.techStackGroups()[index].forEach((icon, index) => {
+        this.techStackGroups()[index].forEach((techStackItem, index) => {
           setTimeout(() => {
-            const hoveredIcon = this.hoveredIcon();
-            if (hoveredIcon) this.removeHoveredIcon(hoveredIcon);
-            this.setHoveredIcon(icon);
+            const hoveredItem = this.hoveredItem();
+            if (hoveredItem) this.removeHoveredItem(hoveredItem);
+            this.setHoveredItem(techStackItem);
           }, 200 * index);
         });
         setTimeout(() => {
-          const hoveredIcon = this.hoveredIcon();
-          if (hoveredIcon) this.removeHoveredIcon(hoveredIcon);
+          const hoveredItem = this.hoveredItem();
+          if (hoveredItem) this.removeHoveredItem(hoveredItem);
           this.scrollObserverDisconnect();
         }, 200 * this.techStackGroups()[index].length);
       },
@@ -84,4 +85,9 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy() {
     this.scrollObserverDisconnect();
   }
+}
+
+interface TechStackItem {
+  icon: IconName;
+  name: string;
 }

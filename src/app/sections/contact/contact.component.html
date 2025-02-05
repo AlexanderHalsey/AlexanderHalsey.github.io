@@ -74,14 +74,14 @@
     ></app-text-area>
     <div class="flex justify-end items-center">
       <input type="text" formControlName="honey" hidden />
-      <app-button
-        i18n
-        [icon]="formLoading() ? 'loader' : 'send'"
-        type="submit"
-        [disabled]="submitDisabled()"
-      >
-        Send
-      </app-button>
+      @if (submitDisabled()) {
+        <app-tooltip location="left">
+          <ng-container activator [ngTemplateOutlet]="submitButton" />
+          <span i18n>Fill out the required fields</span>
+        </app-tooltip>
+      } @else {
+        <ng-container [ngTemplateOutlet]="submitButton" />
+      }
     </div>
   </form>
 </section>
@@ -119,4 +119,15 @@
       </li>
     </ul>
   </div>
+</ng-template>
+
+<ng-template #submitButton>
+  <app-button
+    i18n
+    [icon]="formLoading() ? 'loader' : 'send'"
+    type="submit"
+    [disabled]="submitDisabled()"
+  >
+    Send
+  </app-button>
 </ng-template>
