@@ -21,7 +21,7 @@ export const animateScene = (
       // boundingClientRect.height * 0.4 -
       // ideally should be using inferred height but for some reason
       // the image height is not correctly inferred on page load
-      642 * 0.4 -
+      510 * 0.4 -
       document.body.getBoundingClientRect().top,
   ];
 
