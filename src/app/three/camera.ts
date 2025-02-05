@@ -21,7 +21,7 @@ const CAMERA_CONFIGURATIONS = {
   // Bottom of rubix cube render screen with maximum width
   end1: {
     position: new THREE.Vector3(800, 170, 1150),
-    target: new THREE.Vector3(460, 220, 700),
+    target: new THREE.Vector3(480, 230, 700),
   },
 } as const;
 
