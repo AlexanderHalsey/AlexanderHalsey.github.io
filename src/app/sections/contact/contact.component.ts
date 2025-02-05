@@ -17,6 +17,7 @@ import { ButtonComponent } from '@/components/button/button.component';
 import { IconComponent } from '@/components/icon/icon.component';
 import { InputComponent } from '@/components/input/input.component';
 import { TextAreaComponent } from '@/components/text-area/text-area.component';
+import { TooltipComponent } from '@/components/tooltip/tooltip.component';
 
 import { DisplayService } from '@/services/display.service';
 import { NotificationService } from '@/services/notification.service';
@@ -38,6 +39,7 @@ const sj = new SubmitJSON({
     NgTemplateOutlet,
     ReactiveFormsModule,
     TextAreaComponent,
+    TooltipComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
