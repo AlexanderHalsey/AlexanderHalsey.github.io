@@ -16,6 +16,8 @@ export class ButtonComponent {
   type = input<'button' | 'submit' | 'reset'>('button');
   size = input<'small' | 'medium' | 'large'>('medium');
   icon = input<IconName | null>(null);
+  iconOnly = input<boolean>(false);
+  iconColor = input<string>('currentColor');
   disabled = input<boolean>(false);
 
   iconSize = computed(() => {
