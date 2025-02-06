@@ -29,7 +29,7 @@ export class TopBarComponent {
   selectorItems: SelectorItem[] = [
     { selector: '#about-me', label: $localize`About me` },
     { selector: '#experience', label: $localize`Experience` },
-    { selector: '#skills', label: $localize`Skills` },
+    { selector: '#skills :first-child', label: $localize`Skills` },
     { selector: '#contact', label: $localize`Contact` },
   ];
 
