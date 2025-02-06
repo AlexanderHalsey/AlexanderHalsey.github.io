@@ -110,7 +110,7 @@ export class ContactComponent {
           ...this.form.value,
           honey: this.form.value.honey || undefined,
         });
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+
         this.form.reset(
           {
             firstName: '',
@@ -124,6 +124,7 @@ export class ContactComponent {
           },
           { emitEvent: false },
         );
+
         this.addNotification({
           type: 'success',
           message: $localize`Form submitted successfully. I will get back to you as soon as possible.`,

@@ -3,15 +3,34 @@
     <div class="mb-4">
       <ng-container
         [ngTemplateOutlet]="notificationFragment"
-        [ngTemplateOutletContext]="notification"
+        [ngTemplateOutletContext]="{ notification }"
       />
     </div>
   }
 </ul>
 
-<ng-template #notificationFragment let-message="message" let-type="type" let-location="location">
-  <div class="flex py-2 px-3 rounded-md shadow-lg text-white max-w-80" [class]="'bg-' + type">
-    <app-icon [iconName]="getIconNameFromType(type)" size="24" />
-    <p class="ml-2">{{ message }}</p>
+<ng-template #notificationFragment let-notification="notification">
+  @let typedType = typed(notification.type);
+  <div
+    class="flex py-2 px-3 rounded-md shadow-lg text-white max-w-96"
+    [ngClass]="
+      {
+        success: 'bg-success',
+        error: 'bg-error',
+        info: 'bg-info',
+        warning: 'bg-warning',
+      }[typedType]
+    "
+  >
+    <app-icon [iconName]="getIconNameFromType(typedType)" size="24" />
+    <p class="ml-2">{{ notification.message }}</p>
+    <app-button
+      icon="close"
+      iconColor="white"
+      [iconOnly]="true"
+      styleType="tertiary"
+      class="ms-1"
+      (click)="removeNotification(notification)"
+    />
   </div>
 </ng-template>

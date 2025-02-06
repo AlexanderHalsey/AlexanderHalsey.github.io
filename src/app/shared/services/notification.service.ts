@@ -13,7 +13,7 @@ export class NotificationService {
     setTimeout(() => this.removeNotification(notification), notification.timeout ?? 5000);
   };
 
-  private removeNotification = (notification: Notification) => {
+  public removeNotification = (notification: Notification) => {
     this._notifications.update((currentValue) => currentValue.filter((n) => n !== notification));
   };
 

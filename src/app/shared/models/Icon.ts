@@ -6,6 +6,7 @@ import { AzureDevopsIconComponent } from '@/assets/icons/azure-devops-icon.compo
 import { BackendDevelopmentIconComponent } from '@/assets/icons/backend-development-icon.component';
 import { CheckCircleIconComponent } from '@/assets/icons/check-circle-icon.component';
 import { CiCdIconComponent } from '@/assets/icons/ci-cd-icon.component';
+import { CloseIconComponent } from '@/assets/icons/close-icon.component';
 import { ComputerIconComponent } from '@/assets/icons/computer-icon.component';
 import { CssIconComponent } from '@/assets/icons/css-icon.component';
 import { CvsIconComponent } from '@/assets/icons/cv-icon.component';
@@ -50,6 +51,7 @@ export const ICON_OPTIONS = [
   { name: 'backend-development', component: BackendDevelopmentIconComponent },
   { name: 'check-circle', component: CheckCircleIconComponent },
   { name: 'ci-cd-pipelines', component: CiCdIconComponent },
+  { name: 'close', component: CloseIconComponent },
   { name: 'computer', component: ComputerIconComponent },
   { name: 'css', component: CssIconComponent, allowAnimate: true },
   { name: 'cv', component: CvsIconComponent },
