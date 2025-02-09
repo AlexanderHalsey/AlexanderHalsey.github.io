@@ -7,6 +7,7 @@ import { CardComponent } from '../card/card.component';
 import { IconComponent } from '../icon/icon.component';
 
 import { DisplayService } from '@/services/display.service';
+import { prefersReducedMotion } from '@/helpers/match-media.helper';
 
 import { TimelineItem } from '@/models';
 
@@ -19,7 +20,9 @@ import { TimelineItem } from '@/models';
     trigger('expand', [
       state('open', style({ height: '*' })),
       state('closed', style({ height: '250px' })),
-      transition('open <=> closed', [animate('0.3s ease-in-out')]),
+      ...(prefersReducedMotion
+        ? []
+        : [transition('open <=> closed', [animate('0.3s ease-in-out')])]),
     ]),
   ],
 })

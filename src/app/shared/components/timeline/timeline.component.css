@@ -30,9 +30,9 @@
     opacity: 1;
   }
   .timeline-item-card {
-    transform: scale(1);
+    transform: none;
   }
   .timeline-item-delineator {
-    transform: translateX(0);
+    transform: none;
   }
 }

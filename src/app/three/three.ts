@@ -3,6 +3,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGL from 'three/addons/capabilities/WebGL.js';
 
+import { prefersReducedMotion } from '@/helpers/match-media.helper';
+
 import { createCamera } from './camera';
 import { waitForEl } from './observers';
 import { createRubixCube } from './rubixCube';
@@ -32,26 +34,31 @@ if (ORBIT_CONTROLS_FLAG) {
 
 function animate() {
   if (ORBIT_CONTROLS_FLAG) controls.update();
-  rubixCube.rotation.x += 0.001;
-  rubixCube.rotation.y += 0.001;
+  if (!prefersReducedMotion) {
+    rubixCube.rotation.x += 0.001;
+    rubixCube.rotation.y += 0.001;
+  }
   if (RENDER_FLAG) renderer.render(scene, camera);
 }
 
 if (!RENDER_FLAG) renderer.render(scene, camera);
 
 const animateSceneHandler = () => animateScene(camera, renderer, rubixCube);
-waitForEl('#rubix-cube').then((el) => {
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      window.addEventListener('scroll', animateSceneHandler);
-      window.addEventListener('resize', animateSceneHandler);
-    } else {
-      window.removeEventListener('scroll', animateSceneHandler);
-      window.removeEventListener('resize', animateSceneHandler);
-    }
+if (!prefersReducedMotion) {
+  waitForEl('#rubix-cube').then((el) => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        window.matchMedia('(prefers-reduced-motion: reduce)');
+        window.addEventListener('scroll', animateSceneHandler);
+        window.addEventListener('resize', animateSceneHandler);
+      } else {
+        window.removeEventListener('scroll', animateSceneHandler);
+        window.removeEventListener('resize', animateSceneHandler);
+      }
+    });
+    observer.observe(el);
   });
-  observer.observe(el);
-});
+}
 waitForEl('#me').then(animateSceneHandler);
 
 if (process.env['NODE_ENV'] === 'development') {

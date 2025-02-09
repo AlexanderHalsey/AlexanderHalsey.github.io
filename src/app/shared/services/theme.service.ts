@@ -3,6 +3,7 @@ import { computed, Injectable, Signal, signal } from '@angular/core';
 import { getColorGradients } from '@/helpers/theme.helper';
 
 import { Theme, ThemeOrSystem } from '@/models';
+import { prefersDark } from '@/helpers/match-media.helper';
 
 export const MOUNTAIN_BACKGROUND_COLOR = {
   light: '#35473e',
@@ -51,6 +52,6 @@ export class ThemeService {
   };
 
   private getSystemPreference = (): Theme => {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return prefersDark ? 'dark' : 'light';
   };
 }

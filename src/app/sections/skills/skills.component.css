@@ -43,14 +43,16 @@
 }
 
 @media (prefers-reduced-motion) {
-  :first-child,
-  :nth-child(2),
-  :nth-child(3),
-  :nth-child(4),
-  :nth-child(5),
-  :nth-child(6) {
-    transform: translateX(0);
-    filter: blur(0);
-    opacity: 1;
+  .skills {
+    :first-child,
+    :nth-child(2),
+    :nth-child(3),
+    :nth-child(4),
+    :nth-child(5),
+    :nth-child(6) {
+      transform: none;
+      filter: none;
+      opacity: 1;
+    }
   }
 }
