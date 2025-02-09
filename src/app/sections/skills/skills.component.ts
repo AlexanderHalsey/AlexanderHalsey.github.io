@@ -4,6 +4,7 @@ import { CardComponent } from '@/components/card/card.component';
 import { IconComponent } from '@/components/icon/icon.component';
 
 import { scrollObserver } from '@/helpers/scroll.helper';
+import { prefersReducedMotion } from '@/helpers/match-media.helper';
 
 @Component({
   selector: 'app-skills',
@@ -44,6 +45,8 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
       description: $localize`I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I also work with Docker and Kubernetes, debugging deployment files and monitoring services.`,
     },
   ] as const;
+
+  prefersReducedMotion = prefersReducedMotion;
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   scrollObserverDisconnect = () => {};

@@ -28,7 +28,5 @@
   }
   .cv:hover {
     transform: none;
-    mask: none;
-    filter: none;
   }
 }

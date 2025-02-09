@@ -17,3 +17,9 @@
     transform: translateX(-100%);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .tech-stack-bar {
+    animation: none;
+  }
+}

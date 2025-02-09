@@ -14,3 +14,12 @@
     border-color: var(--color-primary);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .typewriter {
+    border-right: none;
+  }
+  .blinking {
+    animation: none;
+  }
+}

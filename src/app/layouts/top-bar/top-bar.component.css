@@ -35,3 +35,12 @@
     transform: rotateZ(0deg);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .rubix-logo {
+    animation: none;
+  }
+  .rubix-logo:hover {
+    animation: none;
+  }
+}

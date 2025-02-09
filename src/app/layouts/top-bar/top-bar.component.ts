@@ -7,6 +7,8 @@ import { ThemeSelectComponent } from '../components/theme-select/theme-select.co
 
 import { DisplayService } from '@/services/display.service';
 
+import { prefersReducedMotion } from '@/helpers/match-media.helper';
+
 import type { SelectorItem } from '@/models';
 
 @Component({
@@ -40,6 +42,9 @@ export class TopBarComponent {
     }
     const yOffset = -104;
     const top = element.getBoundingClientRect().top + window.scrollY + yOffset;
-    window.scrollTo({ behavior: 'smooth', top });
+    window.scrollTo({
+      behavior: prefersReducedMotion ? 'instant' : 'smooth',
+      top,
+    });
   };
 }

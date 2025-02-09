@@ -1,4 +1,9 @@
-<div class="h-full border border-border-color rounded-md bg-bg-color dark:bg-gray-800">
+<div
+  class="h-full border border-border-color rounded-md bg-bg-color dark:bg-gray-800"
+  [ngClass]="[
+    { true: 'hover:translate-x-px hover:translate-y-[-1px]', false: '' }[popOnHover().toString()],
+  ]"
+>
   <div class="p-6">
     <ng-content />
   </div>

@@ -1,4 +1,5 @@
 import { wait } from '@/helpers/async.helper';
+import { prefersReducedMotion } from '@/helpers/match-media.helper';
 import { Component, signal } from '@angular/core';
 
 @Component({
@@ -12,7 +13,11 @@ export class LandingComponent {
   title = signal('');
   isTyping = signal(false);
   constructor() {
-    this.loopTitles();
+    if (!prefersReducedMotion) {
+      this.loopTitles();
+    } else {
+      this.title.set(this.titles[0]);
+    }
   }
 
   async loopTitles() {
