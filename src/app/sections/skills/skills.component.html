@@ -9,7 +9,7 @@
           <app-icon [iconName]="skill.icon" size="38" class="dark:text-gray-200" />
           <h3 class="font-bold ml-4">{{ skill.title }}</h3>
         </div>
-        <p class="mt-4">{{ skill.description }}</p>
+        <app-markdown class="mt-4" [value]="skill.description" />
       </app-card>
     }
   </div>
