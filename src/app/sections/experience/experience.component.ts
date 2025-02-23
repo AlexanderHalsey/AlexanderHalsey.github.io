@@ -22,45 +22,66 @@ export class ExperienceComponent implements AfterViewInit, OnDestroy {
 
   experience = computed<TimelineItem[]>(() => [
     {
-      startDate: new Date(2022, 7, 1),
+      startDate: new Date(2023, 5, 1),
+      endDate: new Date(),
+      title: $localize`Junior Software Developer`,
       description: $localize`
-I developed a variety of back-office microservices used by our internal teams to assist
-hospital clients, helping streamline processes and meet key performance indicators. I used
-Vue.js and TypeScript to build user-friendly interfaces, followed SPA design principles,
-and helped develop and maintain a centralised UI design system to ensure consistency
-across applications. I collaborated with senior developers, writing pull requests and
-incorporating feedback to improve code quality. Additionally, I worked with product
-owners and peer developers to brainstorm solutions and align on project goals,
-contributing to both technical and business objectives. To enhance reliability and
-scalability, I implemented end-to-end and unit testing using Cypress and Jest, developed
-reusable components, and wrote clean, well-documented code. On the backend, I utilised
-the NestJS framework on the backend with PostgreSQL as a database and ORM tools to
-ensure efficient data management. I also worked with Git, Docker, Kubernetes, and Azure
-DevOps for CI/CD pipelines and gained experience with proxy gateways / load balancers
-to optimise communication between services.
+I developed back-office microservices to support hospital clients and internal teams, streamlining processes and meeting key performance indicators.
+
+<div class="ms-4 mt-4">• <span class="font-medium">Designed</span> and maintained a centralized UI design system for consistency across applications.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Collaborated</span> with product owners and peer developers to define project goals and solutions.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> CI/CD pipelines with Git, Docker, Kubernetes, and Azure DevOps.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Optimized</span> service communication using proxy gateways and load balancers.</div>
       `,
+      includeToggleBtn: true,
+    },
+    {
+      startDate: new Date(2023, 0, 1),
+      endDate: new Date(2023, 5, 1),
+      title: $localize`Freelance Web Developer`,
+      description: $localize`
+<div>• <span class="font-medium">Built</span> user-friendly interfaces using Vue.js and TypeScript, following SPA design principles.</div>
+<div class="mt-2">• <span class="font-medium">Wrote</span> pull requests, incorporated feedback, and worked closely with senior developers to improve code quality.</div>
+<div class="mt-2">• <span class="font-medium">Developed</span> reusable components and maintained clean, well-documented code.</div>
+<div class="mt-2">• <span class="font-medium">Enhanced</span> reliability with end-to-end and unit tests using Cypress and Jest.</div>
+      `,
+    },
+    {
+      startDate: new Date(2023, 0, 1),
+      milestone: $localize`Registered as a freelancer in France.`,
+    },
+    {
+      startDate: new Date(2022, 6, 1),
+      endDate: new Date(2023, 0, 1),
+      title: $localize`Software Developer Intern`,
+      description: $localize`
+<div>• <span class="font-medium">Contributed</span> to backend development using NestJS and PostgreSQL, ensuring efficient data management.</div>
+<div class="mt-2">• <span class="font-medium">Gained</span> experience working with ORM tools and database optimization.</div>
+<div class="mt-2">• <span class="font-medium">Assisted</span> in debugging, troubleshooting, and improving application performance.</div>
+<div class="mt-2">• <span class="font-medium">Learned</span> and applied best practices in software development and team collaboration.</div>
+      `,
+    },
+    {
+      startDate: new Date(2022, 4, 27),
+      milestone: $localize`Certificate of Completion – Full-Stack JavaScript Web & Mobile Developer (La Capsule)`,
     },
     {
       startDate: new Date(2021, 7, 1),
+      endDate: new Date(2021, 11, 31),
+      title: $localize`Volunteer Programmer`,
       description: $localize`
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minus illo, obcaecati consequuntur labore odit facere esse ullam, eaque incidunt asperiores cupiditate expedita quibusdam voluptatibus? Modi id officiis amet omnis.
-Dolor, quidem natus ipsum error, iure est alias voluptatum velit dolores labore aliquam explicabo reiciendis dignissimos ullam quasi nobis culpa optio nulla eum. Iusto similique placeat saepe sunt accusamus magnam.
-Ex ratione repudiandae sit expedita rerum, officia quos officiis, cum distinctio provident suscipit at qui pariatur fugiat aliquam maxime amet tempore, nulla harum nihil deleniti nam incidunt ipsa ipsam? Cum!
-Voluptas praesentium fugiat placeat tenetur debitis! Corporis saepe non, labore neque nulla nihil id commodi quia illum modi dolores ex ratione quaerat doloremque facere sapiente quo possimus voluptatem a similique?
-Vero porro sint dolores soluta laudantium delectus ea praesentium eius tempora commodi? Delectus explicabo sed cumque. Quam, quo? Laboriosam nesciunt debitis velit magni fugiat alias cumque doloribus nisi error voluptatem.
-      `,
-    },
-    {
-      startDate: new Date(2020, 7, 1),
-      description: $localize`
-I developed a donation management system using Python/Django and JavaScript that
-enabled the institute’s admin to track donations, manage donor information, generate
-individual and annual fiscal PDF receipts, and schedule email dispatches. This project was
-fully comprehensive, covering CRUD functionality, frontend and backend processes, REST
-APIs, external libraries, and various architectural design patterns. As a self-taught
+I developed a donation management system enabled the institute’s admin to track donations, manage donor information, generate individual and annual fiscal PDF receipts, and schedule email dispatches.
+<div class="ms-4 mt-4">• <span class="font-medium">Python/Django & JavaScript</span> – Backend logic with Django, interactive UI with JavaScript.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">CRUD functionality</span> – Managed donor and donation records.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Frontend & backend integration</span> – Ensured seamless data flow.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">REST APIs</span> – Secure data retrieval and updates.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">External libraries</span> – Used for PDFs (ReportLab) and email automation.</div>
+<div class="ms-4 mt-2 mb-4">• <span class="font-medium">MVC architecture</span> – Maintained clean, scalable code.</div>
+As a self-taught
 developer at this stage, I adopted a proactive, problem-solving approach, demonstrating
 my ability to tackle challenges independently and continuously learn new technologies.
       `,
+      includeToggleBtn: true,
     },
   ]);
 
