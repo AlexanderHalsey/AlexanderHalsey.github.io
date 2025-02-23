@@ -9,7 +9,7 @@ import { IconComponent } from '../icon/icon.component';
 import { DisplayService } from '@/services/display.service';
 import { prefersReducedMotion } from '@/helpers/match-media.helper';
 
-import { TimelineItem } from '@/models';
+import { TimelineDateRange, TimelineItem, TimelineMilestone } from '@/models';
 
 @Component({
   selector: 'app-timeline',
@@ -38,4 +38,7 @@ export class TimelineComponent<T extends TimelineItem> {
   toggle = (index: number) => {
     this.expanded.update((currentValue) => ({ ...currentValue, [index]: !currentValue[index] }));
   };
+
+  isMilestone = (item: TimelineItem): item is TimelineMilestone => 'milestone' in item;
+  isDateRange = (item: TimelineItem): item is TimelineDateRange => 'description' in item;
 }
