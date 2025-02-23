@@ -5,6 +5,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { ButtonComponent } from '../button/button.component';
 import { CardComponent } from '../card/card.component';
 import { IconComponent } from '../icon/icon.component';
+import { MarkdownComponent } from '../markdown/markdown.component';
 
 import { DisplayService } from '@/services/display.service';
 import { prefersReducedMotion } from '@/helpers/match-media.helper';
@@ -13,7 +14,14 @@ import { TimelineDateRange, TimelineItem, TimelineMilestone } from '@/models';
 
 @Component({
   selector: 'app-timeline',
-  imports: [ButtonComponent, CardComponent, DatePipe, IconComponent, NgTemplateOutlet],
+  imports: [
+    ButtonComponent,
+    CardComponent,
+    DatePipe,
+    IconComponent,
+    MarkdownComponent,
+    NgTemplateOutlet,
+  ],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
   animations: [
