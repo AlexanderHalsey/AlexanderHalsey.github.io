@@ -62,7 +62,7 @@
               />
             }
 
-            <span class="timeline-item-content-description">{{ item.description }}</span>
+            <app-markdown [value]="item.description" [options]="{ breaks: true }" />
 
             @if (item.includeToggleBtn) {
               <app-button
