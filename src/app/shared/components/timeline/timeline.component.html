@@ -69,13 +69,12 @@
                 styleType="tertiary"
                 size="small"
                 class="see-more-btn absolute bottom-0 pb-1 left-0 h-12 w-full flex items-end justify-center rounded-b-md bg-gradient-to-t from-bg-color dark:from-gray-800 from-60%"
-                i18n
                 (click)="toggle($index)"
               >
                 @if (expanded()[$index]) {
-                  See less
+                  <span i18n>See less</span>
                 } @else {
-                  See more
+                  <span i18n>See more</span>
                 }
               </app-button>
             }
@@ -89,7 +88,7 @@
 <ng-template #timelineEvent let-item>
   <div class="md:text-end md:me-2">
     <div class="flex mb-2 md:justify-end">
-      <p i18n>
+      <p>
         {{ item.startDate | date }}
         @if (item.endDate) {
           &nbsp;-&nbsp;
