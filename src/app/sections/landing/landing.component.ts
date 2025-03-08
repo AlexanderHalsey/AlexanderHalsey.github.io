@@ -9,7 +9,12 @@ import { Component, signal } from '@angular/core';
   styleUrl: './landing.component.css',
 })
 export class LandingComponent {
-  titles = ['A fullstack web developper', 'A tech enthusiast', 'A problem solver'] as const;
+  titles = [
+    $localize`A fullstack web developper`,
+    $localize`A tech enthusiast`,
+    $localize`A problem solver`,
+  ] as const;
+
   title = signal('');
   isTyping = signal(false);
   constructor() {

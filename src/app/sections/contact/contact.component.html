@@ -90,14 +90,14 @@
   <div class="flex md:flex-col max-md:justify-between text-gray-300 pb-8 md:pb-0 pr-12 pt-0">
     <ul>
       <li class="cv max-md:pt-1 pb-2 flex items-center">
-        <app-button i18n styleType="secondary" icon="cv" (click)="downloadCV()">
-          Download&nbsp;<span class="font-bold">CV</span>
+        <app-button styleType="secondary" icon="cv" (click)="downloadCV()">
+          <span i18n>Download</span>&nbsp;<span i18n class="font-bold">CV</span>
         </app-button>
       </li>
       <li class="contact-link py-3">
         <a href="tel:+33688518384">
           <div class="flex items-center">
-            <app-icon iconName="phone" class="me-4" /> +33 6 88 51 83 84
+            <app-icon iconName="phone" class="me-4" /><span i18n> +33 6 88 51 83 84</span>
           </div>
         </a>
       </li>
@@ -106,14 +106,14 @@
       <li class="contact-link py-3">
         <a href="https://github.com/AlexanderHalsey" target="_blank">
           <div class="flex items-center">
-            <app-icon iconName="github" size="26" class="me-4" /> Github
+            <app-icon iconName="github" size="26" class="me-4" /><span i18n> Github</span>
           </div>
         </a>
       </li>
       <li class="contact-link py-3">
         <a href="https://www.linkedin.com/in/alexander-halsey-01a13125b/" target="_blank">
           <div class="flex items-center">
-            <app-icon iconName="linkedin" size="28" class="me-4" /> LinkedIn
+            <app-icon iconName="linkedin" size="28" class="me-4" /><span i18n> LinkedIn</span>
           </div>
         </a>
       </li>
