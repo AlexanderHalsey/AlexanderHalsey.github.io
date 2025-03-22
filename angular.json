@@ -14,7 +14,10 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "en",
+        "sourceLocale": {
+          "code": "en",
+          "baseHref": "/"
+        },
         "locales": {
           "fr": {
             "translation": "src/locale/messages.fr.xlf"
@@ -29,7 +32,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "docs",
+              "base": "_site",
               "browser": ""
             },
             "index": "src/index.html",
