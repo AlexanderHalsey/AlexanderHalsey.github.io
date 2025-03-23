@@ -32,7 +32,9 @@ export class ThemeService {
   );
 
   constructor() {
-    this.setTheme((localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference);
+    this.setTheme(
+      (localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference(),
+    );
   }
 
   public get<K extends keyof State>(key: K): Signal<State[K]> {
