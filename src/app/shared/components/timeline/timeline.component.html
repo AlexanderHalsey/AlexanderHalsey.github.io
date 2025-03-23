@@ -42,19 +42,13 @@
               [ngTemplateOutletContext]="{ $implicit: item }"
             />
           }
-          <div class="flex text-center h-48 items-center justify-center">
+          <div class="flex text-center md:h-48 items-center justify-center">
             <p class="w-3/5 font-bold text-lg text-gray-200 dark:text-gray-300">
               {{ item.milestone }}
             </p>
           </div>
         } @else if (isDateRange(item)) {
-          <app-card
-            class="relative flex flex-col"
-            [class]="{
-              '[&>*>*]:pb-9': expanded()[$index],
-            }"
-            [@expand]="expanded()[$index] || !item.includeToggleBtn ? 'open' : 'closed'"
-          >
+          <app-card class="relative flex flex-col [&>*>*]:pb-9">
             @if (isMobile()) {
               <ng-container
                 [ngTemplateOutlet]="timelineEvent"
@@ -63,21 +57,6 @@
             }
 
             <app-markdown [value]="item.description" [options]="{ breaks: true }" />
-
-            @if (item.includeToggleBtn) {
-              <app-button
-                styleType="tertiary"
-                size="small"
-                class="see-more-btn absolute bottom-0 pb-1 left-0 h-12 w-full flex items-end justify-center rounded-b-md bg-gradient-to-t from-bg-color dark:from-gray-800 from-60%"
-                (click)="toggle($index)"
-              >
-                @if (expanded()[$index]) {
-                  <span i18n>See less</span>
-                } @else {
-                  <span i18n>See more</span>
-                }
-              </app-button>
-            }
           </app-card>
         }
       </div>
@@ -87,7 +66,10 @@
 
 <ng-template #timelineEvent let-item>
   <div class="md:text-end md:me-2">
-    <div class="flex mb-2 md:justify-end">
+    <div
+      class="flex mb-2 md:justify-end"
+      [ngClass]="{ 'justify-center text-gray-200 dark:text-gray-300': isMilestone(item) }"
+    >
       <p>
         {{ item.startDate | date }}
         @if (item.endDate) {

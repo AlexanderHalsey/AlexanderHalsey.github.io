@@ -5,8 +5,8 @@ import { getObjectKeys } from '@/helpers/types.helper';
 const CAMERA_CONFIGURATIONS = {
   // Top of rubix cube render screen with minimum width
   start0: {
-    position: new THREE.Vector3(250, 80, 1000),
-    target: new THREE.Vector3(0, 0, 500),
+    position: new THREE.Vector3(220, 80, 1000),
+    target: new THREE.Vector3(10, 0, 520),
   },
   // Top of rubix cube render screen with maximum width
   start1: {
@@ -15,8 +15,8 @@ const CAMERA_CONFIGURATIONS = {
   },
   // Bottom of rubix cube render screen with minimum width
   end0: {
-    position: new THREE.Vector3(200, 200, 1550),
-    target: new THREE.Vector3(0, 340, 500),
+    position: new THREE.Vector3(250, 210, 1550),
+    target: new THREE.Vector3(0, 340, 480),
   },
   // Bottom of rubix cube render screen with maximum width
   end1: {

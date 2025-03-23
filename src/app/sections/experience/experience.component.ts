@@ -33,7 +33,6 @@ I developed back-office microservices to support hospital clients and internal t
 <div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> CI/CD pipelines with Git, Docker, Kubernetes, and Azure DevOps.</div>
 <div class="ms-4 mt-2">• <span class="font-medium">Optimized</span> service communication using proxy gateways and load balancers.</div>
       `,
-      includeToggleBtn: true,
     },
     {
       startDate: new Date(2023, 0, 1),
@@ -81,7 +80,6 @@ As a self-taught
 developer at this stage, I adopted a proactive, problem-solving approach, demonstrating
 my ability to tackle challenges independently and continuously learn new technologies.
       `,
-      includeToggleBtn: true,
     },
   ]);
 
@@ -92,7 +90,7 @@ my ability to tackle challenges independently and continuously learn new technol
       enterCallback: (entry) => {
         entry.target.classList.add('show');
       },
-      options: { threshold: 0.8 },
+      options: { threshold: 0.5 },
     });
     this.scrollObserverLeaveDisconnect = scrollObserver('.timeline-item', {
       leaveCallback: (entry) => {
