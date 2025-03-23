@@ -41,6 +41,10 @@ jobs:
         run: npm run build
       - name: Move en locale files up to root
         run: mv ./_site/en/* ./_site/
+      - name: Remove redundant cv pdf files
+        run: rm -f ./_site/cv_fr.pdf && rm -f ./_site/cv_es.pdf && rm -f ./_site/fr/cv.pdf && rm -f ./_site/fr/cv_es.pdf && rm -f ./_site/es/cv.pdf && rm -f ./_site/es/cv_fr.pdf
+      - name: Rename cv files for locales
+        run: mv ./_site/fr/cv_fr.pdf ./_site/fr/cv.pdf && mv ./_site/es/cv_es.pdf ./_site/es/cv.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

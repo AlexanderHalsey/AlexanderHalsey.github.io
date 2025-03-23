@@ -65,7 +65,7 @@ I developed back-office microservices to support hospital clients and internal t
       milestone: $localize`Certificate of Completion – Full-Stack JavaScript Web & Mobile Developer (La Capsule)`,
     },
     {
-      startDate: new Date(2021, 7, 1),
+      startDate: new Date(2021, 3, 1),
       endDate: new Date(2021, 11, 31),
       title: $localize`Volunteer Programmer`,
       description: $localize`
