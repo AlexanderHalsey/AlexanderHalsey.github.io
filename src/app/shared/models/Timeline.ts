@@ -1,7 +1,6 @@
 interface BaseTimelineItem {
   startDate: Date;
   endDate?: Date;
-  includeToggleBtn?: boolean;
 }
 export interface TimelineMilestone extends BaseTimelineItem {
   milestone: string;
