@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Remove redundant cv pdf files
-        run: rm -f ./_site/en/(cv_fr|cv_es).pdf && rm -f ./_site/fr/(cv|cv_es).pdf && rm -f ./_site/es/(cv|cv_fr).pdf
+        run: rm -f "./_site/en/(cv_fr|cv_es).pdf" && rm -f "./_site/fr/(cv|cv_es).pdf" && rm -f "./_site/es/(cv|cv_fr).pdf"
       - name: Rename cv files for locales
         run: mv ./_site/fr/cv_fr.pdf ./_site/fr/cv.pdf && mv ./_site/es/cv_es.pdf ./_site/es/cv.pdf
       - name: Upload artifact
