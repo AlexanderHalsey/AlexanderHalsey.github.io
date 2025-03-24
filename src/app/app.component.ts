@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Signal } from '@angular/core';
 
 import { AboutMeComponent } from '@/sections/about-me/about-me.component';
 import { ContactComponent } from '@/sections/contact/contact.component';
@@ -11,6 +11,8 @@ import { NotificationComponent } from '@/components/notification/notification.co
 import { SkillsComponent } from '@/sections/skills/skills.component';
 import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 import { TopBarComponent } from '@/layouts/top-bar/top-bar.component';
+
+import { ThemeService } from '@/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -29,4 +31,9 @@ import { TopBarComponent } from '@/layouts/top-bar/top-bar.component';
   ],
   templateUrl: './app.component.html',
 })
-export class AppComponent {}
+export class AppComponent {
+  backgroundColor: Signal<string>;
+  constructor(private themeService: ThemeService) {
+    this.backgroundColor = themeService.mountainBackgroundColor;
+  }
+}

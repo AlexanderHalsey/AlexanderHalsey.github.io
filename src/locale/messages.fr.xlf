@@ -2,6 +2,14 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="4382387356927042708" datatype="html">
+        <source> SIRET: 922 030 010 00016 – Registered in France </source>
+        <target> SIRET : 922 030 010 00016 – Enregistré en France </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="413116577994876478" datatype="html">
         <source>Light</source>
         <target>Jour</target>
@@ -316,7 +324,7 @@ J'ai développé des microservices back-office pour soutenir les clients hospita
       </trans-unit>
       <trans-unit id="5690535201686042384" datatype="html">
         <source>Registered as a freelancer in France.</source>
-        <target>Inscrit en tant que freelance en France.</target>
+        <target>Enregistré en tant que micro-entrepreneur en France.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
           <context context-type="linenumber">51</context>
