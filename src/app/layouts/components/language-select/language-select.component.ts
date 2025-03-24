@@ -1,7 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 import { DropdownMenuComponent } from '@/shared/components/dropdown-menu/dropdown-menu.component';
+
+import { languageOptions } from '@/helpers/language.helper';
+
 import { MenuItem } from '@/models';
+
+type LanguageMenuItem = MenuItem & { code: string; pathname: string };
 
 @Component({
   selector: 'app-language-select',
@@ -9,11 +14,21 @@ import { MenuItem } from '@/models';
   templateUrl: './language-select.component.html',
 })
 export class LanguageSelectComponent {
-  activeLanguage = signal<string>(navigator.language);
+  languageOptions = languageOptions;
+  activeLanguageCode = signal<string | undefined>(
+    this.languageOptions.find((option) => option.pathname === location.pathname)?.code,
+  );
 
-  languages: MenuItem[] = [{ label: 'English' }, { label: 'Français' }, { label: 'Español' }];
+  languageOption = computed(() => {
+    return (
+      this.languageOptions.find((language) => language.code === this.activeLanguageCode()) ??
+      this.languageOptions[0]
+    );
+  });
 
-  setLanguage = (language: MenuItem) => {
-    this.activeLanguage.set(language.label);
+  setLanguage = (languageOption: LanguageMenuItem) => {
+    if (languageOption.pathname !== location.pathname) {
+      location.href = location.origin + languageOption.pathname;
+    }
   };
 }

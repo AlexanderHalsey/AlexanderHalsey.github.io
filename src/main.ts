@@ -4,6 +4,9 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
+import { localizeUrl } from '@/helpers/language.helper';
+
 import './app/three/three';
 
+localizeUrl();
 bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));
