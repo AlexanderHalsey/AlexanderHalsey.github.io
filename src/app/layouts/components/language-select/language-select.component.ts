@@ -23,6 +23,7 @@ export class LanguageSelectComponent {
   );
 
   languageOption = computed(() => {
+    console.log(location);
     return (
       this.languageOptions.find((language) => language.code === this.activeLanguageCode()) ??
       this.languageOptions[0]
