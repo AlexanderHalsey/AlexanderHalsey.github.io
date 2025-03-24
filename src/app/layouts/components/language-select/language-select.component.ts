@@ -2,8 +2,6 @@ import { Component, computed, signal } from '@angular/core';
 
 import { DropdownMenuComponent } from '@/shared/components/dropdown-menu/dropdown-menu.component';
 
-import { languageOptions } from '@/helpers/language.helper';
-
 import { MenuItem } from '@/models';
 
 type LanguageMenuItem = MenuItem & { code: string; pathname: string };
@@ -14,7 +12,12 @@ type LanguageMenuItem = MenuItem & { code: string; pathname: string };
   templateUrl: './language-select.component.html',
 })
 export class LanguageSelectComponent {
-  languageOptions = languageOptions;
+  languageOptions: LanguageMenuItem[] = [
+    { code: 'en', label: 'English', pathname: '/en' },
+    { code: 'fr', label: 'Français', pathname: '/fr' },
+    { code: 'es', label: 'Español', pathname: '/es' },
+  ];
+
   activeLanguageCode = signal<string | undefined>(
     this.languageOptions.find((option) => option.pathname === location.pathname)?.code,
   );
