@@ -44,7 +44,7 @@ jobs:
       - name: Rename cv files for locales
         run: mv ./_site/fr/cv_fr.pdf ./_site/fr/cv.pdf && mv ./_site/es/cv_es.pdf ./_site/es/cv.pdf
       - name: Add localize file as init script
-        run: cp ./.github/workflow/localize.js ./_site/
+        run: cp ./.github/workflows/localize.js ./_site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
