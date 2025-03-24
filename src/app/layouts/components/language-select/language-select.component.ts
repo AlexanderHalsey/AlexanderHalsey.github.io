@@ -19,16 +19,14 @@ export class LanguageSelectComponent {
   ];
 
   activeLanguageCode = signal<string | undefined>(
-    this.languageOptions.find((option) => option.pathname === location.pathname)?.code,
+    this.languageOptions.find((option) => location.pathname.startsWith(option.pathname))?.code,
   );
 
-  languageOption = computed(() => {
-    console.log(location);
-    return (
+  languageOption = computed(
+    () =>
       this.languageOptions.find((language) => language.code === this.activeLanguageCode()) ??
-      this.languageOptions[0]
-    );
-  });
+      this.languageOptions[0],
+  );
 
   setLanguage = (languageOption: LanguageMenuItem) => {
     if (languageOption.pathname !== location.pathname) {
