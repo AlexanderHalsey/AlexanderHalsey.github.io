@@ -1,4 +1,4 @@
-import { Component, Signal } from '@angular/core';
+import { AfterViewInit, Component, signal, Signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 import { HamburgerMenuComponent } from '../components/hamburger-menu/hamburger-menu.component';
@@ -22,8 +22,9 @@ import type { SelectorItem } from '@/models';
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css', '../../shared/components/button/button.component.css'],
 })
-export class TopBarComponent {
+export class TopBarComponent implements AfterViewInit {
   isMobile: Signal<boolean>;
+  isTop = signal(true);
   constructor(private displayService: DisplayService) {
     this.isMobile = displayService.get('isMobile');
   }
@@ -47,4 +48,11 @@ export class TopBarComponent {
       top,
     });
   };
+
+  ngAfterViewInit() {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      this.isTop.set(scrollTop < 50);
+    });
+  }
 }

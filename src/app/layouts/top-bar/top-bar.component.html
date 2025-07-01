@@ -1,5 +1,6 @@
 <nav
-  class="flex py-3 px-6 items-center fixed w-full top-0 backdrop-blur-2xl border-b border-gray-800 dark:border-gray-700"
+  class="flex py-3 px-6 items-center fixed w-full top-0 backdrop-blur-2xl"
+  [class]="{ 'shadow-xl': !isTop() }"
 >
   <div class="grow">
     <button class="rubix-logo p-1" (click)="scrollTo('#landing')">
