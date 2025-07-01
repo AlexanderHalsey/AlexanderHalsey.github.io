@@ -1,7 +1,16 @@
 .tech-stack-bar {
-  animation: scrollStack 600s linear infinite;
   &:hover {
     animation-play-state: paused;
+  }
+}
+@media (max-width: 768px) {
+  .tech-stack-bar {
+    animation: scrollStackVertical 450s linear infinite;
+  }
+}
+@media (min-width: 769px) {
+  .tech-stack-bar {
+    animation: scrollStackHorizontal 500s linear infinite;
   }
 }
 #tech-stack {
@@ -9,12 +18,20 @@
     animation-direction: reverse;
   }
 }
-@keyframes scrollStack {
+@keyframes scrollStackHorizontal {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes scrollStackVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 

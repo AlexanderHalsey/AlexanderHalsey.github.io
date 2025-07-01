@@ -1,20 +1,23 @@
-<section id="tech-stack" class="flex flex-col items-center gap-16 py-24">
+<section
+  id="tech-stack"
+  class="flex md:flex-col items-center justify-center gap-6 sm:gap-10 md:gap-16 py-24"
+>
   @for (techStackGroup of techStackGroups(); track $index) {
     <div
-      class="flex justify-center w-full overflow-x-hidden border-y border-border-color shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800"
+      class="flex max-md:flex-col justify-center items-center md:w-full md:overflow-x-hidden max-md:overflow-y-hidden shadow-lg bg-bg-color dark:bg-gray-800 shadow-stone-400 dark:shadow-slate-800 rounded-md"
       [class]="'tech-stack-item-' + $index"
     >
-      <div class="sticky left-0 bg-gradient-to-l from-transparent to-stone-200 dark:to-gray-900">
-        <div class="w-12"></div>
-      </div>
-      <div class="w-full flex">
-        <div class="tech-stack-bar relative w-[150rem] ms-7 flex py-14 right-[-1rem]">
+      <div class="md:w-full max-md:h-[48rem] flex max-md:flex-col">
+        <div
+          class="tech-stack-bar relative max-md:h-[142rem] md:w-[150rem] md:ms-7 flex max-md:flex-col md:py-14 max-md:px-6 md:right-[-1rem] max-md:bottom-[-1rem]"
+          [class]="$index % 2 === 0 ? 'max-md:mt-5' : 'max-md:mt-[47rem]'"
+        >
           @for (techStackItem of techStackGroup; track $index) {
-            <app-tooltip location="bottom" class="me-[6.5rem]">
+            <app-tooltip location="bottom" class="md:me-[6.5rem] max-md:mb-[3rem]">
               <app-icon
                 activator
                 [iconName]="techStackItem.icon"
-                size="70"
+                [size]="isMobile() ? '55' : '70'"
                 color="gray"
                 [animateOnHover]="techStackItem.hovered"
                 (mouseover)="techStackItem.hovered = true"
@@ -26,9 +29,6 @@
             </app-tooltip>
           }
         </div>
-      </div>
-      <div class="sticky right-0 bg-gradient-to-r from-transparent to-stone-200 dark:to-gray-900">
-        <div class="w-12"></div>
       </div>
     </div>
   }

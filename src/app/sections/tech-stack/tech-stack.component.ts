@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, Signal, signal } from '@angular/core';
 
 import { IconComponent } from '@/components/icon/icon.component';
 import { TooltipComponent } from '@/components/tooltip/tooltip.component';
@@ -6,6 +6,7 @@ import { TooltipComponent } from '@/components/tooltip/tooltip.component';
 import { scrollObserver } from '@/helpers/scroll.helper';
 
 import { IconName } from '@/models';
+import { DisplayService } from '@/services/display.service';
 
 @Component({
   selector: 'app-tech-stack',
@@ -14,6 +15,11 @@ import { IconName } from '@/models';
   styleUrl: './tech-stack.component.css',
 })
 export class TechStackComponent implements AfterViewInit {
+  isMobile: Signal<boolean>;
+  constructor(private displayService: DisplayService) {
+    this.isMobile = displayService.get('isMobile');
+  }
+
   techStacks = signal<TechStackItem[][]>(
     Array.from({ length: 3 }, () => TECH_STACK.map((item) => ({ ...item, hovered: false }))),
   );
