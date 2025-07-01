@@ -1,59 +1,170 @@
-# Portfolio
+# 🌟 Personal Portfolio Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+A portfolio website built with Angular, featuring 3D animations and CSS transitions. This project showcases professional experience, skills, and projects through an interactive user interface with multilingual support.
 
-## Development server
+## 🫥 Project Introduction
 
-To start a local development server, run:
+This portfolio website serves as a digital showcase of my professional journey, technical expertise, and creative projects. Built with current web technologies, it demonstrates frontend development capabilities while providing visitors with an interactive experience.
+
+The site features a 3D Rubik's cube animation powered by Three.js, scroll-based animations, and a responsive design that works across devices. It includes support for multiple languages (English, French, and Spanish) for international accessibility.
+
+## 📝 Project Overview and Features
+
+### 🎯 Core Features
+
+- **Interactive 3D Rubik's Cube**: Three.js scene that responds to scroll interactions
+- **CSS Animations**: Angular animations for form validation and UI transitions
+- **Multilingual Support**: i18n implementation supporting English, French, and Spanish
+- **Responsive Design**: Mobile-first approach with Tailwind CSS for cross-device compatibility
+- **Contact Form**: Contact form with real-time validation and submission handling
+- **CV Downloads**: Multiple language versions of CV available for download
+- **Accessible UI**: Design with accessibility considerations
+
+### 🎨 Visual Elements
+
+- **Layered Peak Backgrounds**: SVG components for visual section separation
+- **Color Themes**: Consistent color scheme with dark/light mode support
+- **Icon Library**: Set of technology and skill icons
+- **Scrolling**: Page navigation with scroll-based interactions
+- **Tech Stack Display**: Animated showcase of technical skills and tools
+
+## ⛏️ Tech Stack, APIs, and Other Resources
+
+### 🚀 Frontend Framework
+
+- **Angular 19.0**: Framework with standalone components and current features
+- **TypeScript 5.6**: Type-safe development with language features
+- **RxJS 7.8**: Reactive programming for data handling
+
+### 🎨 Styling & Design
+
+- **Tailwind CSS 3.4**: Utility-first CSS framework for UI development
+- **CSS Animations**: Keyframe animations and transitions
+- **Responsive Design**: Mobile-first approach with breakpoint optimization
+- **PostCSS & Autoprefixer**: CSS processing and browser compatibility
+
+### 🎮 3D Graphics & Animation
+
+- **Three.js 0.172**: 3D graphics library for WebGL rendering
+- **@types/three**: TypeScript definitions for Three.js
+- **WebGL**: Hardware-accelerated 3D graphics
+- **OrbitControls**: Interactive camera controls for 3D scene navigation
+
+### 🔧 Development Tools
+
+- **Angular CLI 19.0**: Command-line interface for project management
+- **ESLint**: Code linting with Angular-specific rules and Prettier integration
+- **Prettier**: Code formatting for consistent style
+- **TypeScript ESLint**: Linting for TypeScript code
+
+### 📝 Content & Forms
+
+- **Marked 15.0**: Markdown parsing for content
+- **SubmitJSON**: Contact form submission handling
+- **DOMPurify**: XSS protection for user-generated content
+- **Angular Forms**: Reactive forms with validation
+
+### 🌐 Internationalization
+
+- **Angular i18n**: Built-in internationalization support
+- **Multiple Locales**: English (default), French, and Spanish
+- **Translation Management**: XLF format translation files
+
+## �🧑‍💻 Getting Started: Setup and Running Instructions
+
+### Prerequisites
+
+- **Node.js**: Version 18.x or higher
+- **npm**: Version 9.x or higher (comes with Node.js)
+- **Git**: For version control
+
+### 🛠️ Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd portfolio_v3
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm start
+   # or
+   ng serve
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:4200` to view the application
+
+### 📋 Available Scripts
+
+| Command          | Description                           |
+| ---------------- | ------------------------------------- |
+| `npm start`      | Start development server on port 4200 |
+| `npm run build`  | Build the app for production          |
+| `npm run watch`  | Build in watch mode for development   |
+| `npm test`       | Run unit tests with Karma             |
+| `npm run lint`   | Lint the codebase with ESLint         |
+| `npm run format` | Format code with Prettier             |
+
+### 🌍 Language Development
+
+To work with translations:
+
+1. **Extract messages for translation**
+
+   ```bash
+   ng extract-i18n
+   ```
+
+2. **Build for specific locale**
+
+   ```bash
+   ng build --localize
+   ```
+
+3. **Serve specific locale in development**
+   ```bash
+   ng serve --configuration=fr  # for French
+   ng serve --configuration=es  # for Spanish
+   ```
+
+### 🏗️ Building for Production
 
 ```bash
-ng serve
+# Build for all locales
+npm run build
+
+# Build for specific locale
+ng build --configuration=production,fr
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The built files will be in the `_site/` directory, organized by locale.
 
-## Code scaffolding
+## 🔥 Conclusion and License
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This portfolio website demonstrates a technical approach to professional web presence, combining Three.js for 3D graphics, Angular's framework capabilities, and responsive design principles. The project serves as both a showcase of technical skills and a functional platform for professional presentation.
 
-```bash
-ng generate component component-name
-```
+### 📄 License
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```bash
-ng generate --help
-```
+### 📞 Contact
 
-## Building
+For questions, suggestions, or professional inquiries, please feel free to reach out through the contact form on the website or connect via:
 
-To build the project run:
+- **Website**: https://alexanderhalsey.github.io
+- **LinkedIn**: https://www.linkedin.com/in/alexander-halsey-01a13125b/
+- **GitHub**: https://github.com/AlexanderHalsey
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Built with Angular, Three.js, and web technologies**
