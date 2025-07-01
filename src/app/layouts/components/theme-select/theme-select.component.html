@@ -4,7 +4,7 @@
   (select)="setTheme($event.id)"
 >
   <ng-content ngProjectAs="activator">
-    <div #activator>
+    <div #activator class="m-2">
       <app-icon
         [iconName]="theme() === 'light' ? 'day' : 'night'"
         size="16"
