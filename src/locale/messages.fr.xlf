@@ -3,8 +3,8 @@
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="4382387356927042708" datatype="html">
-        <source> SIRET: 922 030 010 00016 – Registered in France </source>
-        <target> SIRET : 922 030 010 00016 – Enregistré en France </target>
+        <source> SIRET: 922 030 010 00016 – Registered in France 🇫🇷 </source>
+        <target> SIRET : 922 030 010 00016 – Enregistré en France 🇫🇷 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -100,7 +100,7 @@
       </trans-unit>
       <trans-unit id="3650693456683972816" datatype="html">
         <source> My journey into programming began as a hobby in 2020. I started with little knowledge and a lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired skills to create a donation management system for a Buddhist institute. It was a challenging experience filled with mistakes, but each one became a stepping stone for growth. </source>
-        <target>Mon parcours en programmation a commencé comme un passe-temps en 2020. J&apos;ai commencé avec peu de connaissances et beaucoup de curiosité. Peu de temps après, j&apos;ai eu l&apos;opportunité de mettre mes compétences nouvellement acquises au service de la création d&apos;un système de gestion des dons pour un institut bouddhiste. Ce fut une expérience enrichissante remplie d&apos;erreurs, mais chacune est devenue une pierre angulaire pour la croissance.</target>
+        <target>Mon parcours en programmation a commencé comme un passe-temps en 2020. J&apos;ai débuté avec quasi aucune connaissance, mais une grande curiosité. Peu de temps après, j&apos;ai eu l&apos;opportunité de mettre mes compétences nouvellement acquises au service de la création d&apos;un système de gestion des dons pour un institut bouddhiste. Ce fut une expérience enrichissante, remplie d&apos;erreurs, mais chacune est devenue un véritable coup de pouce dans mes apprentissages.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">27,30</context>
@@ -424,7 +424,7 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
       </trans-unit>
       <trans-unit id="4338123382166156090" datatype="html">
         <source>A problem solver</source>
-        <target>Un résolveur de problèmes</target>
+        <target>Un expert en débrouillardise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.ts</context>
           <context context-type="linenumber">15</context>
