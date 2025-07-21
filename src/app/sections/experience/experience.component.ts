@@ -23,7 +23,7 @@ export class ExperienceComponent implements AfterViewInit, OnDestroy {
   experience = computed<TimelineItem[]>(() => [
     {
       startDate: new Date(2023, 5, 1),
-      endDate: new Date(),
+      endDate: new Date(2025, 5, 30),
       title: $localize`Junior Software Developer`,
       description: $localize`
 I developed back-office microservices to support hospital clients and internal teams, streamlining processes and meeting key performance indicators.
