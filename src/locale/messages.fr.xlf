@@ -284,12 +284,12 @@ I developed back-office microservices to support hospital clients and internal t
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimized&lt;/span&gt; service communication using proxy gateways and load balancers.&lt;/div&gt;
       </source>
       <target>
-J'ai développé des microservices back-office pour soutenir les clients hospitaliers et les équipes internes, rationalisant les processus et répondant aux indicateurs de performance clés.
+J'ai développé des microservices back-office pour soutenir les clients hospitaliers et les équipes internes, rationalisant les processus et répondant aux KPIs.
 
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Conçu&lt;/span&gt; et maintenu un système de conception centralisé pour une cohérence entre les applications.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Collaboré&lt;/span&gt; avec les propriétaires de produits et les développeurs pairs pour définir les objectifs et les solutions du projet.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Conçu&lt;/span&gt; et maintenu un lib UI centralisé pour une cohérence entre les applications.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Collaboré&lt;/span&gt; avec les product owners et les développeurs pairs pour définir les objectifs et les solutions du projet.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implémenté&lt;/span&gt; des pipelines CI/CD avec Git, Docker, Kubernetes et Azure DevOps.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimisé&lt;/span&gt; la communication des services en utilisant des passerelles proxy et des équilibreurs de charge.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimisé&lt;/span&gt; la communication des services en utilisant des proxy gateways et des load balancers.&lt;/div&gt;
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
@@ -312,8 +312,8 @@ J'ai développé des microservices back-office pour soutenir les clients hospita
 &lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Enhanced&lt;/span&gt; reliability with end-to-end and unit tests using Cypress and Jest.&lt;/div&gt;
       </source>
       <target>
-&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Construit&lt;/span&gt; des interfaces conviviales en utilisant Vue.js et TypeScript, en suivant les principes de conception SPA.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Écrit&lt;/span&gt; des demandes de tirage, intégré des retours et travaillé en étroite collaboration avec des développeurs seniors pour améliorer la qualité du code.&lt;/div&gt;
+&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Construit&lt;/span&gt; des interfaces user-friendly en utilisant Vue.js et TypeScript, en suivant les principes de conception SPA.&lt;/div&gt;
+&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Écrit&lt;/span&gt; des PRs, intégré des retours et travaillé en étroite collaboration avec des développeurs seniors pour améliorer la qualité du code.&lt;/div&gt;
 &lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Développé&lt;/span&gt; des composants réutilisables et maintenu un code propre et bien documenté.&lt;/div&gt;
 &lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Amélioré&lt;/span&gt; la fiabilité avec des tests de bout en bout et unitaires en utilisant Cypress et Jest.&lt;/div&gt;
       </target>
@@ -389,7 +389,7 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Fonctionnalité CRUD&lt;/span&gt; - Gestion des enregistrements de donateurs et de dons.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Intégration frontend &amp; backend&lt;/span&gt; - Assuré un flux de données transparent.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;API REST&lt;/span&gt; - Récupération et mises à jour sécurisées des données.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Bibliothèques externes&lt;/span&gt; - Utilisées pour les PDF (ReportLab) et l&apos;automatisation des e-mails.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Libs externes&lt;/span&gt; - Utilisées pour les PDF (ReportLab) et l&apos;automatisation des e-mails.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2 mb-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Architecture MVC&lt;/span&gt; - Maintien d&apos;un code propre et évolutif.&lt;/div&gt;
 À ce stade, en tant que développeur autodidacte, j&apos;ai adopté une approche proactive et axée sur la résolution de problèmes, démontrant ma capacité à relever des défis de manière indépendante et à apprendre continuellement de nouvelles technologies
       </target>
