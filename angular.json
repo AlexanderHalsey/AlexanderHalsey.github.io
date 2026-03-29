@@ -30,12 +30,10 @@
           "options": {
             "outputPath": {
               "base": "_site",
-              "browser": ""
+              "browser": "browser"
             },
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "server": "src/main.server.ts",
-            "prerender": true,
             "localize": true,
             "polyfills": [
               "zone.js",
@@ -56,6 +54,8 @@
           },
           "configurations": {
             "production": {
+              "server": "src/main.server.ts",
+              "prerender": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -71,6 +71,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "prerender": false,
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
