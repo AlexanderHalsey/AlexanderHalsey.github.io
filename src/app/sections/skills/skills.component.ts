@@ -37,13 +37,6 @@ I have experience writing end-to-end and unit tests using tools like <span class
 `,
     },
     {
-      title: $localize`Mobile Development`,
-      icon: 'mobile-development',
-      description: $localize`
-I have foundational experience in building mobile applications creating solutions for <span class="font-medium">web</span>, <span class="font-medium">iOS</span>, and <span class="font-medium">Android</span> platforms. I gained hands-on experience with React Native during my programming course.
-`,
-    },
-    {
       title: $localize`Web / UX Design`,
       icon: 'web-design',
       description: $localize`
@@ -53,8 +46,8 @@ I have experience designing websites using tools like <span class="font-medium">
     {
       title: $localize`CI / CD Pipelines`,
       icon: 'ci-cd-pipelines',
-      description: $localize`
-I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I also work with <span class="font-medium">Docker</span> and <span class="font-medium">Kubernetes</span>, debugging deployment files and monitoring services.
+      description: $localize`:@@skills-cicd-description:
+I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I work with <span class="font-medium">Docker</span>, managing containerised deployments and monitoring services.
 `,
     },
   ] as const;

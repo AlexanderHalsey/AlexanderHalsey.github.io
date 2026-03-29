@@ -456,26 +456,6 @@ J&apos;ai de l&apos;expérience dans l&apos;écriture de tests de bout en bout e
           <context context-type="linenumber">35,37</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3622219714924175108" datatype="html">
-        <source>Mobile Development</source>
-        <target>Développement Mobile</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8101061488549759277" datatype="html">
-        <source>
-I have foundational experience in building mobile applications creating solutions for &lt;span class=&quot;font-medium&quot;&gt;web&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;iOS&lt;/span&gt;, and &lt;span class=&quot;font-medium&quot;&gt;Android&lt;/span&gt; platforms. I gained hands-on experience with React Native during my programming course.
-        </source>
-        <target>
-J&apos;ai une expérience fondamentale dans la création d&apos;applications mobiles en créant des solutions pour les plateformes &lt;span class=&quot;font-medium&quot;&gt;web&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;iOS&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Android&lt;/span&gt;. J&apos;ai acquis une expérience pratique avec React Native lors de mon cours de programmation.
-        </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
-          <context context-type="linenumber">42,44</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7098465221816763451" datatype="html">
         <source>Web / UX Design</source>
         <target>Conception Web / UX</target>
@@ -504,12 +484,12 @@ J&apos;ai de l&apos;expérience dans la conception de sites Web en utilisant des
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1356908190734295979" datatype="html">
+      <trans-unit id="skills-cicd-description" datatype="html">
         <source>
-I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I also work with &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Kubernetes&lt;/span&gt;, debugging deployment files and monitoring services.
+I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I work with &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt;, managing containerised deployments and monitoring services.
         </source>
         <target>
-Je comprends bien les pipelines CI/CD et les utilise pour pousser du code au sein de l&apos;infrastructure de mon travail. Je travaille également avec &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Kubernetes&lt;/span&gt;, déboguant les fichiers de déploiement et surveillant les services.
+Je comprends bien les pipelines CI/CD et les utilise pour pousser du code au sein de l&apos;infrastructure de mon travail. Je travaille avec &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt;, gérant les déploiements conteneurisés et surveillant les services.
         </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>

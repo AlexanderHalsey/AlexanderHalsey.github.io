@@ -25,7 +25,6 @@ import { JavascriptIconComponent } from '@/assets/icons/javascript-icon.componen
 import { JestIconComponent } from '@/assets/icons/jest-icon.component';
 import { LinkedInIconComponent } from '@/assets/icons/linkedin-icon.component';
 import { LoaderIconComponent } from '@/assets/icons/loader.component';
-import { MobileDevelopmentIconComponent } from '@/assets/icons/mobile-development-icon.component';
 import { NestIconComponent } from '@/assets/icons/nest-icon.component';
 import { NodeIconComponent } from '@/assets/icons/node-icon.component';
 import { NpmIconComponent } from '@/assets/icons/npm-icon.component';
@@ -70,7 +69,6 @@ export const ICON_OPTIONS = [
   { name: 'jest', component: JestIconComponent, allowAnimate: true },
   { name: 'linkedin', component: LinkedInIconComponent },
   { name: 'loader', component: LoaderIconComponent },
-  { name: 'mobile-development', component: MobileDevelopmentIconComponent },
   { name: 'nest', component: NestIconComponent, allowAnimate: true },
   { name: 'node', component: NodeIconComponent, allowAnimate: true },
   { name: 'npm', component: NpmIconComponent, allowAnimate: true },
