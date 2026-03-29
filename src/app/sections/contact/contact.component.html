@@ -7,46 +7,12 @@
     @if (isMobile()) {
       <ng-container [ngTemplateOutlet]="contactInfo" />
     }
-    <div class="flex">
+    <div>
       @if (!isMobile()) {
         <ng-container [ngTemplateOutlet]="contactInfo" />
       }
       <div>
-        <div class="flex mb-3">
-          <app-input
-            formControlName="firstName"
-            type="text"
-            [error]="errorBag().firstName"
-            i18n-placeholder
-            placeholder="First Name *"
-            class="me-4"
-          />
-          <app-input
-            formControlName="lastName"
-            type="text"
-            [error]="errorBag().lastName"
-            i18n-placeholder
-            placeholder="Last Name *"
-          />
-        </div>
-        <div class="flex mb-3">
-          <app-input
-            formControlName="phone"
-            type="tel"
-            [error]="errorBag().phone"
-            i18n-placeholder
-            placeholder="Phone"
-            class="me-4"
-          />
-          <app-input
-            formControlName="company"
-            type="text"
-            [error]="errorBag().company"
-            i18n-placeholder
-            placeholder="Company"
-          />
-        </div>
-        <div class="flex mb-3">
+        <div class="flex max-md:flex mb-3">
           <app-input
             formControlName="email"
             type="email"
@@ -87,11 +53,9 @@
 </section>
 
 <ng-template #contactInfo>
-  <div
-    class="flex md:flex-col max-md:justify-between text-gray-300 pb-8 md:pb-0 pr-12 pt-0 max-md:gap-4"
-  >
+  <div class="flex gap-10 text-gray-300 pr-12 pt-0 mb-8">
     <ul>
-      <li class="cv max-md:pt-1 pb-2 flex items-center">
+      <li class="cv pt-1 pb-2 flex items-center">
         <app-button styleType="secondary" icon="cv" (click)="downloadCV()">
           <span i18n>Download</span>&nbsp;<span i18n class="font-bold">CV</span>
         </app-button>

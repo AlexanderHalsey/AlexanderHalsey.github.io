@@ -66,11 +66,7 @@ export class ContactComponent {
 
     this.form = formBuilder.group(
       {
-        firstName: ['', [Validators.required]],
-        lastName: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
-        phone: [''],
-        company: [''],
         subject: ['', [Validators.required]],
         message: ['', [Validators.required]],
         honey: [''],
@@ -113,11 +109,7 @@ export class ContactComponent {
 
         this.form.reset(
           {
-            firstName: '',
-            lastName: '',
             email: '',
-            phone: '',
-            company: '',
             subject: '',
             message: '',
             honey: '',
@@ -148,11 +140,7 @@ export class ContactComponent {
 }
 
 interface FormData {
-  firstName: string;
-  lastName: string;
   email: string;
-  phone: string;
-  company: string;
   subject: string;
   message: string;
   honey: string;
