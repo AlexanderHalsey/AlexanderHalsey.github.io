@@ -82,7 +82,7 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="23466490114816775" datatype="html">
+      <trans-unit id="about-me-greeting" datatype="html">
         <source>Hi there!</source>
         <target>Bonjour !</target>
         <context-group purpose="location">
@@ -90,36 +90,36 @@
           <context context-type="linenumber">18,19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3378437041977929890" datatype="html">
-        <source> You guessed it—I like Rubik&apos;s cubes. But what I’m even more passionate about is coding! I’m a full-stack web developer with a love for building beautiful and functional web applications. </source>
-        <target>Vous l&apos;avez deviné - j&apos;aime les Rubik&apos;s cubes. Mais ce qui me passionne encore plus, c&apos;est la programmation ! Je suis un développeur web full-stack avec un amour pour la création d&apos;applications web belles et fonctionnelles.</target>
+      <trans-unit id="about-me-p1" datatype="html">
+        <source> I&apos;m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Happytal, a Paris health-tech startup, over three years. </source>
+        <target> Je suis développeur fullstack basé près de Toulouse, avec plus de 3 ans d&apos;expérience professionnelle dans le développement d&apos;applications TypeScript — frontends Vue.js, backends NestJS/PostgreSQL, Docker, CI/CD. J&apos;ai évolué de stagiaire à développeur à temps plein chez Happytal, une startup parisienne de la santé, en trois ans. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">22,24</context>
+          <context context-type="linenumber">22,26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3650693456683972816" datatype="html">
-        <source> My journey into programming began as a hobby in 2020. I started with little knowledge and a lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired skills to create a donation management system for a Buddhist institute. It was a challenging experience filled with mistakes, but each one became a stepping stone for growth. </source>
-        <target>Mon parcours en programmation a commencé comme un passe-temps en 2020. J&apos;ai débuté avec quasi aucune connaissance, mais une grande curiosité. Peu de temps après, j&apos;ai eu l&apos;opportunité de mettre mes compétences nouvellement acquises au service de la création d&apos;un système de gestion des dons pour un institut bouddhiste. Ce fut une expérience enrichissante, remplie d&apos;erreurs, mais chacune est devenue un véritable coup de pouce dans mes apprentissages.</target>
+      <trans-unit id="about-me-p2" datatype="html">
+        <source> I came to software later than most, and deliberately. What kept me here is the problem-solving — not as an abstract idea, but as the actual daily work. There&apos;s something about sitting with a hard problem until it gives way that I find genuinely satisfying. </source>
+        <target> Je suis arrivé au développement logiciel plus tard que la plupart, et délibérément. Ce qui m&apos;y a retenu, c&apos;est la résolution de problèmes — pas comme une idée abstraite, mais comme le travail quotidien concret. Il y a quelque chose dans le fait de rester face à un problème difficile jusqu&apos;à ce qu&apos;il cède que je trouve vraiment satisfaisant. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">27,30</context>
+          <context context-type="linenumber">27,31</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1118342254921598736" datatype="html">
-        <source> Those early days taught me that making mistakes isn’t just part of the process—it’s how we improve. Over time, my passion for problem-solving and creativity in coding has only grown stronger, driving me to constantly learn, experiment, and refine my craft. </source>
-        <target>Ces premiers jours m&apos;ont appris que faire des erreurs n&apos;est pas seulement une partie du processus - c&apos;est ainsi que nous nous améliorons. Au fil du temps, ma passion pour la résolution de problèmes et la créativité en programmation n&apos;a fait que se renforcer, me poussant à apprendre constamment, à expérimenter et à affiner mon métier.</target>
+      <trans-unit id="about-me-p3" datatype="html">
+        <source> I&apos;m drawn to work with a clear purpose. My most recent project was a full rebuild of a donation management system for a local institute, delivered pro bono — chosen because it mattered, not because it was convenient. </source>
+        <target> Je suis attiré par le travail qui a un sens clair. Mon projet le plus récent était une refonte complète d&apos;un système de gestion des dons pour un institut local, réalisée pro bono — choisie parce qu&apos;elle importait, pas parce qu&apos;elle était commode. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">32,35</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4105515037181626232" datatype="html">
-        <source> When I’m not coding or solving puzzles, I’m usually exploring new technologies or thinking up creative ways to make the web a better place. Let’s build something amazing together! </source>
-        <target>Quand je ne code pas ou ne résous pas de casse-tête, j&apos;explore généralement de nouvelles technologies ou je réfléchis à des moyens créatifs de rendre le web meilleur. Construisons quelque chose d&apos;incroyable ensemble !</target>
+      <trans-unit id="about-me-p4" datatype="html">
+        <source> When I&apos;m not coding, I&apos;m usually somewhere outdoors. </source>
+        <target> Quand je ne code pas, je suis généralement quelque part en plein air. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8838478044018052369" datatype="html">

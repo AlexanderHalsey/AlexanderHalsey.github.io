@@ -72,39 +72,39 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="23466490114816775" datatype="html">
+      <trans-unit id="about-me-greeting" datatype="html">
         <source>Hi there!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">18,19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3378437041977929890" datatype="html">
-        <source> You guessed it—I like Rubik&apos;s cubes. But what I’m even more passionate about is coding! I’m a full-stack web developer with a love for building beautiful and functional web applications. </source>
+      <trans-unit id="about-me-p1" datatype="html">
+        <source> I&apos;m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Happytal, a Paris health-tech startup, over three years. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">22,24</context>
+          <context context-type="linenumber">22,26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3650693456683972816" datatype="html">
-        <source> My journey into programming began as a hobby in 2020. I started with little knowledge and a lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired skills to create a donation management system for a Buddhist institute. It was a challenging experience filled with mistakes, but each one became a stepping stone for growth. </source>
+      <trans-unit id="about-me-p2" datatype="html">
+        <source> I came to software later than most, and deliberately. What kept me here is the problem-solving — not as an abstract idea, but as the actual daily work. There&apos;s something about sitting with a hard problem until it gives way that I find genuinely satisfying. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">27,30</context>
+          <context context-type="linenumber">27,31</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1118342254921598736" datatype="html">
-        <source> Those early days taught me that making mistakes isn’t just part of the process—it’s how we improve. Over time, my passion for problem-solving and creativity in coding has only grown stronger, driving me to constantly learn, experiment, and refine my craft. </source>
+      <trans-unit id="about-me-p3" datatype="html">
+        <source> I&apos;m drawn to work with a clear purpose. My most recent project was a full rebuild of a donation management system for a local institute, delivered pro bono — chosen because it mattered, not because it was convenient. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">32,35</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4105515037181626232" datatype="html">
-        <source> When I’m not coding or solving puzzles, I’m usually exploring new technologies or thinking up creative ways to make the web a better place. Let’s build something amazing together! </source>
+      <trans-unit id="about-me-p4" datatype="html">
+        <source> When I&apos;m not coding, I&apos;m usually somewhere outdoors. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8838478044018052369" datatype="html">
