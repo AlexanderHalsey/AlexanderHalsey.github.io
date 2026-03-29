@@ -10,6 +10,10 @@ export const scrollObserver = (
     options: IntersectionObserverInit;
   },
 ): (() => void) => {
+  if (typeof IntersectionObserver === 'undefined') {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    return () => {};
+  }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) enterCallback?.(entry);

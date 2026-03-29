@@ -1,4 +1,5 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 import { DropdownMenuComponent } from '@/shared/components/dropdown-menu/dropdown-menu.component';
 
@@ -12,6 +13,8 @@ type LanguageMenuItem = MenuItem & { code: string; pathname: string };
   templateUrl: './language-select.component.html',
 })
 export class LanguageSelectComponent {
+  private platformId = inject(PLATFORM_ID);
+
   languageOptions: LanguageMenuItem[] = [
     { code: 'en', label: 'English', pathname: '/en' },
     { code: 'fr', label: 'Français', pathname: '/fr' },
@@ -19,7 +22,9 @@ export class LanguageSelectComponent {
   ];
 
   activeLanguageCode = signal<string | undefined>(
-    this.languageOptions.find((option) => location.pathname.startsWith(option.pathname))?.code,
+    isPlatformBrowser(this.platformId)
+      ? this.languageOptions.find((option) => location.pathname.startsWith(option.pathname))?.code
+      : undefined,
   );
 
   languageOption = computed(

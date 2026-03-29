@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, signal, Signal } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { AfterViewInit, Component, inject, PLATFORM_ID, signal, Signal } from '@angular/core';
+import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 
 import { HamburgerMenuComponent } from '../components/hamburger-menu/hamburger-menu.component';
 import { LanguageSelectComponent } from '../components/language-select/language-select.component';
@@ -23,6 +23,7 @@ import type { SelectorItem } from '@/models';
   styleUrls: ['./top-bar.component.css', '../../shared/components/button/button.component.css'],
 })
 export class TopBarComponent implements AfterViewInit {
+  private platformId = inject(PLATFORM_ID);
   isMobile: Signal<boolean>;
   isTop = signal(true);
   constructor(private displayService: DisplayService) {
@@ -50,6 +51,7 @@ export class TopBarComponent implements AfterViewInit {
   };
 
   ngAfterViewInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       this.isTop.set(scrollTop < 50);

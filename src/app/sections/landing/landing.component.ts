@@ -1,6 +1,7 @@
 import { wait } from '@/helpers/async.helper';
 import { prefersReducedMotion } from '@/helpers/match-media.helper';
-import { Component, signal } from '@angular/core';
+import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-landing',
@@ -9,6 +10,8 @@ import { Component, signal } from '@angular/core';
   styleUrl: './landing.component.css',
 })
 export class LandingComponent {
+  private platformId = inject(PLATFORM_ID);
+
   titles = [
     $localize`A fullstack web developper`,
     $localize`A tech enthusiast`,
@@ -18,7 +21,9 @@ export class LandingComponent {
   title = signal('');
   isTyping = signal(false);
   constructor() {
-    if (!prefersReducedMotion) {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.title.set(this.titles[0]);
+    } else if (!prefersReducedMotion) {
       this.loopTitles();
     } else {
       this.title.set(this.titles[0]);

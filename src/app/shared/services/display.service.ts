@@ -1,4 +1,13 @@
-import { computed, Injectable, OnDestroy, Signal, signal } from '@angular/core';
+import {
+  computed,
+  inject,
+  Injectable,
+  OnDestroy,
+  PLATFORM_ID,
+  Signal,
+  signal,
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 interface State {
   isMobile: boolean;
@@ -8,16 +17,23 @@ interface State {
   providedIn: 'root',
 })
 export class DisplayService implements OnDestroy {
+  private platformId = inject(PLATFORM_ID);
+
   readonly state = signal<State>({
-    isMobile: window.innerWidth < 768,
+    isMobile: false,
   });
 
   constructor() {
-    window.addEventListener('resize', this.onResize);
+    if (isPlatformBrowser(this.platformId)) {
+      this.state.set({ isMobile: window.innerWidth < 768 });
+      window.addEventListener('resize', this.onResize);
+    }
   }
 
   ngOnDestroy() {
-    window.removeEventListener('resize', this.onResize);
+    if (isPlatformBrowser(this.platformId)) {
+      window.removeEventListener('resize', this.onResize);
+    }
   }
 
   private onResize = () => {

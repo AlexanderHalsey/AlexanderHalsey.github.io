@@ -132,10 +132,11 @@ To work with translations:
    ```
 
 3. **Serve specific locale in development**
-   ```bash
-   ng serve --configuration=fr  # for French
-   ng serve --configuration=es  # for Spanish
-   ```
+  
+  ```bash
+  ng serve --configuration=fr  # for French
+  ng serve --configuration=es  # for Spanish
+  ```
 
 ### 🏗️ Building for Production
 
@@ -161,10 +162,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or professional inquiries, please feel free to reach out through the contact form on the website or connect via:
 
-- **Website**: https://alexanderhalsey.github.io
-- **LinkedIn**: https://www.linkedin.com/in/alexander-halsey-01a13125b/
-- **GitHub**: https://github.com/AlexanderHalsey
+- **Website**: <https://alexanderhalsey.github.io>
+- **LinkedIn**: <https://www.linkedin.com/in/alexander-halsey-01a13125b/>
+- **GitHub**: <https://github.com/AlexanderHalsey>
 
 ---
 
-**Built with Angular, Three.js, and web technologies**
+### Built with Angular, Three.js, and web technologies

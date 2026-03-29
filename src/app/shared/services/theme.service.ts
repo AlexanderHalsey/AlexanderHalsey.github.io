@@ -1,4 +1,5 @@
-import { computed, Injectable, Signal, signal } from '@angular/core';
+import { computed, inject, Injectable, PLATFORM_ID, Signal, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 import { getColorGradients } from '@/helpers/theme.helper';
 
@@ -18,6 +19,8 @@ interface State {
   providedIn: 'root',
 })
 export class ThemeService {
+  private platformId = inject(PLATFORM_ID);
+
   readonly state = signal<State>({
     theme: 'light',
   });
@@ -32,9 +35,11 @@ export class ThemeService {
   );
 
   constructor() {
-    this.setTheme(
-      (localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference(),
-    );
+    if (isPlatformBrowser(this.platformId)) {
+      this.setTheme(
+        (localStorage.getItem('theme') as 'light' | 'dark') ?? this.getSystemPreference(),
+      );
+    }
   }
 
   public get<K extends keyof State>(key: K): Signal<State[K]> {
@@ -43,12 +48,14 @@ export class ThemeService {
 
   public setTheme = (theme: ThemeOrSystem) => {
     if (theme === 'system') theme = this.getSystemPreference();
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+    if (isPlatformBrowser(this.platformId)) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
     }
     this.state.update((currentValue) => ({ ...currentValue, theme }));
   };
