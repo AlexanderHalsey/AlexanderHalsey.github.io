@@ -233,6 +233,27 @@
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="experience-dms-title" datatype="html">
+        <source>Independent Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience-dms-description" datatype="html">
+        <source>
+Full-stack rebuild of the institute&apos;s donation management system, delivered pro bono. Replaced the original Django/JS app with a modern, production-ready architecture over 4 months.
+
+&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Designed&lt;/span&gt; and built a REST API with NestJS/TypeScript backed by PostgreSQL and Redis for job queue processing.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Developed&lt;/span&gt; a Vue.js SPA with donor and donation management, JWT authentication, and automated tax receipt generation.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Deployed&lt;/span&gt; the full stack with Docker, including GCS integration for file storage and email templates.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Wrote&lt;/span&gt; technical documentation covering architecture, setup, and deployment.&lt;/div&gt;
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
+          <context context-type="linenumber">29,38</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4081414519740696353" datatype="html">
         <source>Software Developer</source>
         <context-group purpose="location">

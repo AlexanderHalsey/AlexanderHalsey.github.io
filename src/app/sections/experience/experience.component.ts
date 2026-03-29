@@ -22,6 +22,19 @@ export class ExperienceComponent implements AfterViewInit, OnDestroy {
 
   experience = computed<TimelineItem[]>(() => [
     {
+      startDate: new Date(2025, 10, 1),
+      endDate: new Date(2026, 2, 31),
+      title: $localize`:@@experience-dms-title:Independent Developer`,
+      description: $localize`:@@experience-dms-description:
+Full-stack rebuild of the institute's donation management system, delivered pro bono. Replaced the original Django/JS app with a modern, production-ready architecture over 4 months.
+
+<div class="ms-4 mt-4">• <span class="font-medium">Designed</span> and built a REST API with NestJS/TypeScript backed by PostgreSQL and Redis for job queue processing.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Developed</span> a Vue.js SPA with donor and donation management, JWT authentication, and automated tax receipt generation.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Deployed</span> the full stack with Docker, including GCS integration for file storage and email templates.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Wrote</span> technical documentation covering architecture, setup, and deployment.</div>
+      `,
+    },
+    {
       startDate: new Date(2022, 6, 1),
       endDate: new Date(2025, 5, 30),
       title: $localize`Software Developer`,
