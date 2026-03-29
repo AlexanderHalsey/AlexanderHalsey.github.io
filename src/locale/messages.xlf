@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="4382387356927042708" datatype="html">
+      <trans-unit id="38072224061766412" datatype="html">
         <source> SIRET: 922 030 010 00016 – Registered in France 🇫🇷 </source>
-        <target> SIRET : 922 030 010 00016 – Enregistré en France 🇫🇷 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -12,71 +11,62 @@
       </trans-unit>
       <trans-unit id="413116577994876478" datatype="html">
         <source>Light</source>
-        <target>Jour</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/components/theme-select/theme-select.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3892161059518616136" datatype="html">
         <source>Dark</source>
-        <target>Nuit</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/components/theme-select/theme-select.component.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="29832309535656200" datatype="html">
         <source>System</source>
-        <target>Système</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/components/theme-select/theme-select.component.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9084885127601930456" datatype="html">
         <source>logo</source>
-        <target>logo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3562199946446423606" datatype="html">
         <source>About me</source>
-        <target>À propos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3398353192845179101" datatype="html">
-        <source>Experience</source>
-        <target>Expérience</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4342625008558026850" datatype="html">
-        <source>Skills</source>
-        <target>Compétences</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7922989125096435449" datatype="html">
-        <source>Contact</source>
-        <target>Contact</target>
+      <trans-unit id="3398353192845179101" datatype="html">
+        <source>Experience</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4342625008558026850" datatype="html">
+        <source>Skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7156797854368699223" datatype="html">
         <source>Me</source>
-        <target>Moi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">11</context>
@@ -84,7 +74,6 @@
       </trans-unit>
       <trans-unit id="23466490114816775" datatype="html">
         <source>Hi there!</source>
-        <target>Bonjour !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">18,19</context>
@@ -92,7 +81,6 @@
       </trans-unit>
       <trans-unit id="3378437041977929890" datatype="html">
         <source> You guessed it—I like Rubik&apos;s cubes. But what I’m even more passionate about is coding! I’m a full-stack web developer with a love for building beautiful and functional web applications. </source>
-        <target>Vous l&apos;avez deviné - j&apos;aime les Rubik&apos;s cubes. Mais ce qui me passionne encore plus, c&apos;est la programmation ! Je suis un développeur web full-stack avec un amour pour la création d&apos;applications web belles et fonctionnelles.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">22,24</context>
@@ -100,7 +88,6 @@
       </trans-unit>
       <trans-unit id="3650693456683972816" datatype="html">
         <source> My journey into programming began as a hobby in 2020. I started with little knowledge and a lot of curiosity. Not long after, I had the opportunity to volunteer my newly-acquired skills to create a donation management system for a Buddhist institute. It was a challenging experience filled with mistakes, but each one became a stepping stone for growth. </source>
-        <target>Mon parcours en programmation a commencé comme un passe-temps en 2020. J&apos;ai débuté avec quasi aucune connaissance, mais une grande curiosité. Peu de temps après, j&apos;ai eu l&apos;opportunité de mettre mes compétences nouvellement acquises au service de la création d&apos;un système de gestion des dons pour un institut bouddhiste. Ce fut une expérience enrichissante, remplie d&apos;erreurs, mais chacune est devenue un véritable coup de pouce dans mes apprentissages.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">27,30</context>
@@ -108,7 +95,6 @@
       </trans-unit>
       <trans-unit id="1118342254921598736" datatype="html">
         <source> Those early days taught me that making mistakes isn’t just part of the process—it’s how we improve. Over time, my passion for problem-solving and creativity in coding has only grown stronger, driving me to constantly learn, experiment, and refine my craft. </source>
-        <target>Ces premiers jours m&apos;ont appris que faire des erreurs n&apos;est pas seulement une partie du processus - c&apos;est ainsi que nous nous améliorons. Au fil du temps, ma passion pour la résolution de problèmes et la créativité en programmation n&apos;a fait que se renforcer, me poussant à apprendre constamment, à expérimenter et à affiner mon métier.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">33,35</context>
@@ -116,7 +102,6 @@
       </trans-unit>
       <trans-unit id="4105515037181626232" datatype="html">
         <source> When I’m not coding or solving puzzles, I’m usually exploring new technologies or thinking up creative ways to make the web a better place. Let’s build something amazing together! </source>
-        <target>Quand je ne code pas ou ne résous pas de casse-tête, j&apos;explore généralement de nouvelles technologies ou je réfléchis à des moyens créatifs de rendre le web meilleur. Construisons quelque chose d&apos;incroyable ensemble !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">38,39</context>
@@ -124,7 +109,6 @@
       </trans-unit>
       <trans-unit id="8838478044018052369" datatype="html">
         <source>First Name *</source>
-        <target>Prénom *</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -132,7 +116,6 @@
       </trans-unit>
       <trans-unit id="4126304011787241908" datatype="html">
         <source>Last Name *</source>
-        <target>Nom *</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">29,30</context>
@@ -140,7 +123,6 @@
       </trans-unit>
       <trans-unit id="3262236020277300799" datatype="html">
         <source>Phone</source>
-        <target>Téléphone</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">39</context>
@@ -148,7 +130,6 @@
       </trans-unit>
       <trans-unit id="1826215573205981970" datatype="html">
         <source>Company</source>
-        <target>Entreprise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">47</context>
@@ -156,7 +137,6 @@
       </trans-unit>
       <trans-unit id="1585425644523299468" datatype="html">
         <source>Email *</source>
-        <target>Email *</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">56</context>
@@ -164,7 +144,6 @@
       </trans-unit>
       <trans-unit id="3349754872628013177" datatype="html">
         <source>Subject *</source>
-        <target>Sujet *</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">63,64</context>
@@ -172,7 +151,6 @@
       </trans-unit>
       <trans-unit id="7666195870272157547" datatype="html">
         <source>Message*</source>
-        <target>Message*</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">72,73</context>
@@ -180,7 +158,6 @@
       </trans-unit>
       <trans-unit id="2922569862195498495" datatype="html">
         <source>Fill out the required fields</source>
-        <target>Remplissez les champs obligatoires</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
           <context context-type="linenumber">80,81</context>
@@ -188,55 +165,48 @@
       </trans-unit>
       <trans-unit id="3099741642167775297" datatype="html">
         <source>Download</source>
-        <target>Télécharger</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5293537796822127156" datatype="html">
         <source>CV</source>
-        <target>CV</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">94,95</context>
+          <context context-type="linenumber">96,97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="234649038899663074" datatype="html">
         <source> +33 6 88 51 83 84</source>
-        <target> +33 6 88 51 83 84</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">100,101</context>
+          <context context-type="linenumber">102,103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1241481517306871440" datatype="html">
         <source> Github</source>
-        <target> Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">109,110</context>
+          <context context-type="linenumber">111,112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6928881025295379447" datatype="html">
         <source> LinkedIn</source>
-        <target> LinkedIn</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">116,117</context>
+          <context context-type="linenumber">118,119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7563035552061651664" datatype="html">
         <source> Send </source>
-        <target> Envoyer </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">131,132</context>
+          <context context-type="linenumber">133,134</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3905346436951999292" datatype="html">
         <source>Form submitted successfully. I will get back to you as soon as possible.</source>
-        <target>Formulaire soumis avec succès. Je vous répondrai dès que possible.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.ts</context>
           <context context-type="linenumber">130</context>
@@ -244,7 +214,6 @@
       </trans-unit>
       <trans-unit id="8759014757903289528" datatype="html">
         <source>Failed to submit form. Please try again later.</source>
-        <target>Impossible de soumettre le formulaire. Veuillez réessayer plus tard.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.ts</context>
           <context context-type="linenumber">135</context>
@@ -252,7 +221,6 @@
       </trans-unit>
       <trans-unit id="7045123878111147511" datatype="html">
         <source>Required</source>
-        <target>Requis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.ts</context>
           <context context-type="linenumber">162</context>
@@ -260,7 +228,6 @@
       </trans-unit>
       <trans-unit id="1140599166278569579" datatype="html">
         <source>Invalid email</source>
-        <target>Email invalide</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.ts</context>
           <context context-type="linenumber">163</context>
@@ -268,7 +235,6 @@
       </trans-unit>
       <trans-unit id="4081414519740696353" datatype="html">
         <source>Software Developer</source>
-        <target>Développeur Logiciel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -284,15 +250,6 @@ Grew from intern to full-time developer over 3 years at a Paris health-tech star
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Enhanced&lt;/span&gt; reliability with end-to-end and unit tests using Cypress and Jest.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimized&lt;/span&gt; service communication using proxy gateways and load balancers.&lt;/div&gt;
       </source>
-        <target>
-J&apos;ai évolué de stagiaire à développeur à temps plein sur 3 ans au sein d&apos;une startup parisienne de la santé, avec une période de 6 mois en freelance/prestataire (jan.–juin 2023) en télétravail depuis l&apos;étranger.
-
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Conçu&lt;/span&gt; et maintenu un système de design UI centralisé pour assurer la cohérence entre les applications.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implémenté&lt;/span&gt; des pipelines CI/CD avec Git, Docker et Azure DevOps.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Développé&lt;/span&gt; des fonctionnalités full-stack avec Vue.js/TypeScript côté frontend et NestJS/PostgreSQL côté backend.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Amélioré&lt;/span&gt; la fiabilité avec des tests end-to-end et unitaires via Cypress et Jest.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimisé&lt;/span&gt; la communication des services avec des proxy gateways et des load balancers.&lt;/div&gt;
-      </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
           <context context-type="linenumber">28,36</context>
@@ -300,18 +257,16 @@ J&apos;ai évolué de stagiaire à développeur à temps plein sur 3 ans au sein
       </trans-unit>
       <trans-unit id="3800334463036925333" datatype="html">
         <source>Certificate of Completion – Full-Stack JavaScript Web &amp; Mobile Developer (La Capsule)</source>
-        <target>Certificat de fin de formation - Développeur Web &amp; Mobile Full-Stack JavaScript (La Capsule)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1346136301774952663" datatype="html">
         <source>Volunteer Programmer</source>
-        <target>Programmeur Bénévole</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4097373348833290058" datatype="html">
@@ -322,13 +277,6 @@ I developed a donation management system that enabled the institute’s admin to
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Built&lt;/span&gt; integration with an external profile system to keep donor records automatically up to date.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Delivered&lt;/span&gt; end-to-end in Python/Django with an interactive JavaScript frontend.&lt;/div&gt;
       </source>
-        <target>
-J&apos;ai développé un système de gestion des dons qui a permis à l&apos;administration de l&apos;institut de suivre les dons, de gérer les informations des donateurs, de générer des reçus fiscaux individuels et annuels au format PDF, et de planifier l&apos;envoi d&apos;e-mails.
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Remplacé&lt;/span&gt; un processus administratif manuel par un système de gestion des dons, permettant à l&apos;institut de gagner un temps considérable sur les dossiers donateurs, les reçus et les communications.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implémenté&lt;/span&gt; la génération automatique de reçus fiscaux PDF individuels et annuels.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Développé&lt;/span&gt; une intégration avec un système de profils externe pour maintenir automatiquement les dossiers donateurs à jour.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Livré&lt;/span&gt; de bout en bout en Python/Django avec un frontend JavaScript interactif.&lt;/div&gt;
-      </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
           <context context-type="linenumber">46,52</context>
@@ -336,7 +284,6 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
       </trans-unit>
       <trans-unit id="1624416355719500444" datatype="html">
         <source>I&apos;m Alex Halsey</source>
-        <target>Je suis Alex Halsey</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.html</context>
           <context context-type="linenumber">3,4</context>
@@ -344,7 +291,6 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
       </trans-unit>
       <trans-unit id="82491520963575885" datatype="html">
         <source>A fullstack web developer</source>
-        <target>Un développeur web fullstack</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -352,23 +298,20 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
       </trans-unit>
       <trans-unit id="1281750388795926761" datatype="html">
         <source>A tech enthusiast</source>
-        <target>Un passionné de technologie</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4338123382166156090" datatype="html">
         <source>A problem solver</source>
-        <target>Un expert en débrouillardise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8664045374910420643" datatype="html">
         <source>Web Development</source>
-        <target>Développement Web</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -377,10 +320,7 @@ J&apos;ai développé un système de gestion des dons qui a permis à l&apos;adm
       <trans-unit id="1339933638025679732" datatype="html">
         <source>
 I have experience building frontend applications using frameworks like &lt;span class=&quot;font-medium&quot;&gt;Vue&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;Angular&lt;/span&gt;, and &lt;span class=&quot;font-medium&quot;&gt;React&lt;/span&gt;, working with state management libraries like &lt;span class=&quot;font-medium&quot;&gt;Pinia&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Redux&lt;/span&gt;, and creating responsive designs.
-        </source>
-        <target>
-J&apos;ai de l&apos;expérience dans la création d&apos;applications frontend en utilisant des frameworks comme &lt;span class=&quot;font-medium&quot;&gt;Vue&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;Angular&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;React&lt;/span&gt;, en travaillant avec des bibliothèques de gestion d&apos;état comme &lt;span class=&quot;font-medium&quot;&gt;Pinia&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Redux&lt;/span&gt;, et en créant des designs réactifs.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">21,23</context>
@@ -388,7 +328,6 @@ J&apos;ai de l&apos;expérience dans la création d&apos;applications frontend e
       </trans-unit>
       <trans-unit id="6565376258322439359" datatype="html">
         <source>Backend Development</source>
-        <target>Développement Backend</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -397,10 +336,7 @@ J&apos;ai de l&apos;expérience dans la création d&apos;applications frontend e
       <trans-unit id="3325651541943092833" datatype="html">
         <source>
 I have experience building backend services using frameworks like &lt;span class=&quot;font-medium&quot;&gt;NestJS&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Express&lt;/span&gt;, working with SQL databases such as &lt;span class=&quot;font-medium&quot;&gt;PostgreSQL&lt;/span&gt;, and integrating with external infrastructure APIs.
-        </source>
-        <target>
-J&apos;ai de l&apos;expérience dans la création de services backend en utilisant des frameworks comme &lt;span class=&quot;font-medium&quot;&gt;NestJS&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Express&lt;/span&gt;, en travaillant avec des bases de données SQL telles que &lt;span class=&quot;font-medium&quot;&gt;PostgreSQL&lt;/span&gt;, et en intégrant des APIs d&apos;infrastructure externes.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">28,30</context>
@@ -408,7 +344,6 @@ J&apos;ai de l&apos;expérience dans la création de services backend en utilisa
       </trans-unit>
       <trans-unit id="3764621523209347708" datatype="html">
         <source>E2E Testing</source>
-        <target>Tests E2E</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">33</context>
@@ -417,10 +352,7 @@ J&apos;ai de l&apos;expérience dans la création de services backend en utilisa
       <trans-unit id="25907797943084410" datatype="html">
         <source>
 I have experience writing end-to-end and unit tests using tools like &lt;span class=&quot;font-medium&quot;&gt;Cypress&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Jest&lt;/span&gt;. These tests have been crucial in catching errors when updating solutions, ensuring long-term scalability and reliability.
-        </source>
-        <target>
-J&apos;ai de l&apos;expérience dans l&apos;écriture de tests de bout en bout et unitaires en utilisant des outils comme &lt;span class=&quot;font-medium&quot;&gt;Cypress&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Jest&lt;/span&gt;. Ces tests ont été cruciaux pour détecter les erreurs lors de la mise à jour des solutions, garantissant une évolutivité et une fiabilité à long terme.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">35,37</context>
@@ -428,7 +360,6 @@ J&apos;ai de l&apos;expérience dans l&apos;écriture de tests de bout en bout e
       </trans-unit>
       <trans-unit id="3622219714924175108" datatype="html">
         <source>Mobile Development</source>
-        <target>Développement Mobile</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">40</context>
@@ -437,10 +368,7 @@ J&apos;ai de l&apos;expérience dans l&apos;écriture de tests de bout en bout e
       <trans-unit id="8101061488549759277" datatype="html">
         <source>
 I have foundational experience in building mobile applications creating solutions for &lt;span class=&quot;font-medium&quot;&gt;web&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;iOS&lt;/span&gt;, and &lt;span class=&quot;font-medium&quot;&gt;Android&lt;/span&gt; platforms. I gained hands-on experience with React Native during my programming course.
-        </source>
-        <target>
-J&apos;ai une expérience fondamentale dans la création d&apos;applications mobiles en créant des solutions pour les plateformes &lt;span class=&quot;font-medium&quot;&gt;web&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;iOS&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Android&lt;/span&gt;. J&apos;ai acquis une expérience pratique avec React Native lors de mon cours de programmation.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">42,44</context>
@@ -448,7 +376,6 @@ J&apos;ai une expérience fondamentale dans la création d&apos;applications mob
       </trans-unit>
       <trans-unit id="7098465221816763451" datatype="html">
         <source>Web / UX Design</source>
-        <target>Conception Web / UX</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">47</context>
@@ -457,10 +384,7 @@ J&apos;ai une expérience fondamentale dans la création d&apos;applications mob
       <trans-unit id="1927312734351973639" datatype="html">
         <source>
 I have experience designing websites using tools like &lt;span class=&quot;font-medium&quot;&gt;Figma&lt;/span&gt;, leveraging CSS frameworks such as &lt;span class=&quot;font-medium&quot;&gt;Tailwind CSS&lt;/span&gt;, and working with &lt;span class=&quot;font-medium&quot;&gt;Material Design&lt;/span&gt; libraries, including creating, using, and maintaining them.
-        </source>
-        <target>
-J&apos;ai de l&apos;expérience dans la conception de sites Web en utilisant des outils comme &lt;span class=&quot;font-medium&quot;&gt;Figma&lt;/span&gt;, en tirant parti des frameworks CSS tels que &lt;span class=&quot;font-medium&quot;&gt;Tailwind CSS&lt;/span&gt;, et en travaillant avec des bibliothèques &lt;span class=&quot;font-medium&quot;&gt;Material Design&lt;/span&gt;, y compris leur création, leur utilisation et leur maintenance.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">49,51</context>
@@ -468,7 +392,6 @@ J&apos;ai de l&apos;expérience dans la conception de sites Web en utilisant des
       </trans-unit>
       <trans-unit id="7787853201221266267" datatype="html">
         <source>CI / CD Pipelines</source>
-        <target>Pipelines CI / CD</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">54</context>
@@ -477,29 +400,10 @@ J&apos;ai de l&apos;expérience dans la conception de sites Web en utilisant des
       <trans-unit id="1356908190734295979" datatype="html">
         <source>
 I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I also work with &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Kubernetes&lt;/span&gt;, debugging deployment files and monitoring services.
-        </source>
-        <target>
-Je comprends bien les pipelines CI/CD et les utilise pour pousser du code au sein de l&apos;infrastructure de mon travail. Je travaille également avec &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt; et &lt;span class=&quot;font-medium&quot;&gt;Kubernetes&lt;/span&gt;, déboguant les fichiers de déploiement et surveillant les services.
-        </target>
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
           <context context-type="linenumber">56,58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="954840788512180203" datatype="html">
-        <source>See less</source>
-        <target>Voir moins</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/timeline/timeline.component.html</context>
-          <context context-type="linenumber">75,76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4462165726005928867" datatype="html">
-        <source>See more</source>
-        <target>Voir plus</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/timeline/timeline.component.html</context>
-          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
     </body>

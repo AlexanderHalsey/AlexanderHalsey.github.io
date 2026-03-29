@@ -13,7 +13,7 @@ export class LandingComponent {
   private platformId = inject(PLATFORM_ID);
 
   titles = [
-    $localize`A fullstack web developper`,
+    $localize`A fullstack web developer`,
     $localize`A tech enthusiast`,
     $localize`A problem solver`,
   ] as const;

@@ -22,42 +22,17 @@ export class ExperienceComponent implements AfterViewInit, OnDestroy {
 
   experience = computed<TimelineItem[]>(() => [
     {
-      startDate: new Date(2023, 5, 1),
+      startDate: new Date(2022, 6, 1),
       endDate: new Date(2025, 5, 30),
-      title: $localize`Junior Software Developer`,
+      title: $localize`Software Developer`,
       description: $localize`
-I developed back-office microservices to support hospital clients and internal teams, streamlining processes and meeting key performance indicators.
+Grew from intern to full-time developer over 3 years at a Paris health-tech startup, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
 <div class="ms-4 mt-4">• <span class="font-medium">Designed</span> and maintained a centralized UI design system for consistency across applications.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">Collaborated</span> with product owners and peer developers to define project goals and solutions.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> CI/CD pipelines with Git, Docker, Kubernetes, and Azure DevOps.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> CI/CD pipelines with Git, Docker, and Azure DevOps.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Built</span> full-stack features with Vue.js/TypeScript on the frontend and NestJS/PostgreSQL on the backend.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Enhanced</span> reliability with end-to-end and unit tests using Cypress and Jest.</div>
 <div class="ms-4 mt-2">• <span class="font-medium">Optimized</span> service communication using proxy gateways and load balancers.</div>
-      `,
-    },
-    {
-      startDate: new Date(2023, 0, 1),
-      endDate: new Date(2023, 5, 1),
-      title: $localize`Freelance Web Developer`,
-      description: $localize`
-<div>• <span class="font-medium">Built</span> user-friendly interfaces using Vue.js and TypeScript, following SPA design principles.</div>
-<div class="mt-2">• <span class="font-medium">Wrote</span> pull requests, incorporated feedback, and worked closely with senior developers to improve code quality.</div>
-<div class="mt-2">• <span class="font-medium">Developed</span> reusable components and maintained clean, well-documented code.</div>
-<div class="mt-2">• <span class="font-medium">Enhanced</span> reliability with end-to-end and unit tests using Cypress and Jest.</div>
-      `,
-    },
-    {
-      startDate: new Date(2023, 0, 1),
-      milestone: $localize`Registered as a freelancer in France.`,
-    },
-    {
-      startDate: new Date(2022, 6, 1),
-      endDate: new Date(2023, 0, 1),
-      title: $localize`Software Developer Intern`,
-      description: $localize`
-<div>• <span class="font-medium">Contributed</span> to backend development using NestJS and PostgreSQL, ensuring efficient data management.</div>
-<div class="mt-2">• <span class="font-medium">Gained</span> experience working with ORM tools and database optimization.</div>
-<div class="mt-2">• <span class="font-medium">Assisted</span> in debugging, troubleshooting, and improving application performance.</div>
-<div class="mt-2">• <span class="font-medium">Learned</span> and applied best practices in software development and team collaboration.</div>
       `,
     },
     {
@@ -69,16 +44,11 @@ I developed back-office microservices to support hospital clients and internal t
       endDate: new Date(2021, 11, 31),
       title: $localize`Volunteer Programmer`,
       description: $localize`
-I developed a donation management system enabled the institute’s admin to track donations, manage donor information, generate individual and annual fiscal PDF receipts, and schedule email dispatches.
-<div class="ms-4 mt-4">• <span class="font-medium">Python/Django & JavaScript</span> – Backend logic with Django, interactive UI with JavaScript.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">CRUD functionality</span> – Managed donor and donation records.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">Frontend & backend integration</span> – Ensured seamless data flow.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">REST APIs</span> – Secure data retrieval and updates.</div>
-<div class="ms-4 mt-2">• <span class="font-medium">External libraries</span> – Used for PDFs (ReportLab) and email automation.</div>
-<div class="ms-4 mt-2 mb-4">• <span class="font-medium">MVC architecture</span> – Maintained clean, scalable code.</div>
-As a self-taught
-developer at this stage, I adopted a proactive, problem-solving approach, demonstrating
-my ability to tackle challenges independently and continuously learn new technologies.
+I developed a donation management system that enabled the institute’s admin to track donations, manage donor information, generate individual and annual fiscal PDF receipts, and schedule email dispatches.
+<div class="ms-4 mt-4">• <span class="font-medium">Replaced</span> a manual admin workflow with a donation management system, saving the institute significant time on donor records, receipts, and communications.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> automated PDF generation for individual and annual fiscal tax receipts.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Built</span> integration with an external profile system to keep donor records automatically up to date.</div>
+<div class="ms-4 mt-2">• <span class="font-medium">Delivered</span> end-to-end in Python/Django with an interactive JavaScript frontend.</div>
       `,
     },
   ]);

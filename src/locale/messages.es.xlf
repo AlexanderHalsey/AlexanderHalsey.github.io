@@ -266,94 +266,36 @@
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6135021948892497643" datatype="html">
-        <source>Junior Software Developer</source>
-        <target>Desarrollador de software junior</target>
+      <trans-unit id="4081414519740696353" datatype="html">
+        <source>Software Developer</source>
+        <target>Desarrollador de Software</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1942876944216987343" datatype="html">
+      <trans-unit id="411214078788534097" datatype="html">
         <source>
-I developed back-office microservices to support hospital clients and internal teams, streamlining processes and meeting key performance indicators.
+Grew from intern to full-time developer over 3 years at a Paris health-tech startup, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
 &lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Designed&lt;/span&gt; and maintained a centralized UI design system for consistency across applications.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Collaborated&lt;/span&gt; with product owners and peer developers to define project goals and solutions.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implemented&lt;/span&gt; CI/CD pipelines with Git, Docker, Kubernetes, and Azure DevOps.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implemented&lt;/span&gt; CI/CD pipelines with Git, Docker, and Azure DevOps.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Built&lt;/span&gt; full-stack features with Vue.js/TypeScript on the frontend and NestJS/PostgreSQL on the backend.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Enhanced&lt;/span&gt; reliability with end-to-end and unit tests using Cypress and Jest.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimized&lt;/span&gt; service communication using proxy gateways and load balancers.&lt;/div&gt;
       </source>
-      <target>
-Desarrollé microservicios de back-office para apoyar a los clientes del hospital y a los equipos internos, optimizando procesos y cumpliendo con los KPIs.
+        <target>
+Progresé de becario a desarrollador a tiempo completo durante 3 años en una startup parisina de salud, con un período de 6 meses como freelance/contratista (ene–jun 2023) trabajando en remoto desde el extranjero.
 
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Diseñé&lt;/span&gt; y mantuve un lib UI centralizado para garantizar la coherencia en todas las aplicaciones.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Colaboré&lt;/span&gt; con los product owners y los desarrolladores pares para definir los objetivos y soluciones del proyecto.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implementé&lt;/span&gt; pipelines de CI/CD con Git, Docker, Kubernetes y Azure DevOps.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimicé&lt;/span&gt; la comunicación de servicios utilizando proxy gateways y load balancers.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Diseñé&lt;/span&gt; y mantuve un sistema de diseño UI centralizado para garantizar la coherencia entre aplicaciones.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implementé&lt;/span&gt; pipelines CI/CD con Git, Docker y Azure DevOps.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Desarrollé&lt;/span&gt; funcionalidades full-stack con Vue.js/TypeScript en frontend y NestJS/PostgreSQL en backend.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Mejoré&lt;/span&gt; la fiabilidad con pruebas end-to-end y unitarias usando Cypress y Jest.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimicé&lt;/span&gt; la comunicación entre servicios mediante proxy gateways y load balancers.&lt;/div&gt;
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">28,35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8197448949542371987" datatype="html">
-        <source>Freelance Web Developer</source>
-        <target>Desarrollador web autónomo</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7330335995093217536" datatype="html">
-        <source>
-&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Built&lt;/span&gt; user-friendly interfaces using Vue.js and TypeScript, following SPA design principles.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Wrote&lt;/span&gt; pull requests, incorporated feedback, and worked closely with senior developers to improve code quality.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Developed&lt;/span&gt; reusable components and maintained clean, well-documented code.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Enhanced&lt;/span&gt; reliability with end-to-end and unit tests using Cypress and Jest.&lt;/div&gt;
-      </source>
-      <target>
-&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Construí&lt;/span&gt; interfaces user-friendly para el usuario utilizando Vue.js y TypeScript, siguiendo los principios de diseño de SPA.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Escribí&lt;/span&gt; PRs, incorporé comentarios y trabajé en estrecha colaboración con desarrolladores senior para mejorar la calidad del código.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Desarrollé&lt;/span&gt; componentes reutilizables y mantuve un código limpio y bien documentado.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Mejoré&lt;/span&gt; la fiabilidad con pruebas de extremo a extremo y unitarias utilizando Cypress y Jest.&lt;/div&gt;
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">42,47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5690535201686042384" datatype="html">
-        <source>Registered as a freelancer in France.</source>
-        <target>Registrado como microempresario en Francia.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4628589331119881379" datatype="html">
-        <source>Software Developer Intern</source>
-        <target>Desarrollador de software en prácticas</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7794463130031211014" datatype="html">
-        <source>
-&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Contributed&lt;/span&gt; to backend development using NestJS and PostgreSQL, ensuring efficient data management.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Gained&lt;/span&gt; experience working with ORM tools and database optimization.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Assisted&lt;/span&gt; in debugging, troubleshooting, and improving application performance.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Learned&lt;/span&gt; and applied best practices in software development and team collaboration.&lt;/div&gt;
-      </source>
-      <target>
-&lt;div&gt;• &lt;span class=&quot;font-medium&quot;&gt;Contribuí&lt;/span&gt; al desarrollo del backend utilizando NestJS y PostgreSQL, garantizando una gestión eficiente de los datos.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Adquirí&lt;/span&gt; experiencia trabajando con herramientas ORM y optimización de bases de datos.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Ayudé&lt;/span&gt; en la depuración, resolución de problemas y mejora del rendimiento de la aplicación.&lt;/div&gt;
-&lt;div class=&quot;mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Aprendí&lt;/span&gt; y apliqué las mejores prácticas en el desarrollo de software y la colaboración en equipo.&lt;/div&gt;
-      </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">57,62</context>
+          <context context-type="linenumber">28,36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3800334463036925333" datatype="html">
@@ -372,30 +314,24 @@ Desarrollé microservicios de back-office para apoyar a los clientes del hospita
           <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5264290204637045733" datatype="html">
+      <trans-unit id="4097373348833290058" datatype="html">
         <source>
-I developed a donation management system enabled the institute’s admin to track donations, manage donor information, generate individual and annual fiscal PDF receipts, and schedule email dispatches.
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Python/Django &amp; JavaScript&lt;/span&gt; – Backend logic with Django, interactive UI with JavaScript.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;CRUD functionality&lt;/span&gt; – Managed donor and donation records.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Frontend &amp; backend integration&lt;/span&gt; – Ensured seamless data flow.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;REST APIs&lt;/span&gt; – Secure data retrieval and updates.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;External libraries&lt;/span&gt; – Used for PDFs (ReportLab) and email automation.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2 mb-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;MVC architecture&lt;/span&gt; – Maintained clean, scalable code.&lt;/div&gt;
-As a self-taught developer at this stage, I adopted a proactive, problem-solving approach, demonstrating my ability to tackle challenges independently and continuously learn new technologies.
+I developed a donation management system that enabled the institute’s admin to track donations, manage donor information, generate individual and annual fiscal PDF receipts, and schedule email dispatches.
+&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Replaced&lt;/span&gt; a manual admin workflow with a donation management system, saving the institute significant time on donor records, receipts, and communications.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implemented&lt;/span&gt; automated PDF generation for individual and annual fiscal tax receipts.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Built&lt;/span&gt; integration with an external profile system to keep donor records automatically up to date.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Delivered&lt;/span&gt; end-to-end in Python/Django with an interactive JavaScript frontend.&lt;/div&gt;
       </source>
-      <target>
-Desarrollé un sistema de gestión de donaciones que permitió al administrador del instituto hacer un seguimiento de las donaciones, gestionar la información de los donantes, generar recibos fiscales individuales y anuales en PDF, y programar envíos de correos electrónicos.
-&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Python/Django &amp; JavaScript&lt;/span&gt; – Lógica del backend con Django, UI interactiva con JavaScript.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Funcionalidad CRUD&lt;/span&gt; – Gestionó registros de donantes y donaciones.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Integración frontend y backend&lt;/span&gt; – Garantizó un flujo de datos sin problemas.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;APIs REST&lt;/span&gt; – Recuperación y actualizaciones seguras de datos.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Libs externas&lt;/span&gt; – Utilizadas para PDFs (ReportLab) y automatización de correos electrónicos.&lt;/div&gt;
-&lt;div class=&quot;ms-4 mt-2 mb-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Arquitectura MVC&lt;/span&gt; – Mantuvo un código limpio y escalable.&lt;/div&gt;
-En esta etapa como desarrollador autodidacta, adopté un enfoque proactivo y resolutivo, demostrando mi capacidad para abordar desafíos de forma independiente y aprender continuamente nuevas tecnologías.
+        <target>
+Desarrollé un sistema de gestión de donaciones para rastrear donaciones, gestionar información de donantes, generar recibos fiscales en PDF y programar envíos de correo.
+&lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Reemplazé&lt;/span&gt; un flujo de trabajo administrativo manual con un sistema de gestión de donaciones, ahorrando al instituto tiempo considerable en registros de donantes, recibos y comunicaciones.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implementé&lt;/span&gt; la generación automática de recibos fiscales en PDF, tanto individuales como anuales.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Desarrollé&lt;/span&gt; una integración con un sistema de perfiles externo para mantener los registros de donantes actualizados automáticamente.&lt;/div&gt;
+&lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Entregado&lt;/span&gt; de principio a fin en Python/Django con un frontend JavaScript interactivo.&lt;/div&gt;
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/experience/experience.component.ts</context>
-          <context context-type="linenumber">72,83</context>
+          <context context-type="linenumber">46,52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1624416355719500444" datatype="html">
@@ -406,12 +342,12 @@ En esta etapa como desarrollador autodidacta, adopté un enfoque proactivo y res
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="9218396843017064845" datatype="html">
-        <source>A fullstack web developper</source>
+      <trans-unit id="82491520963575885" datatype="html">
+        <source>A fullstack web developer</source>
         <target>Un desarrollador web fullstack</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/landing/landing.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1281750388795926761" datatype="html">
