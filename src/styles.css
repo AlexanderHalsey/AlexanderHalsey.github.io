@@ -84,6 +84,7 @@
 
 @layer components {
   .layered-peaks-spacer > svg {
+    display: block;
     width: 100%;
     height: auto;
     background-color: transparent;
