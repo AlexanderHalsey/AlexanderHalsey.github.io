@@ -29,7 +29,8 @@ export class TechStackComponent implements AfterViewInit {
     this.techStacks().map((techStack, index) => {
       const begin = this.getBegininingIndex(index);
       const stack = techStack.slice(begin).concat(techStack.slice(0, begin));
-      return index % 2 === 0 ? stack : stack.reverse();
+      const ordered = index % 2 === 0 ? stack : stack.reverse();
+      return [...ordered, ...ordered];
     }),
   );
 
