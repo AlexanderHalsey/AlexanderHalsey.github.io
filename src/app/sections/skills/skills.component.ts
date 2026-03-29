@@ -18,36 +18,36 @@ export class SkillsComponent implements AfterViewInit, OnDestroy {
     {
       title: $localize`Web Development`,
       icon: 'web-development',
-      description: $localize`
-I have experience building frontend applications using frameworks like <span class="font-medium">Vue</span>, <span class="font-medium">Angular</span>, and <span class="font-medium">React</span>, working with state management libraries like <span class="font-medium">Pinia</span> and <span class="font-medium">Redux</span>, and creating responsive designs.
+      description: $localize`:@@skills-web-description:
+Frontend development with <span class="font-medium">Vue</span>, <span class="font-medium">Angular</span>, and <span class="font-medium">React</span> — state management with <span class="font-medium">Pinia</span> and <span class="font-medium">Redux</span>, component architecture, and responsive design.
 `,
     },
     {
       title: $localize`Backend Development`,
       icon: 'backend-development',
-      description: $localize`
-I have experience building backend services using frameworks like <span class="font-medium">NestJS</span> and <span class="font-medium">Express</span>, working with SQL databases such as <span class="font-medium">PostgreSQL</span>, and integrating with external infrastructure APIs.
+      description: $localize`:@@skills-backend-description:
+Backend services built with <span class="font-medium">NestJS</span> and <span class="font-medium">Express</span>, relational data modelled in <span class="font-medium">PostgreSQL</span>, and integrations with external APIs and infrastructure.
 `,
     },
     {
       title: $localize`E2E Testing`,
       icon: 'e2e-testing',
-      description: $localize`
-I have experience writing end-to-end and unit tests using tools like <span class="font-medium">Cypress</span> and <span class="font-medium">Jest</span>. These tests have been crucial in catching errors when updating solutions, ensuring long-term scalability and reliability.
+      description: $localize`:@@skills-testing-description:
+End-to-end and unit tests with <span class="font-medium">Cypress</span> and <span class="font-medium">Jest</span>, integrated throughout development to catch regressions early and keep things reliable as codebases grow.
 `,
     },
     {
       title: $localize`Web / UX Design`,
       icon: 'web-design',
-      description: $localize`
-I have experience designing websites using tools like <span class="font-medium">Figma</span>, leveraging CSS frameworks such as <span class="font-medium">Tailwind CSS</span>, and working with <span class="font-medium">Material Design</span> libraries, including creating, using, and maintaining them.
+      description: $localize`:@@skills-design-description:
+Interface design in <span class="font-medium">Figma</span>, built with <span class="font-medium">Tailwind CSS</span> and <span class="font-medium">Material Design</span> component libraries — including creating and maintaining design systems from scratch.
 `,
     },
     {
       title: $localize`CI / CD Pipelines`,
       icon: 'ci-cd-pipelines',
       description: $localize`:@@skills-cicd-description:
-I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I work with <span class="font-medium">Docker</span>, managing containerised deployments and monitoring services.
+Working within and setting up CI/CD pipelines to ship code reliably. Comfortable with <span class="font-medium">Docker</span> for containerised deployments and service monitoring.
 `,
     },
   ] as const;

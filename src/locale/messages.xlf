@@ -338,9 +338,9 @@ I developed a donation management system that enabled the institute’s admin to
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1339933638025679732" datatype="html">
+      <trans-unit id="skills-web-description" datatype="html">
         <source>
-I have experience building frontend applications using frameworks like &lt;span class=&quot;font-medium&quot;&gt;Vue&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;Angular&lt;/span&gt;, and &lt;span class=&quot;font-medium&quot;&gt;React&lt;/span&gt;, working with state management libraries like &lt;span class=&quot;font-medium&quot;&gt;Pinia&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Redux&lt;/span&gt;, and creating responsive designs.
+Frontend development with &lt;span class=&quot;font-medium&quot;&gt;Vue&lt;/span&gt;, &lt;span class=&quot;font-medium&quot;&gt;Angular&lt;/span&gt;, and &lt;span class=&quot;font-medium&quot;&gt;React&lt;/span&gt; — state management with &lt;span class=&quot;font-medium&quot;&gt;Pinia&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Redux&lt;/span&gt;, component architecture, and responsive design.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
@@ -354,9 +354,9 @@ I have experience building frontend applications using frameworks like &lt;span 
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3325651541943092833" datatype="html">
+      <trans-unit id="skills-backend-description" datatype="html">
         <source>
-I have experience building backend services using frameworks like &lt;span class=&quot;font-medium&quot;&gt;NestJS&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Express&lt;/span&gt;, working with SQL databases such as &lt;span class=&quot;font-medium&quot;&gt;PostgreSQL&lt;/span&gt;, and integrating with external infrastructure APIs.
+Backend services built with &lt;span class=&quot;font-medium&quot;&gt;NestJS&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Express&lt;/span&gt;, relational data modelled in &lt;span class=&quot;font-medium&quot;&gt;PostgreSQL&lt;/span&gt;, and integrations with external APIs and infrastructure.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
@@ -370,9 +370,9 @@ I have experience building backend services using frameworks like &lt;span class
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="25907797943084410" datatype="html">
+      <trans-unit id="skills-testing-description" datatype="html">
         <source>
-I have experience writing end-to-end and unit tests using tools like &lt;span class=&quot;font-medium&quot;&gt;Cypress&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Jest&lt;/span&gt;. These tests have been crucial in catching errors when updating solutions, ensuring long-term scalability and reliability.
+End-to-end and unit tests with &lt;span class=&quot;font-medium&quot;&gt;Cypress&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Jest&lt;/span&gt;, integrated throughout development to catch regressions early and keep things reliable as codebases grow.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
@@ -386,9 +386,9 @@ I have experience writing end-to-end and unit tests using tools like &lt;span cl
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1927312734351973639" datatype="html">
+      <trans-unit id="skills-design-description" datatype="html">
         <source>
-I have experience designing websites using tools like &lt;span class=&quot;font-medium&quot;&gt;Figma&lt;/span&gt;, leveraging CSS frameworks such as &lt;span class=&quot;font-medium&quot;&gt;Tailwind CSS&lt;/span&gt;, and working with &lt;span class=&quot;font-medium&quot;&gt;Material Design&lt;/span&gt; libraries, including creating, using, and maintaining them.
+Interface design in &lt;span class=&quot;font-medium&quot;&gt;Figma&lt;/span&gt;, built with &lt;span class=&quot;font-medium&quot;&gt;Tailwind CSS&lt;/span&gt; and &lt;span class=&quot;font-medium&quot;&gt;Material Design&lt;/span&gt; component libraries — including creating and maintaining design systems from scratch.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
@@ -404,7 +404,7 @@ I have experience designing websites using tools like &lt;span class=&quot;font-
       </trans-unit>
       <trans-unit id="skills-cicd-description" datatype="html">
         <source>
-I have a good understanding of CI/CD pipelines and use them to push code within my work’s infrastructure. I work with &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt;, managing containerised deployments and monitoring services.
+Working within and setting up CI/CD pipelines to ship code reliably. Comfortable with &lt;span class=&quot;font-medium&quot;&gt;Docker&lt;/span&gt; for containerised deployments and service monitoring.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/skills/skills.component.ts</context>
