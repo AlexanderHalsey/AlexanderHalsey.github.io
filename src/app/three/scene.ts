@@ -1,53 +1,102 @@
 import * as THREE from 'three';
 
-import { getCameraCoordinates } from './camera';
+import { LANDING_CONFIG, getStartConfig, screenPosToCameraPos } from './camera';
+import { setupScrollObserver, waitForEl, waitForElLoaded } from './observers';
+import { RUBIX_CUBE_SIZE } from './rubixCube';
 
-// minimum / maximum viewport width
-const [MIN_WIDTH, MAX_WIDTH] = [500, 2500] as const;
+const computeCameraPositions = (
+  camera: THREE.PerspectiveCamera,
+  rubixCube: THREE.Group<THREE.Object3DEventMap>,
+  meEl: Element,
+): { startPos: THREE.Vector3; endPos: THREE.Vector3; scrollAtLanding: number } => {
+  const start = getStartConfig();
+  const rect = meEl.getBoundingClientRect();
 
-export const animateScene = (
+  const fovV = THREE.MathUtils.degToRad(camera.fov);
+  const endDistance =
+    (RUBIX_CUBE_SIZE * window.innerHeight) / (2 * LANDING_CONFIG.cubeTargetPx * Math.tan(fovV / 2));
+
+  const startPos = screenPosToCameraPos(
+    new THREE.Vector3(
+      start.screenFraction.x * window.innerWidth,
+      start.screenFraction.y * window.innerHeight,
+      0,
+    ),
+    start.distance,
+    camera.fov,
+    camera.aspect,
+    rubixCube.position,
+  );
+
+  const endPos = screenPosToCameraPos(
+    new THREE.Vector3(
+      rect.left + rect.width * LANDING_CONFIG.handsFractionX,
+      LANDING_CONFIG.viewportFractionY * window.innerHeight,
+      0,
+    ),
+    endDistance,
+    camera.fov,
+    camera.aspect,
+    rubixCube.position,
+  );
+
+  const docHandsY = rect.top + window.scrollY + rect.height * LANDING_CONFIG.handsFractionY;
+  const scrollAtLanding = docHandsY - LANDING_CONFIG.viewportFractionY * window.innerHeight;
+
+  return { startPos, endPos, scrollAtLanding };
+};
+
+const animateScene = (
   camera: THREE.PerspectiveCamera,
   renderer: THREE.WebGLRenderer,
-  rubixCube: THREE.Group<THREE.Object3DEventMap>,
-) => {
-  const me = document.querySelector('#me');
-  if (!me) return;
+  startPos: THREE.Vector3,
+  endPos: THREE.Vector3,
+  scrollAtLanding: number,
+): void => {
+  const alphaHeight = Math.min(1, Math.max(0, window.scrollY / scrollAtLanding));
 
-  const boundingClientRect = me.getBoundingClientRect();
-  const [width, height] = [
-    window.innerWidth,
-    boundingClientRect.top +
-      // add 40% of image height to include hands catching the cube
-      // boundingClientRect.height * 0.4 -
-      // ideally should be using inferred height but for some reason
-      // the image height is not correctly inferred on page load
-      510 * 0.4 -
-      document.body.getBoundingClientRect().top,
-  ];
+  // Past the landing point: pin the canvas in document space so it scrolls off naturally.
+  // Before it: keep it fixed to the viewport so the animation plays.
+  if (window.scrollY >= scrollAtLanding) {
+    renderer.domElement.style.position = 'absolute';
+    renderer.domElement.style.top = `${scrollAtLanding}px`;
+  } else {
+    renderer.domElement.style.position = 'fixed';
+    renderer.domElement.style.top = '0';
+  }
 
-  // There is a portion of the screen where the cube has already been caught
-  // but still visible as we scroll down. The animationHeight is the height
-  // where the cube hasn't been caught yet.
-  const animationHeight = height * 0.6;
-  const [alphaWidth, alphaHeight] = [
-    (Math.min(MAX_WIDTH, width) - MIN_WIDTH) / (MAX_WIDTH - MIN_WIDTH),
-    Math.min(animationHeight, -document.body.getBoundingClientRect().top) / animationHeight,
-  ];
-
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   const currentSize = renderer.getSize(new THREE.Vector2());
   if (currentSize.width !== width || currentSize.height !== height) {
-    if (currentSize.width !== width) {
-      const d = 0.8 + 0.2 * alphaWidth;
-      const scale = new THREE.Vector3(d, d, d);
-      rubixCube.scale.set(...scale.toArray());
-    }
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height);
   }
 
-  const position = getCameraCoordinates('position', alphaWidth, alphaHeight);
-  const target = getCameraCoordinates('target', alphaWidth, alphaHeight);
-  camera.position.set(...position.toArray());
-  camera.lookAt(...target.toArray());
+  camera.position.copy(startPos.clone().lerp(endPos, alphaHeight));
+  camera.lookAt(camera.position.x, camera.position.y, 0);
+};
+
+export const setupScrollAnimation = (
+  camera: THREE.PerspectiveCamera,
+  renderer: THREE.WebGLRenderer,
+  rubixCube: THREE.Group,
+): void => {
+  waitForElLoaded('#me').then((meEl) => {
+    let { startPos, endPos, scrollAtLanding } = computeCameraPositions(camera, rubixCube, meEl);
+
+    const onScroll = () => animateScene(camera, renderer, startPos, endPos, scrollAtLanding);
+
+    const onResize = () => {
+      ({ startPos, endPos, scrollAtLanding } = computeCameraPositions(camera, rubixCube, meEl));
+      onScroll();
+    };
+
+    waitForEl('#rubix-cube').then((el) => setupScrollObserver(el, onScroll));
+
+    window.addEventListener('resize', onResize);
+    window.addEventListener('load', onResize);
+    onResize();
+  });
 };

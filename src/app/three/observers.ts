@@ -1,3 +1,25 @@
+export function setupScrollObserver(el: Element, onScroll: () => void): void {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      window.addEventListener('scroll', onScroll);
+    } else {
+      window.removeEventListener('scroll', onScroll);
+    }
+  });
+  observer.observe(el);
+}
+
+export async function waitForElLoaded(selector: string): Promise<Element> {
+  const el = await waitForEl(selector);
+  const imgEl = el instanceof HTMLImageElement ? el : el.querySelector('img');
+  if (imgEl && !imgEl.complete) {
+    await new Promise<void>((resolve) =>
+      imgEl.addEventListener('load', () => resolve(), { once: true }),
+    );
+  }
+  return el;
+}
+
 export async function waitForEl(selector: string): Promise<Element> {
   return new Promise((resolve) => {
     const el = document.querySelector(selector);

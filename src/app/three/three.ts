@@ -6,12 +6,12 @@ import WebGL from 'three/addons/capabilities/WebGL.js';
 import { prefersReducedMotion } from '@/helpers/match-media.helper';
 
 import { createCamera } from './camera';
-import { waitForEl } from './observers';
 import { createRubixCube } from './rubixCube';
-import { animateScene } from './scene';
+import { setupScrollAnimation } from './scene';
 
 const ORBIT_CONTROLS_FLAG = false;
 const RENDER_FLAG = true;
+const FOV = 50;
 
 const scene = new THREE.Scene();
 
@@ -22,7 +22,7 @@ if (RENDER_FLAG) renderer.setAnimationLoop(animate);
 renderer.domElement.id = 'rubix-cube';
 document.body.appendChild(renderer.domElement);
 
-const camera = createCamera();
+const camera = createCamera(FOV);
 
 const rubixCube = createRubixCube();
 scene.add(rubixCube);
@@ -43,23 +43,9 @@ function animate() {
 
 if (!RENDER_FLAG) renderer.render(scene, camera);
 
-const animateSceneHandler = () => animateScene(camera, renderer, rubixCube);
 if (!prefersReducedMotion) {
-  waitForEl('#rubix-cube').then((el) => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        window.matchMedia('(prefers-reduced-motion: reduce)');
-        window.addEventListener('scroll', animateSceneHandler);
-        window.addEventListener('resize', animateSceneHandler);
-      } else {
-        window.removeEventListener('scroll', animateSceneHandler);
-        window.removeEventListener('resize', animateSceneHandler);
-      }
-    });
-    observer.observe(el);
-  });
+  setupScrollAnimation(camera, renderer, rubixCube);
 }
-waitForEl('#me').then(animateSceneHandler);
 
 if (process.env['NODE_ENV'] === 'development') {
   window.setInterval(() => {

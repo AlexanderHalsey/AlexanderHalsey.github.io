@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
-const RUBIX_CUBE_POSITION = new THREE.Vector3(100, 40, 700);
-const RUBIX_CUBE_SIZE = 69;
+export const RUBIX_CUBE_POSITION = new THREE.Vector3(0, 0, 0);
+export const RUBIX_CUBE_SIZE = 69;
 
 export const createRubixCube = (): THREE.Group<THREE.Object3DEventMap> => {
   const rubixCube = new THREE.Group();
