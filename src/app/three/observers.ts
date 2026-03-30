@@ -17,6 +17,22 @@ export async function waitForElLoaded(selector: string): Promise<Element> {
       imgEl.addEventListener('load', () => resolve(), { once: true }),
     );
   }
+  // In SSR production builds, Angular replaces the prerendered DOM during bootstrap,
+  // leaving the grabbed element detached (getBoundingClientRect returns zeros).
+  // Poll with rAF so we always check after a layout pass with a fresh DOM query.
+  if (el instanceof HTMLElement && el.getBoundingClientRect().height === 0) {
+    return new Promise<Element>((resolve) => {
+      const poll = () => {
+        const current = document.querySelector(selector);
+        if (current instanceof HTMLElement && current.getBoundingClientRect().height > 0) {
+          resolve(current);
+        } else {
+          requestAnimationFrame(poll);
+        }
+      };
+      requestAnimationFrame(poll);
+    });
+  }
   return el;
 }
 
