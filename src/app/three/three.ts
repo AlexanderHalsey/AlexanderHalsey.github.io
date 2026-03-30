@@ -43,9 +43,11 @@ function animate() {
 
 if (!RENDER_FLAG) renderer.render(scene, camera);
 
-if (!prefersReducedMotion) {
-  setupScrollAnimation(camera, renderer, rubixCube);
-}
+export const initScrollAnimation = (): void => {
+  if (!prefersReducedMotion) {
+    setupScrollAnimation(camera, renderer, rubixCube);
+  }
+};
 
 if (process.env['NODE_ENV'] === 'development') {
   window.setInterval(() => {
