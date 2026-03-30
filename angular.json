@@ -50,7 +50,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "isomorphic-dompurify",
+              "dompurify",
+              "jsdom"
+            ]
           },
           "configurations": {
             "production": {

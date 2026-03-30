@@ -2,7 +2,7 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="4382387356927042708" datatype="html">
+      <trans-unit id="38072224061766412" datatype="html">
         <source> SIRET: 922 030 010 00016 – Registered in France 🇫🇷 </source>
         <target> SIRET: 922 030 010 00016 – Registrado en Francia 🇫🇷 </target>
         <context-group purpose="location">
