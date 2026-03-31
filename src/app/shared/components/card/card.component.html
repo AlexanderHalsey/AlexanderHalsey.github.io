@@ -1,9 +1,18 @@
 <div
-  class="h-full border border-border-color rounded-md bg-bg-color dark:bg-gray-800"
+  class="h-full border border-border-color rounded-md overflow-hidden bg-white dark:bg-gray-800"
   [ngClass]="[
     { true: 'hover:translate-x-px hover:translate-y-[-1px]', false: '' }[popOnHover().toString()],
+    {
+      true: 'transition-[transform,border-color,box-shadow] duration-200 ease-out hover:scale-[1.02] hover:[border-color:var(--color-primary)] hover:[box-shadow:0_0_18px_rgba(0,167,240,0.3)]',
+      false: '',
+    }[interactive().toString()],
   ]"
 >
+  @if (image()) {
+    <div class="border-b border-border-color bg-gray-100 dark:bg-gray-700 px-2">
+      <img [src]="image()" class="w-full h-64 object-contain rounded-sm" alt="" />
+    </div>
+  }
   <div class="p-6">
     <ng-content />
   </div>

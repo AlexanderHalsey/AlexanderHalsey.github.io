@@ -8,4 +8,6 @@ import { NgClass } from '@angular/common';
 })
 export class CardComponent {
   popOnHover = input(false);
+  interactive = input(false);
+  image = input<string | undefined>(undefined);
 }

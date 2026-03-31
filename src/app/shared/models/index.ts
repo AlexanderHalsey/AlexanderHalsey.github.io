@@ -3,4 +3,5 @@ export * from './Menu';
 export * from './Notification';
 export * from './Selector';
 export * from './Theme';
+export * from './Project';
 export * from './Timeline';

@@ -58,6 +58,14 @@
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+        <target>Proyectos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layouts/top-bar/top-bar.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4342625008558026850" datatype="html">
         <source>Skills</source>
         <target>Habilidades</target>
@@ -396,6 +404,18 @@ Desarrollé un sistema de gestión de donaciones para rastrear donaciones, gesti
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Close</source>
+        <target>Cerrar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/project-overlay/project-overlay.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/project-overlay/project-overlay.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8664045374910420643" datatype="html">
         <source>Web Development</source>
         <target>Desarrollo web</target>
@@ -510,6 +530,64 @@ Trabajo dentro de pipelines CI/CD y configuración de los mismos para entregar c
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/timeline/timeline.component.html</context>
           <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-dms-title" datatype="html">
+        <source>Donation Management System v2</source>
+        <target>Sistema de Gestión de Donaciones v2</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-dms-summary" datatype="html">
+        <source>Full-stack rebuild of a donation management platform, built independently as a volunteer.</source>
+        <target>Reconstrucción full-stack de una plataforma de gestión de donaciones, realizada de forma independiente como voluntario.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-dms-description" datatype="html">
+        <source>Built for a non-profit that was previously managing donations manually, this system brought everything into one place: donor records, donation tracking, individual and annual tax receipt generation as PDFs, and automated bulk email dispatch. Background jobs run via Redis handle the heavy lifting during annual receipt cycles, and donor profiles stay in sync with the institute&apos;s external membership platform. A full rewrite of an earlier volunteer project, replacing a Django/JavaScript app with NestJS, Vue.js, TypeScript, and Docker.</source>
+        <target>Desarrollado para una organización sin fines de lucro que gestionaba sus donaciones manualmente, este sistema centraliza todo en un solo lugar: fichas de donantes, seguimiento de donaciones, generación de recibos fiscales individuales y anuales en PDF, y envío automatizado masivo de correos electrónicos. Las tareas en segundo plano mediante Redis gestionan el trabajo pesado durante los ciclos anuales de recibos, y los perfiles de los donantes se mantienen sincronizados con la plataforma de membresía externa del instituto. Una reescritura completa de un proyecto voluntario anterior, reemplazando una aplicación Django/JavaScript por NestJS, Vue.js, TypeScript y Docker.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-habit-title" datatype="html">
+        <source>Habit Tracker</source>
+        <target>Habit Tracker</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-habit-summary" datatype="html">
+        <source>A personal desktop app for building and tracking daily habits, with optional macOS Calendar integration for custom recurrence patterns.</source>
+        <target>Una aplicación de escritorio personal para crear y seguir hábitos diarios, con integración opcional de macOS Calendar para patrones de recurrencia personalizados.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-habit-description" datatype="html">
+        <source>- Cross-platform desktop app built with Tauri — Rust backend, React/TypeScript frontend
+- Local SQLite database; no server, no account, data stored per OS conventions
+- Two habit modes: simple daily tracking, or calendar-linked with custom recurrence (weekly, monthly, etc.)
+- macOS Calendar sync via AppleScript — recurring events drive habit scheduling via rrule
+- Stats dashboard with total and monthly completion rates per habit
+- Background launchd services for daily reminders and automated calendar sync</source>
+        <target>- Aplicación de escritorio multiplataforma construida con Tauri — backend en Rust, frontend en React/TypeScript
+- Base de datos SQLite local; sin servidor ni cuenta, datos almacenados según las convenciones del SO
+- Dos modos de hábitos: seguimiento diario simple, o hábitos vinculados al calendario con recurrencia personalizada (semanal, mensual, etc.)
+- Sincronización con macOS Calendar via AppleScript — los eventos recurrentes dirigen la planificación de hábitos mediante rrule
+- Panel de estadísticas con tasas de completitud total y mensual por hábito
+- Servicios launchd en segundo plano para recordatorios diarios y sincronización automática del calendario</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
     </body>

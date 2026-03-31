@@ -33,6 +33,7 @@ export class TopBarComponent implements AfterViewInit {
   selectorItems: SelectorItem[] = [
     { selector: '#about-me', label: $localize`About me` },
     { selector: '#experience', label: $localize`Experience` },
+    { selector: '#projects', label: $localize`Projects` },
     { selector: '#skills :first-child', label: $localize`Skills` },
     { selector: '#contact', label: $localize`Contact` },
   ];

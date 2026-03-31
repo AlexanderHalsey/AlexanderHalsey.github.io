@@ -1,0 +1,11 @@
+<section
+  id="projects"
+  class="flex flex-col items-center py-32"
+  [style.background-color]="backgroundColor()"
+>
+  <div class="project-cards grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl px-6">
+    @for (project of projects(); track project.id) {
+      <app-project-card class="project-card" [project]="project" (open)="openProject($event)" />
+    }
+  </div>
+</section>

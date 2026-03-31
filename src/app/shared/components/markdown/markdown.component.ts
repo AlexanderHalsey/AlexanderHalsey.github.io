@@ -6,6 +6,7 @@ import { marked, type MarkedOptions } from 'marked';
 @Component({
   selector: 'app-markdown',
   templateUrl: './markdown.component.html',
+  styleUrl: './markdown.component.css',
 })
 export class MarkdownComponent implements OnInit {
   private platformId = inject(PLATFORM_ID);

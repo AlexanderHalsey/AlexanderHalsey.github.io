@@ -1,0 +1,36 @@
+.project-cards {
+  :first-child,
+  :nth-child(2) {
+    transform: translateX(-10%);
+    filter: blur(1px);
+    opacity: 0;
+  }
+
+  :first-child {
+    transition: all 0.3s 0.15s ease-in;
+  }
+
+  :nth-child(2) {
+    transition: all 0.3s 0.3s ease-in;
+  }
+}
+
+.show {
+  :first-child,
+  :nth-child(2) {
+    transform: translateX(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .project-cards {
+    :first-child,
+    :nth-child(2) {
+      transform: none;
+      filter: none;
+      opacity: 1;
+    }
+  }
+}

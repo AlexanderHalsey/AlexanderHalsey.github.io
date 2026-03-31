@@ -2,7 +2,7 @@
   <textarea
     [value]="value()"
     [placeholder]="placeholder()"
-    class="w-full h-full rounded-md bg-bg-color p-2 border dark:bg-gray-100 dark:text-black"
+    class="w-full h-full rounded-md bg-white p-2 border dark:bg-gray-100 dark:text-black"
     (input)="onInput($event)"
     [@borderError]="error() ? 'error' : 'default'"
   ></textarea>

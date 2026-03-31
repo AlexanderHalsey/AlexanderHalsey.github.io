@@ -1,0 +1,68 @@
+<div class="fixed inset-0 z-50 flex items-center justify-center">
+  <button
+    #backdrop
+    type="button"
+    class="backdrop"
+    i18n-aria-label
+    aria-label="Close"
+    (click)="close()"
+  ></button>
+
+  <div
+    #panel
+    class="panel border border-border-color rounded-md bg-white dark:bg-gray-800"
+    role="dialog"
+    aria-modal="true"
+    tabindex="-1"
+  >
+    <button class="close-btn" (click)="close()" i18n-aria-label aria-label="Close">
+      <app-close-icon size="20" color="currentColor" />
+    </button>
+
+    <h2 class="font-bold text-xl pr-8">{{ project().title }}</h2>
+
+    @if (project().images?.length) {
+      <div
+        class="flex gap-3 overflow-x-auto mt-4 pb-8"
+        [class]="{ 'justify-center': project().images!.length === 1 }"
+      >
+        @for (img of project().images!; track img) {
+          <img
+            [src]="img"
+            class="h-96 w-auto flex-shrink-0 rounded-md object-cover object-top"
+            alt=""
+          />
+        }
+      </div>
+    }
+
+    <app-markdown
+      class="mt-4 text-sm text-gray-600 dark:text-gray-300 leading-relaxed"
+      [value]="project().description"
+    />
+
+    <div class="flex flex-wrap gap-2 mt-6">
+      @for (tag of project().tech; track tag) {
+        <span
+          class="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+        >
+          {{ tag }}
+        </span>
+      }
+    </div>
+
+    @if (project().links?.length) {
+      <div class="flex flex-wrap gap-4 mt-6">
+        @for (link of project().links!; track link.url) {
+          <a
+            [href]="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-medium underline"
+            >{{ link.label }}</a
+          >
+        }
+      </div>
+    }
+  </div>
+</div>
