@@ -87,7 +87,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about-me-p1" datatype="html">
-        <source> I’m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Happytal, a Paris health-tech startup, over three years. </source>
+        <source> I’m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Careside, a Paris digital health company, over three years. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">22,25</context>
@@ -242,7 +242,7 @@ Full-stack rebuild of the institute&apos;s donation management system, delivered
       </trans-unit>
       <trans-unit id="411214078788534097" datatype="html">
         <source>
-Grew from intern to full-time developer over 3 years at a Paris health-tech startup, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
+Grew from intern to full-time developer over 3 years at Careside, a Paris digital health company, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
 &lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Designed&lt;/span&gt; and maintained a centralized UI design system for consistency across applications.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implemented&lt;/span&gt; CI/CD pipelines with Git, Docker, and Azure DevOps.&lt;/div&gt;

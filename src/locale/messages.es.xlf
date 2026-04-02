@@ -99,8 +99,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="about-me-p1" datatype="html">
-        <source> I&apos;m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Happytal, a Paris health-tech startup, over three years. </source>
-        <target> Soy desarrollador fullstack con base cerca de Toulouse, con más de 3 años de experiencia profesional desarrollando aplicaciones TypeScript — frontends Vue.js, backends NestJS/PostgreSQL, Docker, CI/CD. Crecí de becario a desarrollador a tiempo completo en Happytal, una startup parisina de salud-tech, en tres años. </target>
+        <source> I&apos;m a fullstack developer based near Toulouse, with 3+ years of professional experience building TypeScript applications — Vue.js frontends, NestJS/PostgreSQL backends, Docker, CI/CD. I grew from intern to full-time developer at Careside, a Paris digital health company, over three years. </source>
+        <target> Soy desarrollador fullstack con base cerca de Toulouse, con más de 3 años de experiencia profesional desarrollando aplicaciones TypeScript — frontends Vue.js, backends NestJS/PostgreSQL, Docker, CI/CD. Crecí de becario a desarrollador a tiempo completo en Careside, una empresa de salud digital parisina, en tres años. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/about-me/about-me.component.html</context>
           <context context-type="linenumber">22,26</context>
@@ -314,7 +314,7 @@ Reconstrucción full-stack del sistema de gestión de donaciones del instituto, 
       </trans-unit>
       <trans-unit id="411214078788534097" datatype="html">
         <source>
-Grew from intern to full-time developer over 3 years at a Paris health-tech startup, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
+Grew from intern to full-time developer over 3 years at Careside, a Paris digital health company, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
 &lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Designed&lt;/span&gt; and maintained a centralized UI design system for consistency across applications.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implemented&lt;/span&gt; CI/CD pipelines with Git, Docker, and Azure DevOps.&lt;/div&gt;
@@ -323,7 +323,7 @@ Grew from intern to full-time developer over 3 years at a Paris health-tech star
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Optimized&lt;/span&gt; service communication using proxy gateways and load balancers.&lt;/div&gt;
       </source>
         <target>
-Progresé de becario a desarrollador a tiempo completo durante 3 años en una startup parisina de salud, con un período de 6 meses como freelance/contratista (ene–jun 2023) trabajando en remoto desde el extranjero.
+Progresé de becario a desarrollador a tiempo completo durante 3 años en Careside, una empresa de salud digital parisina, con un período de 6 meses como freelance/contratista (ene–jun 2023) trabajando en remoto desde el extranjero.
 
 &lt;div class=&quot;ms-4 mt-4&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Diseñé&lt;/span&gt; y mantuve un sistema de diseño UI centralizado para garantizar la coherencia entre aplicaciones.&lt;/div&gt;
 &lt;div class=&quot;ms-4 mt-2&quot;&gt;• &lt;span class=&quot;font-medium&quot;&gt;Implementé&lt;/span&gt; pipelines CI/CD con Git, Docker y Azure DevOps.&lt;/div&gt;

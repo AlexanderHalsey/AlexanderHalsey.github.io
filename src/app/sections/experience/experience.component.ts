@@ -39,7 +39,7 @@ Full-stack rebuild of the institute's donation management system, delivered pro 
       endDate: new Date(2025, 5, 30),
       title: $localize`Software Developer`,
       description: $localize`
-Grew from intern to full-time developer over 3 years at a Paris health-tech startup, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
+Grew from intern to full-time developer over 3 years at Careside, a Paris digital health company, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
 <div class="ms-4 mt-4">• <span class="font-medium">Designed</span> and maintained a centralized UI design system for consistency across applications.</div>
 <div class="ms-4 mt-2">• <span class="font-medium">Implemented</span> CI/CD pipelines with Git, Docker, and Azure DevOps.</div>
