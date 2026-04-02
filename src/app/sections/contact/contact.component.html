@@ -3,6 +3,9 @@
   class="flex flex-col items-center pt-8 pb-16"
   [style.background-color]="backgroundColor()"
 >
+  <h3 i18n="@@contact-title" class="section-title text-gray-200 dark:text-gray-300 mb-12">
+    Contact
+  </h3>
   <form [formGroup]="form" class="flex flex-col" (ngSubmit)="onSubmit()">
     @if (isMobile()) {
       <ng-container [ngTemplateOutlet]="contactInfo" />
