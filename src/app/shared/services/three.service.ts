@@ -8,7 +8,7 @@ import WebGL from 'three/addons/capabilities/WebGL.js';
 import { prefersReducedMotion } from '@/helpers/match-media.helper';
 
 import { createCamera } from '@/three/camera';
-import { createRubixCube } from '@/three/rubixCube';
+import { createRubixCube, shuffleCube } from '@/three/rubixCube';
 import { setupScrollAnimation } from '@/three/scene';
 
 const ORBIT_CONTROLS_FLAG = false;
@@ -26,8 +26,10 @@ export class ThreeService implements OnDestroy {
   private camera?: THREE.PerspectiveCamera;
   private rubixCube?: THREE.Group<THREE.Object3DEventMap>;
   private controls?: OrbitControls;
-  private scrollAnimationCleanup?: () => void;
   private debugIntervalId?: number;
+  private lastTime = 0;
+  private shuffleTick?: (delta: number) => void;
+  private scrollAnimationCleanup?: () => void;
 
   init(host: HTMLElement): void {
     if (!isPlatformBrowser(this.platformId) || this.renderer) return;
@@ -38,12 +40,14 @@ export class ThreeService implements OnDestroy {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.domElement.id = 'rubix-cube';
+    this.renderer.domElement.style.opacity = '0';
     host.appendChild(this.renderer.domElement);
 
     this.camera = createCamera(FOV);
 
     this.rubixCube = createRubixCube();
     this.scene.add(this.rubixCube);
+    this.shuffleTick = shuffleCube(this.rubixCube);
 
     if (ORBIT_CONTROLS_FLAG) {
       this.controls = new OrbitControls(this.camera, this.renderer.domElement);
@@ -61,6 +65,8 @@ export class ThreeService implements OnDestroy {
         this.renderer,
         this.rubixCube,
       );
+    } else {
+      this.renderer.domElement.style.opacity = '1';
     }
 
     if (process.env['NODE_ENV'] === 'development') {
@@ -92,8 +98,10 @@ export class ThreeService implements OnDestroy {
     this.renderer?.dispose();
     this.renderer?.domElement.remove();
 
-    this.debugIntervalId = undefined;
     this.scrollAnimationCleanup = undefined;
+    this.shuffleTick = undefined;
+    this.lastTime = 0;
+    this.debugIntervalId = undefined;
     this.controls = undefined;
     this.rubixCube = undefined;
     this.camera = undefined;
@@ -101,7 +109,9 @@ export class ThreeService implements OnDestroy {
     this.scene = undefined;
   }
 
-  private readonly animate = (): void => {
+  private readonly animate = (time: number): void => {
+    const delta = time - this.lastTime;
+    this.lastTime = time;
     if (!this.renderer || !this.scene || !this.camera) {
       return;
     }
@@ -110,11 +120,12 @@ export class ThreeService implements OnDestroy {
       this.controls?.update();
     }
 
-    // if (!prefersReducedMotion && this.rubixCube) {
-    //   this.rubixCube.rotation.x += 0.0005;
-    //   this.rubixCube.rotation.y += 0.0005;
-    //   this.rubixCube.rotation.z += 0.0005;
-    // }
+    if (!prefersReducedMotion && this.rubixCube) {
+      this.rubixCube.rotation.x += 0.001;
+      this.rubixCube.rotation.y += 0.001;
+    }
+
+    this.shuffleTick?.(delta);
 
     if (RENDER_FLAG) {
       this.renderer.render(this.scene, this.camera);

@@ -107,6 +107,10 @@ export const setupScrollAnimation = (
     window.addEventListener('resize', onResize);
     window.addEventListener('load', onResize);
     onResize();
+    requestAnimationFrame(() => {
+      renderer.domElement.style.transition = 'opacity 0.3s ease';
+      renderer.domElement.style.opacity = '1';
+    });
   });
 
   return () => {
