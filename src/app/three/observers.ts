@@ -1,4 +1,4 @@
-export function setupScrollObserver(el: Element, onScroll: () => void): void {
+export function setupScrollObserver(el: Element, onScroll: () => void): () => void {
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       window.addEventListener('scroll', onScroll);
@@ -7,6 +7,11 @@ export function setupScrollObserver(el: Element, onScroll: () => void): void {
     }
   });
   observer.observe(el);
+
+  return () => {
+    window.removeEventListener('scroll', onScroll);
+    observer.disconnect();
+  };
 }
 
 export async function waitForElLoaded(selector: string): Promise<Element> {

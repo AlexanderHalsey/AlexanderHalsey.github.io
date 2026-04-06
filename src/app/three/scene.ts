@@ -82,21 +82,39 @@ export const setupScrollAnimation = (
   camera: THREE.PerspectiveCamera,
   renderer: THREE.WebGLRenderer,
   rubixCube: THREE.Group,
-): void => {
+): (() => void) => {
+  let disposed = false;
+  let disposeScrollObserver: (() => void) | undefined;
+  let onResize: (() => void) | undefined;
+
   waitForElLoaded('#me').then((meEl) => {
+    if (disposed) return;
+
     let { startPos, endPos, scrollAtLanding } = computeCameraPositions(camera, rubixCube, meEl);
 
     const onScroll = () => animateScene(camera, renderer, startPos, endPos, scrollAtLanding);
 
-    const onResize = () => {
+    onResize = () => {
       ({ startPos, endPos, scrollAtLanding } = computeCameraPositions(camera, rubixCube, meEl));
       onScroll();
     };
 
-    waitForEl('#rubix-cube').then((el) => setupScrollObserver(el, onScroll));
+    waitForEl('#rubix-cube').then((el) => {
+      if (disposed) return;
+      disposeScrollObserver = setupScrollObserver(el, onScroll);
+    });
 
     window.addEventListener('resize', onResize);
     window.addEventListener('load', onResize);
     onResize();
   });
+
+  return () => {
+    disposed = true;
+    disposeScrollObserver?.();
+    if (onResize) {
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('load', onResize);
+    }
+  };
 };

@@ -1,4 +1,4 @@
-import { Component, Signal, afterNextRender } from '@angular/core';
+import { AfterViewInit, Component, Signal } from '@angular/core';
 
 import { AboutMeComponent } from '@/sections/about-me/about-me.component';
 import { ContactComponent } from '@/sections/contact/contact.component';
@@ -16,6 +16,7 @@ import { TopBarComponent } from '@/layouts/top-bar/top-bar.component';
 
 import { ProjectService } from '@/services/project.service';
 import { ThemeService } from '@/services/theme.service';
+import { ThreeService } from '@/services/three.service';
 
 @Component({
   selector: 'app-root',
@@ -36,17 +37,17 @@ import { ThemeService } from '@/services/theme.service';
   ],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   backgroundColor: Signal<string>;
   constructor(
     private themeService: ThemeService,
     protected projectService: ProjectService,
+    private threeService: ThreeService,
   ) {
     this.backgroundColor = themeService.mountainBackgroundColor;
-    // three.ts uses browser APIs (document, window, WebGL) — dynamic import keeps it
-    // out of the SSR bundle. afterNextRender guarantees the DOM is ready before it runs.
-    afterNextRender(() =>
-      import('./three/three').then(({ initScrollAnimation }) => initScrollAnimation()),
-    );
+  }
+
+  ngAfterViewInit(): void {
+    this.threeService.init(document.body);
   }
 }
