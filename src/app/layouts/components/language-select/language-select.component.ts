@@ -16,9 +16,9 @@ export class LanguageSelectComponent {
   private platformId = inject(PLATFORM_ID);
 
   languageOptions: LanguageMenuItem[] = [
-    { code: 'en', label: 'English', pathname: '/en' },
-    { code: 'fr', label: 'Français', pathname: '/fr' },
-    { code: 'es', label: 'Español', pathname: '/es' },
+    { code: 'en', label: 'EN', pathname: '/en' },
+    { code: 'fr', label: 'FR', pathname: '/fr' },
+    { code: 'es', label: 'ES', pathname: '/es' },
   ];
 
   activeLanguageCode = signal<string | undefined>(

@@ -9,8 +9,8 @@ export const LANDING_CONFIG = {
   viewportFractionY: 0.5,
 };
 
-const START_CONFIG_NARROW = { screenFraction: { x: 0.5, y: 0.65 }, distance: 400 };
-const START_CONFIG_WIDE = { screenFraction: { x: 0.72, y: 0.48 }, distance: 240 };
+const START_CONFIG_NARROW = { screenFraction: { x: 0.5, y: 0.6 }, distance: 400 };
+const START_CONFIG_WIDE = { screenFraction: { x: 0.75, y: 0.48 }, distance: 240 };
 const ASPECT_NARROW = 0.5; // ~portrait phone (9:16)
 const ASPECT_WIDE = 1.6; // ~widescreen desktop (16:10)
 
