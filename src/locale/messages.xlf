@@ -114,74 +114,81 @@
           <context context-type="linenumber">37,40</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="contact-title" datatype="html">
+        <source> Contact </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1585425644523299468" datatype="html">
         <source>Email *</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3349754872628013177" datatype="html">
         <source>Subject *</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7666195870272157547" datatype="html">
         <source>Message*</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2922569862195498495" datatype="html">
         <source>Fill out the required fields</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3099741642167775297" datatype="html">
         <source>Download</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5293537796822127156" datatype="html">
         <source>CV</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">60,61</context>
+          <context context-type="linenumber">63,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="234649038899663074" datatype="html">
         <source> +33 6 88 51 83 84</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">66,67</context>
+          <context context-type="linenumber">69,70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1241481517306871440" datatype="html">
         <source> Github</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">75,76</context>
+          <context context-type="linenumber">78,79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6928881025295379447" datatype="html">
         <source> LinkedIn</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">82,83</context>
+          <context context-type="linenumber">85,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7563035552061651664" datatype="html">
         <source> Send </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/contact/contact.component.html</context>
-          <context context-type="linenumber">97,98</context>
+          <context context-type="linenumber">100,101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3905346436951999292" datatype="html">
@@ -212,6 +219,13 @@
           <context context-type="linenumber">151</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="experience-title" datatype="html">
+        <source> Experience </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/experience/experience.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="experience-dms-title" datatype="html">
         <source>Independent Developer</source>
         <context-group purpose="location">
@@ -240,7 +254,7 @@ Full-stack rebuild of the institute&apos;s donation management system, delivered
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="411214078788534097" datatype="html">
+      <trans-unit id="1766257635821341522" datatype="html">
         <source>
 Grew from intern to full-time developer over 3 years at Careside, a Paris digital health company, including a 6-month freelance/contractor period (Jan–Jun 2023) while working remotely from abroad.
 
@@ -321,6 +335,13 @@ I developed a donation management system that enabled the institute’s admin to
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="projects-title" datatype="html">
+        <source> Projects </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="project-dms-title" datatype="html">
         <source>Donation Management System v2</source>
         <context-group purpose="location">
@@ -366,6 +387,37 @@ I developed a donation management system that enabled the institute’s admin to
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
           <context context-type="linenumber">45,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-job-tracker-title" datatype="html">
+        <source>Job Tracker</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-job-tracker-summary" datatype="html">
+        <source>A personal dashboard for managing an active job search — applications, companies, prep notes, and search reports in one place.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="project-job-tracker-description" datatype="html">
+        <source>- Personal dashboard for managing an active job search — built with Next.js 15 (App Router) as a hands-on learning project
+- Application tracking with company profiles, role details, status management, interview prep notes, and cover letter storage
+- Importable search reports — results from an automated search pipeline are reviewed and shortlisted within the app
+- Data stays local — no cloud database; everything stored in a local SQLite file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/projects/projects.component.ts</context>
+          <context context-type="linenumber">59,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills-title" datatype="html">
+        <source>Skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sections/skills/skills.component.html</context>
+          <context context-type="linenumber">2,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8664045374910420643" datatype="html">

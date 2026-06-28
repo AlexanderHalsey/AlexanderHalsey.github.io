@@ -52,6 +52,18 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
       links: [{ label: 'GitHub', url: 'https://github.com/AlexanderHalsey/Habit-Tracker' }],
       images: ['projects/habitTracker/habit_tracker.png'],
     },
+    {
+      id: 'job-tracker',
+      title: $localize`:@@project-job-tracker-title:Job Tracker`,
+      summary: $localize`:@@project-job-tracker-summary:A personal dashboard for managing an active job search — applications, companies, prep notes, and search reports in one place.`,
+      description: $localize`:@@project-job-tracker-description:- Personal dashboard for managing an active job search — built with Next.js 15 (App Router) as a hands-on learning project
+- Application tracking with company profiles, role details, status management, interview prep notes, and cover letter storage
+- Importable search reports — results from an automated search pipeline are reviewed and shortlisted within the app
+- Data stays local — no cloud database; everything stored in a local SQLite file`,
+      tech: ['Next.js', 'React', 'TypeScript', 'Prisma', 'SQLite'],
+      links: [{ label: 'GitHub', url: 'https://github.com/AlexanderHalsey/job-tracker' }],
+      images: ['projects/jobTracker/jobTracker.png'],
+    },
   ]);
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
